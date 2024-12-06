@@ -1,4 +1,5 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# for quick ignoring a file or dir, prepend with .ignore
+.ignore**
 
 # dependencies
 /node_modules
