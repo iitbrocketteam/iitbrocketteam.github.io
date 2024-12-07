@@ -1,0 +1,14 @@
+.navbar {
+  background-color: rgb(54, 54, 54);
+  list-style: none;
+
+  height: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.Link {
+  text-transform: uppercase;
+}

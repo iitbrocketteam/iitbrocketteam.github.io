@@ -6,20 +6,7 @@ export default function Home() {
     <div className={styles.page}>
       Homepage
       <br />
-      <ul>
-        <li>
-          <Link href="/sponsors">Sponsors</Link>
-        </li>
-        <li>
-          <Link href="/rockets">Rockets</Link>
-        </li>
-        <li>
-          <Link href="/events">Events</Link>
-        </li>
-        <li>
-          <Link href="/team">Team</Link>
-        </li>
-      </ul>
+      
     </div>
   );
 }
