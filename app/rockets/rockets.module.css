@@ -8,15 +8,20 @@
   font-size: 1.6rem;
 }
 
-.table th {
+.table tbody th {
   font-weight: 300;
   width: 16rem;
   padding: 0.1rem 0.1rem;
 }
 
 .table thead {
-  font-weight: 700;
+  font-weight: 800;
   font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.table thead th {
+  color: rgb(138, 138, 255);
 }
 
 .table td {
@@ -40,5 +45,5 @@
 }
 
 .table thead tr::after {
-    height: 0.25rem;
-  }
+  height: 0.25rem;
+}
