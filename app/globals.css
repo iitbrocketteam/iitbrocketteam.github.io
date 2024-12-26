@@ -16,6 +16,10 @@ body {
   overflow-x: hidden;
 }
 
+ul {
+  list-style: none;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
