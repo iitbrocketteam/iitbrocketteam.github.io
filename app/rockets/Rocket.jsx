@@ -1,5 +1,13 @@
 import styles from "./rockets.module.css";
 
+import { Roboto_Mono } from "next/font/google";
+
+const roboto_mono = Roboto_Mono({
+  weight: ["300","500", "700"],
+  subsets: ["latin"],
+  display: "swap",
+});
+
 export default function Rocket({ name, year, data }) {
   const rows = data.map((element) => (
     <tr key={element[0]}>
@@ -9,7 +17,7 @@ export default function Rocket({ name, year, data }) {
   ));
 
   return (
-    <table className={styles.table}>
+    <table className={styles.table + " " + roboto_mono.className}>
       <thead>
         <tr>
           <th>{name}</th>

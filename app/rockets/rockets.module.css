@@ -3,9 +3,42 @@
 }
 
 .table {
-    background-color: darkblue;
+  /* background-color: darkblue; */
+  font-weight: 300;
+  font-size: 1.6rem;
 }
 
 .table th {
-  width: 10rem;
+  font-weight: 300;
+  width: 16rem;
+  padding: 0.1rem 0.1rem;
 }
+
+.table thead {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.table td {
+  width: 6rem;
+  padding: 0.1rem 0.1rem;
+  text-align: end;
+}
+
+.table tr {
+  position: relative;
+}
+
+.table tr::after {
+  content: "";
+  width: 100%;
+  height: 0.15rem;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.table thead tr::after {
+    height: 0.25rem;
+  }
