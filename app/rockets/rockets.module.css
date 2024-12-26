@@ -1,0 +1,11 @@
+.page {
+  padding: 3rem 10rem;
+}
+
+.table {
+    background-color: darkblue;
+}
+
+.table th {
+  width: 10rem;
+}
