@@ -1,5 +1,6 @@
 import styles from "./Navbar.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
   const pages = [
@@ -10,14 +11,21 @@ export default function Navbar() {
   ];
 
   return (
-    <ul className={styles.navbar}>
-      {pages.map((page) => (
-        <li key={page.name}>
-          <Link href={page.path} className={styles.Link}>
-            {page.name}
-          </Link>
-        </li>
-      ))}
-    </ul>
+    <div className={styles.navbar}>
+      <div  className={styles.logo_name}>
+        <Image src="/rtlogo1.png" width={384} height={222} alt="Logo" />
+        <div>IIT-B Rocket Team</div>
+      </div>
+
+      <ul className={styles.links}>
+        {pages.map((page) => (
+          <li key={page.name}>
+            <Link href={page.path} className={styles.Link}>
+              {page.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
