@@ -1,9 +1,10 @@
 import styles from "./rockets.module.css";
+import Image from "next/image";
 
 import { Roboto_Mono } from "next/font/google";
 
 const roboto_mono = Roboto_Mono({
-  weight: ["300","500", "700"],
+  weight: ["300", "500", "700"],
   subsets: ["latin"],
   display: "swap",
 });
@@ -17,15 +18,19 @@ export default function Rocket({ name, year, data }) {
   ));
 
   return (
-    <table className={styles.table + " " + roboto_mono.className}>
-      <thead>
-        <tr>
-          <th>{name}</th>
-          <td>{year}</td>
-        </tr>
-      </thead>
+    <div>
+      <table className={styles.table + " " + roboto_mono.className}>
+        <thead>
+          <tr>
+            <th>{name}</th>
+            <td>{year}</td>
+          </tr>
+        </thead>
 
-      <tbody>{rows}</tbody>
-    </table>
+        <tbody>{rows}</tbody>
+      </table>
+
+      <Image src="/rtlogo1.png" width={384} height={222} alt="Logo" />
+    </div>
   );
 }
