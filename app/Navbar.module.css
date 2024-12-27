@@ -1,14 +1,24 @@
 .navbar {
-  background-color: rgb(54, 54, 54);
-  list-style: none;
+  background-color: rgb(36, 36, 36);
+  height: 3rem;
+}
 
-  height: 2rem;
-  display: flex;
-  justify-content: space-between;
+.logo_name {
+    display: inline-flex;
+}
+
+.links {
+  padding: 1rem 1rem;
+  display: inline-flex;
+  justify-content: end;
   align-items: center;
   gap: 2rem;
 }
 
 .Link {
   text-transform: uppercase;
+}
+
+.Link:hover {
+  color: white;
 }
