@@ -13,7 +13,8 @@ const nextConfig = {
    * Set base path. This is the slug of your GitHub repository.
    * https://nextjs.org/docs/app/api-reference/next-config-js/basePath
    */
-  basePath: "/nextjs-testing",
+  //   only for github pages
+  //   basePath: "/nextjs-testing",
 
   /**
    * Disable server-based image optimization. Next.js does not support
