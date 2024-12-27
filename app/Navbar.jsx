@@ -12,9 +12,15 @@ export default function Navbar() {
 
   return (
     <div className={styles.navbar}>
-      <div  className={styles.logo_name}>
-        <Image src="/rtlogo1.png" width={384} height={222} alt="Logo" />
-        <div>IIT-B Rocket Team</div>
+      <div className={styles.logo_name}>
+        <Image
+          className={styles.logo}
+          src="/rtlogo1.png"
+          width={384}
+          height={222}
+          alt="Logo"
+        />
+        <div className={styles.name}>IIT-B Rocket Team</div>
       </div>
 
       <ul className={styles.links}>
