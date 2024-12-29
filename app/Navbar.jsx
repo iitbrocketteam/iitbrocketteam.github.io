@@ -6,8 +6,8 @@ export default function Navbar() {
   const pages = [
     { name: "sponsors", path: "/sponsors" },
     { name: "rockets", path: "/rockets" },
-    { name: "events", path: "/events" },
-    { name: "team", path: "/team" },
+    // { name: "events", path: "/events" },
+    // { name: "team", path: "/team" },
   ];
 
   return (
