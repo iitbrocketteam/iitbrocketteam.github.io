@@ -1,0 +1,54 @@
+html {
+  background-color: white;
+}
+
+.page {
+  background-color: white;
+  color: black;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  align-items: center;
+}
+
+.heading {
+  font-size: 3rem;
+  margin: 0rem 0rem 2rem 0rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.7rem;
+  width: 20rem;
+  background-color: rgb(237, 237, 237);
+  padding: 1.22rem;
+  border-radius: 1rem;
+}
+
+.input {
+  margin: 0.3rem 0rem 0.3rem 0rem;
+  font-size: 1.1rem;
+  padding: 0.3rem;
+  border: 1rem red;
+  border-radius: 0.4rem;
+}
+
+.submit {
+  margin: 0.3rem 0rem 0rem 0rem;
+  font-size: 1.3rem;
+  background-color: black;
+  border-radius: 0.4rem;
+  padding: 0.6rem 0.3rem;
+  width: 100%;
+  font-weight: 500;
+  border: none;
+}
+
+.submit:hover {
+  background-color: rgb(40, 40, 40);
+}
+.submit:active {
+  background-color: rgb(85, 85, 85);
+}
