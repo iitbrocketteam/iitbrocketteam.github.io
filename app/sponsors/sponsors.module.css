@@ -1,0 +1,56 @@
+.center_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 2rem;
+  width: 100vw;
+}
+
+.background {
+  /* width: 100vw;
+  height: 38.65vw;
+  z-index: -10;
+  position: relative; */
+}
+
+.support_h1 {
+    margin: 3rem;
+}
+
+.pitch {
+  font-size: 2rem;
+}
+
+.thanks {
+  font-size: 2rem;
+  background-color: rgb(38, 37, 37);
+}
+
+.tier {
+  color: black;
+  font-weight: 700;
+  padding: 8rem;
+}
+
+.platinum {
+  background-color: #e5e4e2;
+}
+
+.gold {
+  background-color: #ffd700;
+}
+
+.silver {
+  background-color: #c0c0c0;
+}
+
+.button_container {
+  margin: 2rem;
+}
+
+.contact_us {
+  padding: 0.9rem;
+  background-color: rgb(41, 62, 255);
+  margin: 1rem;
+  border-radius: 0.6rem;
+}
