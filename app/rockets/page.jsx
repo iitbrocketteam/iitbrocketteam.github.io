@@ -21,8 +21,8 @@ export default function Rockets() {
           />
 
           <Rocket
-            name="Agastya"
-            year="2024"
+            name="Adyanta"
+            year="2023"
             data={[
               ["Length", "1.5m"],
               ["Mass", "1.5kg"],
