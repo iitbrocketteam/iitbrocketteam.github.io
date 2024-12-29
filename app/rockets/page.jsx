@@ -15,6 +15,17 @@ export default function Rockets() {
               ["Length", "1.5m"],
               ["Mass", "1.5kg"],
             ]}
+            videoSrc="/agastya01.mp4"
+          />
+
+          <Rocket
+            name="Agastya"
+            year="2024"
+            data={[
+              ["Length", "1.5m"],
+              ["Mass", "1.5kg"],
+            ]}
+            videoSrc="/agastya01.mp4"
           />
         </li>
       </ul>

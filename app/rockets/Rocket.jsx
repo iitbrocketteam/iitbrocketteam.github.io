@@ -9,7 +9,7 @@ const roboto_mono = Roboto_Mono({
   display: "swap",
 });
 
-export default function Rocket({ name, year, data }) {
+export default function Rocket({ name, year, data, videoSrc }) {
   const rows = data.map((element) => (
     <tr key={element[0]}>
       <th>{element[0]}</th>
@@ -18,7 +18,7 @@ export default function Rocket({ name, year, data }) {
   ));
 
   return (
-    <div>
+    <div className={styles.rocket_container}>
       <table className={styles.table + " " + roboto_mono.className}>
         <thead>
           <tr>
@@ -30,7 +30,11 @@ export default function Rocket({ name, year, data }) {
         <tbody>{rows}</tbody>
       </table>
 
-      <Image src="/rtlogo1.png" width={384} height={222} alt="Logo" />
+      {/* <Image className={styles.video} src="/rocket.png" width={260} height={750} alt="Logo" /> */}
+
+      <video className={styles.video} width="356" height="800" loop autoPlay>
+        <source src={videoSrc} type="video/mp4" />
+      </video>
     </div>
   );
 }
