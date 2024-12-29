@@ -19,16 +19,27 @@ export default function Rocket({ name, year, data, videoSrc }) {
 
   return (
     <div className={styles.rocket_container}>
-      <table className={styles.table + " " + roboto_mono.className}>
-        <thead>
-          <tr>
-            <th>{name}</th>
-            <td>{year}</td>
-          </tr>
-        </thead>
+      <div>
+        <table className={styles.table + " " + roboto_mono.className}>
+          <thead>
+            <tr>
+              <th>{name}</th>
+              <td>{year}</td>
+            </tr>
+          </thead>
 
-        <tbody>{rows}</tbody>
-      </table>
+          <tbody>{rows}</tbody>
+        </table>
+
+        <p className={styles.para}>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla rem
+          quia commodi ex et porro sequi nisi magnam fugit distinctio nobis
+          dolorem quaerat nam vel neque magni eaque ut, eligendi minus!
+          Consequuntur dolorum fugit inventore, optio, architecto harum facere
+          iusto deserunt molestias totam dolorem. Ratione porro saepe asperiores
+          dignissimos neque!
+        </p>
+      </div>
 
       {/* <Image className={styles.video} src="/rocket.png" width={260} height={750} alt="Logo" /> */}
 

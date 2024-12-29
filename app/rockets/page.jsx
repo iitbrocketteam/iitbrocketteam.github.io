@@ -4,7 +4,7 @@ import styles from "./rockets.module.css";
 export default function Rockets() {
   return (
     <div className={styles.page}>
-      <h1>Our Rockets</h1>
+      <h1 className={styles.heading}>Our Rockets</h1>
 
       <ul>
         <li>
@@ -12,8 +12,10 @@ export default function Rockets() {
             name="Agastya"
             year="2024"
             data={[
-              ["Length", "1.5m"],
-              ["Mass", "1.5kg"],
+              ["Height", "2.0m"],
+              ["Diameter", "20cm"],
+              ["Launch Mass", "2.0kg"],
+              ["Motor Diameter", "10cm"],
             ]}
             videoSrc="/agastya01.mp4"
           />
