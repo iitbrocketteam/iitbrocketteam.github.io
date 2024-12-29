@@ -34,6 +34,15 @@ export default function Contact() {
           pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
         />
 
+        <textarea
+          placeholder="Message"
+          className={styles.input}
+          id="message"
+          name="message"
+          rows="4"
+          cols="20"
+        ></textarea>
+
         <input className={styles.submit} type="submit" value="SUBMIT" />
       </form>
     </div>
