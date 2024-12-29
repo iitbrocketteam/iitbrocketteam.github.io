@@ -5,24 +5,28 @@ export default function Sponsors() {
   return (
     <>
       <div className={styles.pitch + " " + styles.center_div}>
-        <Image
+        {/* <Image
           className={styles.background}
           src="/support-bg2.jpg"
           width={714}
           height={276}
           alt="Logo"
-        />
+        /> */}
         <h1 className={styles.support_h1}>Support the Team!</h1>
 
         <div className={styles.button_container}>
-          <a className={styles.contact_us} href="">
+          <a
+            className={styles.contact_us}
+            href="/contact"
+            target="_blank" // open in new tab
+          >
             Contact Us
           </a>
 
           <a
             className={styles.contact_us}
             href="https://1drv.ms/b/s!AvV62ePKU4vKi5BaRrqnnAjQ2IuQGw?e=WplGkc"
-            target="_blank" // open in new tab
+            target="_blank"
           >
             View Brochure
           </a>
