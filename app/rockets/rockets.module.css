@@ -13,7 +13,7 @@
 
 .table tbody th {
   font-weight: 400;
-  width: 16rem;
+  width: 18rem;
   padding: 0.3rem 0.1rem;
 }
 
@@ -28,14 +28,14 @@
 }
 
 .table td {
-  width: 6rem;
+  width: 10rem;
   padding: 0.1rem 0.1rem;
   text-align: end;
 }
 
 .para {
   font-size: 1.1rem;
-  width: 22rem;
+  width: 28rem;
   text-align: justify;
   margin: 2rem 0rem 0rem 0rem;
 }
