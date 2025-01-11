@@ -1,0 +1,47 @@
+.page {
+  background-color: white;
+  min-height: 100svh;
+  color: black;
+}
+
+.page h2 {
+  font-size: 2em;
+  color: rgb(0, 51, 102);
+  margin-bottom: 1rem;
+}
+
+.content {
+  padding: 2em 3em;
+  margin: auto;
+  max-width: 1200px;
+  font-size: 1.4rem;
+}
+
+.group_photo {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 2em;
+}
+
+.description p {
+  max-width: 60%;
+}
+
+.group_photo {
+  max-width: 40%;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.click_command {
+  margin-top: 3.4rem;
+}
