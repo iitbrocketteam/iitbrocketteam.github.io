@@ -1,39 +1,81 @@
-.navbar {
-  background-color: rgb(10, 10, 10);
-  height: 5rem;
-  font-weight: 700;
-  font-size: 1.2rem;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-}
-
-.logo_name {
-  /* TODO why? */
-  display: inline-flex;
-}
-
 .logo {
-  width: auto;
-  height: 2.5rem;
+  width: 160px;
+  height: auto;
 }
 
-.name {
-  align-content: center;
+.logo img {
+  display: block;
+  width: 95%;
+  height: auto;
 }
 
 .links {
-  padding: 1rem 1rem;
-  display: inline-flex;
-  justify-content: end;
-  align-items: center;
-  gap: 2rem;
+  display: flex;
+  gap: 0.5rem;
 }
 
-.Link {
-  text-transform: uppercase;
-}
-
-.Link:hover {
+.links a {
+  text-decoration: none;
   color: white;
+  font-size: 1.4rem;
+}
+
+.links a:hover {
+  color: gray;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  background-color: #111;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1em;
+  font-weight: bold;
+}
+
+.buttons {
+  display: flex;
+  gap: 1em;
+}
+
+.buttons a {
+  padding: 0.5em 1em;
+  border-radius: 5px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.reach_out {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s, color 0.3s;
+
+  background-color: #f4f4f4;
+  color: #000;
+}
+
+.reach_out:hover {
+  background-color: #ddd;
 }
