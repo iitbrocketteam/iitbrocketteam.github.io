@@ -6,22 +6,34 @@
   width: 100vw;
 }
 
+.pitch {
+  font-size: 2rem;
+  /* background-color: white; */
+  color: rgb(255, 255, 255);
+  height: 80rem;
+  padding: 4rem 9rem;
+}
+
+.description {
+  margin: 2rem 0rem;
+}
+
 .background {
-  /* width: 100vw;
-  height: 38.65vw;
-  z-index: -10;
-  position: relative; */
+  width: 100vw;
+  /* height: 38.65vw; */
+  /* position: relative; */
+  /* z-index: -10; */
+  position: absolute;
+  z-index: -1;
+filter: brightness(55%);
 }
 
 .support_h1 {
-    margin: 3rem;
+  margin: 3rem;
+  text-align: center;
 }
 
-.pitch {
-  font-size: 2rem;
-}
-
-.thanks {
+.thanks_msg {
   font-size: 2rem;
   background-color: rgb(38, 37, 37);
 }
@@ -46,6 +58,7 @@
 
 .button_container {
   margin: 2rem;
+  color: white;
 }
 
 .contact_us {
