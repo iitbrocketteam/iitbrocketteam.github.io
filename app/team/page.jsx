@@ -1,6 +1,8 @@
 import styles from "./team.module.css";
 import Image from "next/image";
 
+import Grid from "./Grid.jsx";
+
 export default function Team() {
   return (
     <div className={styles.page}>
@@ -16,6 +18,7 @@ export default function Team() {
             international mentor who will be our Flyer of Record for the
             competition.
           </p>
+
           <Image
             className={styles.group_photo}
             src="/group_photo_800_cropped.jpg"
@@ -24,8 +27,12 @@ export default function Team() {
             alt="Group Photo"
           />
         </div>
-        <div className={styles.click_command}>Click on any of our members below to learn more about them!</div>
+        <div className={styles.click_command}>
+          Click on any of our members below to learn more about them!
+        </div>
       </main>
+
+      <Grid />
     </div>
   );
 }
