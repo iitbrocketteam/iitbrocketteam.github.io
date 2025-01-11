@@ -3,18 +3,22 @@ html {
 }
 
 .page {
-  background-color: white;
+  /* background-color: white; */
+  background-image: url("/mountains.png");
+  background-repeat: repeat-x;
+
   color: black;
-  padding: 3rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   width: 100vw;
+  height: 100vh;
   align-items: center;
 }
 
 .heading {
   font-size: 3rem;
-  margin: 0rem 0rem 2rem 0rem;
+  margin: 0rem 0rem 1rem 0rem;
 }
 
 .form {
@@ -22,17 +26,19 @@ html {
   flex-direction: column;
   font-size: 1.7rem;
   width: 20rem;
-  background-color: rgb(237, 237, 237);
-  padding: 1.22rem;
+  background-color: rgb(5, 109, 255);
+  padding: 1rem;
   border-radius: 1rem;
 }
 
 .input {
   margin: 0.3rem 0rem 0.3rem 0rem;
   font-size: 1.1rem;
-  padding: 0.3rem;
+  padding: 0.3rem 0.6rem;
   border: 1rem red;
-  border-radius: 0.4rem;
+  border-radius: 0.9rem;
+  background-color: black;
+  color: white;
 }
 
 .submit {
