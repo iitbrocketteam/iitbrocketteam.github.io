@@ -12,10 +12,12 @@ export default function Rockets() {
             name="Agastya"
             year="2024"
             data={[
+              ["Apogee", "9800m"],
+              ["Motor", "M2500"],
+              ["Fuel", "APCP"],
               ["Height", "2.0m"],
               ["Diameter", "20cm"],
-              ["Launch Mass", "2.0kg"],
-              ["Motor Diameter", "10cm"],
+              ["Airframe Filament", "Glass Fibre"],
             ]}
             videoSrc="/agastya01.mp4"
           />
@@ -24,10 +26,39 @@ export default function Rockets() {
             name="Adyanta"
             year="2023"
             data={[
-              ["Length", "1.5m"],
-              ["Mass", "1.5kg"],
+              ["Apogee", "9600m"],
+              ["Motor", "M2500"],
+              ["Fuel", "APCP"],
+              ["Height", "1.5m"],
+              ["Diameter", "20cm"],
             ]}
-            videoSrc="/agastya01.mp4"
+            videoSrc="/adyanta01.png"
+          />
+
+          <Rocket
+            name="Jnr1"
+            year="2023"
+            data={[
+              ["Apogee", "9600m"],
+              ["Motor", "M2500"],
+              ["Fuel", "APCP"],
+              ["Height", "1.5m"],
+              ["Diameter", "20cm"],
+            ]}
+            videoSrc="/adyanta01.png"
+          />
+
+          <Rocket
+            name="Adhyanta junior"
+            year="2023"
+            data={[
+              ["Apogee", "9600m"],
+              ["Motor", "M2500"],
+              ["Fuel", "APCP"],
+              ["Height", "1.5m"],
+              ["Diameter", "20cm"],
+            ]}
+            videoSrc="/adyanta01.png"
           />
         </li>
       </ul>
