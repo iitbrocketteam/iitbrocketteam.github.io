@@ -1,5 +1,6 @@
 import styles from "./Navbar.module.css";
 import Image from "next/image";
+import { FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function Navbar() {
   return (
@@ -32,21 +33,21 @@ export default function Navbar() {
           target="_blank"
           className={styles.social_icon}
         >
-          <i class="fab fa-instagram"></i>
+          <FaInstagram />
         </a>
         <a
           href="https://in.linkedin.com/company/iitbrocketteam"
           target="_blank"
           className={styles.social_icon}
         >
-          <i class="fab fa-linkedin"></i>
+          <FaLinkedin />
         </a>
         <a
           href="mailto:iitbrocketteam@gmail.com"
           target="_blank"
           className={styles.social_icon}
         >
-          <i class="fas fa-envelope icon"></i>
+          <FaEnvelope />
         </a>
       </div>
     </nav>
