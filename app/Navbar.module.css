@@ -1,6 +1,20 @@
+.navbar {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 0.4em 2em;
+  background-color: #111;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
 .logo {
-  width: 160px;
+  width: 9rem; /* indirectly: controls navbar height */
   height: auto;
+
+  /* send logo to left */
+  margin-right: auto;
 }
 
 .logo img {
@@ -12,62 +26,37 @@
 .links {
   display: flex;
   gap: 0.5rem;
+  /* margin-right: 2rem; */
 }
 
 .links a {
   text-decoration: none;
   color: white;
   font-size: 1.4rem;
+  margin: 0 0.6em;
+  font-weight: bold;
 }
 
 .links a:hover {
   color: gray;
 }
 
-.actions {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1em 2em;
-  background-color: #111;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-  margin: 0 1em;
-  font-weight: bold;
-}
-
 .buttons {
   display: flex;
-  gap: 1em;
+  gap: 1.0rem;
+  font-size: 2rem;
 }
 
 .buttons a {
-  padding: 0.5em 1em;
-  border-radius: 5px;
-}
-
-.buttons {
-  display: flex;
-  gap: 10px;
+  /* padding: 0.5em 1em; */
 }
 
 .reach_out {
-  padding: 8px 15px;
+  padding: 0.6rem 0.9rem;
+  margin: 0rem 1.4rem;
   border: none;
-  border-radius: 5px;
-  font-size: 14px;
+  border-radius: 0.3rem;
+  font-size: 0.9rem;
   cursor: pointer;
   text-transform: uppercase;
   transition: background-color 0.3s, color 0.3s;
