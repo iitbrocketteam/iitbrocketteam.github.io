@@ -1,52 +1,60 @@
 import styles from "./sponsors.module.css";
 import Image from "next/image";
 
+// https://fonts.google.com/?preview.text=TRANSCENDING%20LIMITS%0ADEFYING%20NORMS&preview.size=26&categoryFilters=Appearance:%2FTheme%2FTechno
+// Space_Mono, Orbitron
+import { Orbitron as techno_font_class, Roboto_Mono } from "next/font/google";
+const techno_font = techno_font_class({ weight: ["400", "700"] });
+const roboto_mono = Roboto_Mono({ weight: "400" });
+
 export default function Sponsors() {
   return (
     <>
       <div className={styles.pitch + " " + styles.center_div}>
-        <Image
-          className={styles.background}
-          src="/agastya02.jpg"
-          width={1403}
-          height={2104}
-          alt="Logo"
-        />
+        <main className={styles.main + " " + styles.center_div}>
+          {/* <Image
+            className={styles.background}
+            src="/agastya02.jpg"
+            width={1403}
+            height={2104}
+            alt="Logo"
+          /> */}
 
-        <h1 className={styles.support_h1}>
           {/* Support the Team! */}
-          Transcending Limits
-          <br />
-          Defying Norms
-        </h1>
 
-        <div className={styles.button_container}>
-          <a
-            className={styles.contact_us}
-            href="/contact"
-            target="_blank" // open in new tab
+          <div className={styles.support_heading + " " + techno_font.className}>
+            <h2>Transcending Limits</h2>
+            <h1>Defying Norms</h1>
+          </div>
+
+          <div
+            className={styles.button_container + " " + techno_font.className}
           >
-            Contact Us
-          </a>
-
-          <a
-            className={styles.contact_us}
-            // href="https://1drv.ms/b/s!AvV62ePKU4vKi5BaRrqnnAjQ2IuQGw?e=WplGkc"
-            href="/brochure.pdf"
-            target="_blank"
-          >
-            View Brochure
-          </a>
-        </div>
-
-        <div className={styles.description}>
-          Our team is dedicated to elevating Indian amateur rocketry through
-          groundbreaking advancements. Beyond launching rockets, our mission is
-          to cultivate technical skills and promote STEM education at all
-          levels. Your support will empower us to push the boundaries of
-          innovation and inspire the next generation of engineers and
-          scientists.
-        </div>
+            <a
+              className={styles.contact_us}
+              href="/contact"
+              target="_blank" // open in new tab
+            >
+              Contact Us
+            </a>
+            <a
+              className={styles.contact_us}
+              // href="https://1drv.ms/b/s!AvV62ePKU4vKi5BaRrqnnAjQ2IuQGw?e=WplGkc"
+              href="/brochure.pdf"
+              target="_blank"
+            >
+              View Brochure
+            </a>
+          </div>
+          <div className={styles.description + " " + roboto_mono.className}>
+            Our team is dedicated to elevating Indian amateur rocketry through
+            groundbreaking advancements. Beyond launching rockets, our mission
+            is to cultivate technical skills and promote STEM education at all
+            levels. Your support will empower us to push the boundaries of
+            innovation and inspire the next generation of engineers and
+            scientists.
+          </div>
+        </main>
 
         <div className={styles.reasons}>
           <h3 className={styles.description}>Why you should sponsor us:</h3>
@@ -64,6 +72,7 @@ export default function Sponsors() {
           </ol>
         </div>
       </div>
+
       <div className={styles.thanks + " " + styles.center_div}>
         <div className={styles.thanks_msg + " " + styles.center_div}>
           <h2>Thanks to our Sponsors!</h2>
