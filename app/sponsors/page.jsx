@@ -4,12 +4,20 @@ import Link from "next/link";
 
 // https://fonts.google.com/?preview.text=TRANSCENDING%20LIMITS%0ADEFYING%20NORMS&preview.size=26&categoryFilters=Appearance:%2FTheme%2FTechno
 // Space_Mono, Orbitron
-import { Orbitron as techno_font_class, Roboto_Mono } from "next/font/google";
+import {
+  Orbitron as techno_font_class,
+  Roboto_Mono,
+  Inter,
+} from "next/font/google";
 const techno_font = techno_font_class({
   weight: ["400", "700"],
   subsets: ["latin"],
 });
 const roboto_mono = Roboto_Mono({ weight: "400", subsets: ["latin"] });
+const inter = Inter({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+});
 
 export default function Sponsors() {
   return (
@@ -149,7 +157,7 @@ export default function Sponsors() {
 
       <div
         className={
-          styles.thanks + " " + styles.center_div + " " + roboto_mono.className
+          styles.thanks + " " + styles.center_div + " " + inter.className
         }
       >
         <div className={styles.thanks_msg + " " + styles.center_div}>
@@ -160,27 +168,39 @@ export default function Sponsors() {
             styles.tier + " " + styles.platinum + " " + styles.center_div
           }
         >
-          <h3>Platinum</h3>
+          <h3 className={styles.platinum}>Platinum</h3>
 
-          <Image
-            className={styles.background}
-            src="/nextjs-testing/ansys-logo.png"
-            width={577}
-            height={189}
-            alt="Logo"
-          />
+          <div className={styles.logos}>
+            <Image
+              className={styles.sponsor_logo}
+              src="/nextjs-testing/ansys-logo.png"
+              width={577}
+              height={189}
+              alt="Logo"
+            />
+
+            <Image
+              className={styles.sponsor_logo}
+              src="/nextjs-testing/ansys-logo.png"
+              width={577}
+              height={189}
+              alt="Logo"
+            />
+
+            <Image
+              className={styles.sponsor_logo}
+              src="/nextjs-testing/ansys-logo.png"
+              width={577}
+              height={189}
+              alt="Logo"
+            />
+          </div>
         </div>
-        <div
-          className={styles.tier + " " + styles.gold + " " + styles.center_div}
-        >
-          Gold
+        <div className={styles.tier + " " + styles.center_div}>
+          <h3 className={styles.gold}>Gold</h3>
         </div>
-        <div
-          className={
-            styles.tier + " " + styles.silver + " " + styles.center_div
-          }
-        >
-          Silver
+        <div className={styles.tier + " " + styles.center_div}>
+          <h3 className={styles.silver}>Silver</h3>
         </div>
       </div>
     </>

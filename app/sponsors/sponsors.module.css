@@ -48,6 +48,13 @@
   font-size: 1.6rem;
 }
 
+.contact_us {
+  padding: 1rem;
+  background-color: rgba(129, 129, 129, 0.092);
+  margin: 1rem;
+  border: 0.1rem solid white;
+}
+
 .description {
   margin: 3rem 0rem;
   padding: 0rem 17rem;
@@ -116,35 +123,52 @@
 /* ------------ THANKS ------------------ */
 
 .thanks {
-  padding: 0rem;
+  padding: 2rem;
+  background-color: rgb(27, 27, 27);
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .thanks_msg {
   font-size: 2rem;
-  background-color: rgb(38, 37, 37);
+  padding: 0;
+  margin: 2rem 0rem 2rem 0rem;
 }
 
 .tier {
-  color: black;
+  padding: 0rem;
+  /* color: black; */
   font-weight: 700;
-  padding: 8rem;
+  padding: 1rem;
+  border: 0.1rem solid white;
+  border-radius: 1rem;
+  width: 50rem;
+}
+
+.tier h3 {
+  font-size: 3rem;
+}
+
+.logos {
+  display: flex;
+}
+
+.sponsor_logo {
+  height: 4rem;
+  width: auto;
+  margin: 0.8rem 0.5rem;
 }
 
 .platinum {
-  background-color: #e5e4e2;
+  color: #e5e4e2;
 }
 
 .gold {
-  background-color: #ffd700;
+  color: #ffd700;
 }
 
 .silver {
-  background-color: #c0c0c0;
-}
-
-.contact_us {
-  padding: 1rem;
-  background-color: rgba(129, 129, 129, 0.092);
-  margin: 1rem;
-  border: 0.1rem solid white;
+  color: #c0c0c0;
 }
