@@ -1,5 +1,6 @@
 import styles from "./sponsors.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 // https://fonts.google.com/?preview.text=TRANSCENDING%20LIMITS%0ADEFYING%20NORMS&preview.size=26&categoryFilters=Appearance:%2FTheme%2FTechno
 // Space_Mono, Orbitron
@@ -37,21 +38,22 @@ export default function Sponsors() {
           <div
             className={styles.button_container + " " + techno_font.className}
           >
-            <a
+            <Link
               className={styles.contact_us}
               href="/contact"
               target="_blank" // open in new tab
             >
               Contact Us
-            </a>
-            <a
+            </Link>
+            <Link
               className={styles.contact_us}
+              // TODO brochure is too large
               // href="https://1drv.ms/b/s!AvV62ePKU4vKi5BaRrqnnAjQ2IuQGw?e=WplGkc"
               href="/brochure.pdf"
               target="_blank"
             >
               View Brochure
-            </a>
+            </Link>
           </div>
           <div className={styles.description}>
             Our team is dedicated to elevating Indian amateur rocketry through
@@ -100,7 +102,7 @@ export default function Sponsors() {
               </p>
             </li>
           </ol>
-          
+
           {/* separator */}
           <br />
 

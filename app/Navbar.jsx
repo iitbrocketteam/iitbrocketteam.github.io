@@ -1,5 +1,6 @@
 import styles from "./Navbar.module.css";
 import Image from "next/image";
+import Link from "next/link";
 import { FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function Navbar() {
@@ -16,11 +17,11 @@ export default function Navbar() {
       </div>
 
       <div className={styles.links}>
-        <a href="/">Home</a>
-        <a href="/team">Team</a>
-        <a href="/sponsors">Sponsors</a>
-        <a href="/achievements">Achievements</a>
-        <a href="/rockets">Rockets</a>
+        <Link href="/">Home</Link>
+        <Link href="/team">Team</Link>
+        <Link href="/sponsors">Sponsors</Link>
+        <Link href="/achievements">Achievements</Link>
+        <Link href="/rockets">Rockets</Link>
       </div>
 
       <div className={styles.buttons}>
