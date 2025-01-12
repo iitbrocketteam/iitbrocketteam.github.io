@@ -1,9 +1,43 @@
+"use client";
+
 import styles from "./Navbar.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 import { FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
+// import {
+//   Helv
+//   Inter,
+// } from "next/font/google";
+// const techno_font = techno_font_class({
+//   weight: ["400", "700"],
+//   subsets: ["latin"],
+// });
+
+const links = [
+  ["/", "Home"],
+  ["/team", "Team"],
+  ["/sponsors", "Sponsors"],
+  ["/achievements", "Achievements"],
+  ["/rockets", "Rockets"],
+];
+
 export default function Navbar() {
+  const pathname = usePathname();
+  console.log(pathname);
+
+  const links_content = links.map((link) => (
+    <Link
+      href={link[0]}
+      key={link[0]}
+      className={link[0] == pathname ? styles.active :  styles.inactive}
+    >
+      {link[1]}
+    </Link>
+  ));
+
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>
@@ -16,13 +50,7 @@ export default function Navbar() {
         />
       </div>
 
-      <div className={styles.links}>
-        <Link href="/">Home</Link>
-        <Link href="/team">Team</Link>
-        <Link href="/sponsors">Sponsors</Link>
-        <Link href="/achievements">Achievements</Link>
-        <Link href="/rockets">Rockets</Link>
-      </div>
+      <div className={styles.links}>{links_content}</div>
 
       <div className={styles.buttons}>
         <button className={styles.reach_out}>REACH OUT TO US</button>
