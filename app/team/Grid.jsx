@@ -11,15 +11,13 @@ export default function Grid() {
 
       <ul className={styles.member_list}>
         {subsystem.members.map((member) => (
-          <div key={member.name}
-          className={styles.member}
-          >
+          <div key={member.name} className={styles.member}>
             <Image
               className={styles.profile_pic}
               src={`/nextjs-testing/team/${member.name}.jpg`}
-              alt={member.name}
               width={400}
               height={400}
+              alt=""
             />
 
             <h4>{member.name}</h4>
