@@ -10,7 +10,11 @@ const roboto_mono = Roboto_Mono({ weight: "400" });
 export default function Sponsors() {
   return (
     <>
-      <div className={styles.pitch + " " + styles.center_div}>
+      <div
+        className={
+          styles.pitch + " " + styles.center_div + " " + roboto_mono.className
+        }
+      >
         <main className={styles.main + " " + styles.center_div}>
           {/* <Image
             className={styles.background}
@@ -46,7 +50,7 @@ export default function Sponsors() {
               View Brochure
             </a>
           </div>
-          <div className={styles.description + " " + roboto_mono.className}>
+          <div className={styles.description}>
             Our team is dedicated to elevating Indian amateur rocketry through
             groundbreaking advancements. Beyond launching rockets, our mission
             is to cultivate technical skills and promote STEM education at all
@@ -57,16 +61,40 @@ export default function Sponsors() {
         </main>
 
         <div className={styles.reasons}>
-          <h3 className={styles.description}>Why you should sponsor us:</h3>
+          <h3>Why you should sponsor us:</h3>
 
           <ol>
             <li>
-              <h4>CSR and Tax Exemption</h4>
+              <h4>1. CSR and Tax Exemption</h4>
               <p>
                 Contributions to the IITB Rocket Team qualify for tax rebates
                 under the relevant sections of the Income Tax Act for scientific
                 research. This presents an opportunity to support scientific
                 innovation and research while benefiting from tax advantages
+              </p>
+            </li>
+
+            <li>
+              <h4>2. Branding Avenues</h4>
+              <p>
+                As a sponsor, your brand will gain global exposure at the
+                Spaceport America Cup, Techfest, and Tech & RnD Expo, reaching
+                thousands of attendees and industry professionals. Your logo
+                will be featured on our rocket, T-shirts, and banners, plus
+                across our website and social media (40k+ followers). You'll
+                also connect with talented IIT Bombay students for internships.
+              </p>
+            </li>
+
+            <li>
+              <h4>3. Soar 30000 feet high</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Corporis commodi, voluptas, veniam assumenda officiis odio optio
+                quae asperiores nisi error nihil modi quos similique quod neque
+                delectus vel perspiciatis quas. Recusandae ea aliquam atque
+                accusantium corporis ducimus impedit vero animi obcaecati
+                aspernatur, neque eum. Ipsam aut quasi hic amet perferendis.
               </p>
             </li>
           </ol>
