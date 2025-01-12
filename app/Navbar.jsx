@@ -9,7 +9,7 @@ export default function Navbar() {
       <div className={styles.logo}>
         <Image
           className={styles.logo}
-          src="/rtlogo1.png"
+          src="/nextjs-testing/rtlogo1.png"
           width={384}
           height={222}
           alt="Logo"

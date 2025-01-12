@@ -147,7 +147,11 @@ export default function Sponsors() {
         </div>
       </div>
 
-      <div className={styles.thanks + " " + styles.center_div}>
+      <div
+        className={
+          styles.thanks + " " + styles.center_div + " " + roboto_mono.className
+        }
+      >
         <div className={styles.thanks_msg + " " + styles.center_div}>
           <h2>Thanks to our Sponsors!</h2>
         </div>
@@ -160,7 +164,7 @@ export default function Sponsors() {
 
           <Image
             className={styles.background}
-            src="/ansys-logo.png"
+            src="/nextjs-testing/ansys-logo.png"
             width={577}
             height={189}
             alt="Logo"

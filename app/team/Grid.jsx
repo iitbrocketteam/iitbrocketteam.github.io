@@ -16,7 +16,7 @@ export default function Grid() {
           >
             <Image
               className={styles.profile_pic}
-              src={`/team/${member.name}.jpg`}
+              src={`/nextjs-testing/team/${member.name}.jpg`}
               alt={member.name}
               width={400}
               height={400}

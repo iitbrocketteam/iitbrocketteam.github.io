@@ -21,7 +21,7 @@ export default function Team() {
 
           <Image
             className={styles.group_photo}
-            src="/group_photo_800_cropped.jpg"
+            src="/nextjs-testing/group_photo_800_cropped.jpg"
             width={800}
             height={418}
             alt="Group Photo"

@@ -17,7 +17,7 @@
 .main {
   /*darken bg*/
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/agastya03.jpg");
+    url("/nextjs-testing/agastya03.jpg");
   background-size: 20%;
   /* height: 100svh; */
 }
