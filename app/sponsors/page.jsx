@@ -85,7 +85,7 @@ export default function Sponsors() {
                 Spaceport America Cup, Techfest, and Tech & RnD Expo, reaching
                 thousands of attendees and industry professionals. Your logo
                 will be featured on our rocket, T-shirts, and banners, plus
-                across our website and social media (40k+ followers). You'll
+                across our website and social media (40k+ followers). You will
                 also connect with talented IIT Bombay students for internships.
               </p>
             </li>
