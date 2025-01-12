@@ -15,7 +15,7 @@ const nextConfig = {
    */
   //   only for github pages
   basePath: "/nextjs-testing",
-  assetPrefix: "/nextjs-testing",
+  assetPrefix: "/nextjs-testing/", // needs trailing slash!
 
   /**
    * Disable server-based image optimization. Next.js does not support
