@@ -64,8 +64,7 @@ export default function Sponsors() {
         </main>
 
         <div className={styles.reasons}>
-          <h3>Why you should sponsor us:</h3>
-
+          <h3>&gt; Why you should sponsor us</h3>
           <ol>
             <li>
               <h4>1. CSR and Tax Exemption</h4>
@@ -98,6 +97,48 @@ export default function Sponsors() {
                 delectus vel perspiciatis quas. Recusandae ea aliquam atque
                 accusantium corporis ducimus impedit vero animi obcaecati
                 aspernatur, neque eum. Ipsam aut quasi hic amet perferendis.
+              </p>
+            </li>
+          </ol>
+          
+          {/* separator */}
+          <br />
+
+          <h3>&gt; How you can help us</h3>
+          <ol>
+            <li>
+              <h4>1. Financial support</h4>
+              <p>
+                We seek monetary contributions to cover essential expenses such
+                as competition fees, materials, travel allowances, outreach,
+                publicity, and event costs. Your support will help us manage
+                operational expenses and focus on innovation and success
+              </p>
+            </li>
+
+            <li>
+              <h4>2. Value in Kind</h4>
+              <p>
+                The IIT Rocket Team designs and builds high-quality engineering
+                prototypes. We invite in-kind sponsorships to support our work,
+                including the provision of mechanical and electrical components,
+                specialized materials, tools, machinery, and other essential
+                supplies for rocket manufacturing. Your contribution will
+                directly aid in advancing our projects and achieving engineering
+                excellence.
+              </p>
+            </li>
+
+            <li>
+              <h4>3. Services and collabs</h4>
+              <p>
+                We seek services such as shipping, accommodation, travel
+                planning, and packaging. Access to your technical experts for
+                guidance would greatly support our efforts. We value scientific
+                mentorship, assistance in connecting with key stakeholders,
+                securing purchase discounts, and collaborating on joint
+                marketing initiatives like press releases and social media
+                campaigns to maximize visibility and impact.
               </p>
             </li>
           </ol>

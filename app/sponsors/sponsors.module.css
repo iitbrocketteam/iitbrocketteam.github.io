@@ -67,7 +67,7 @@
   top: 0;
   content: "";
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   z-index: -1;
 
   background-size: 4rem 4rem;
@@ -86,6 +86,10 @@
 
 .reasons ol {
   list-style-type: none;
+}
+
+.reasons br {
+  font-size: 4rem;
 }
 
 .reasons h4 {
