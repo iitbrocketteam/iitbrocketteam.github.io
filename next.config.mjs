@@ -9,13 +9,14 @@ const nextConfig = {
    */
   output: "export",
 
-  /**
-   * Set base path. This is the slug of your GitHub repository.
-   * https://nextjs.org/docs/app/api-reference/next-config-js/basePath
-   */
-  //   only for github pages
   basePath: "/nextjs-testing",
+
+  // TODO doesn't work:
   assetPrefix: "/nextjs-testing/", // needs trailing slash!
+  
+  // https://nextjs.org/docs/app/api-reference/next-config-js/basePath
+  // https://stackoverflow.com/a/67971972
+  // https://wallis.dev/blog/next-js-basepath-and-assetprefix
 
   /**
    * Disable server-based image optimization. Next.js does not support
