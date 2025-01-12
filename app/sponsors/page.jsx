@@ -4,8 +4,11 @@ import Image from "next/image";
 // https://fonts.google.com/?preview.text=TRANSCENDING%20LIMITS%0ADEFYING%20NORMS&preview.size=26&categoryFilters=Appearance:%2FTheme%2FTechno
 // Space_Mono, Orbitron
 import { Orbitron as techno_font_class, Roboto_Mono } from "next/font/google";
-const techno_font = techno_font_class({ weight: ["400", "700"] });
-const roboto_mono = Roboto_Mono({ weight: "400" });
+const techno_font = techno_font_class({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+});
+const roboto_mono = Roboto_Mono({ weight: "400", subsets: ["latin"] });
 
 export default function Sponsors() {
   return (
