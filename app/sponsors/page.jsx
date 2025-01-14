@@ -52,7 +52,7 @@ export default function Sponsors() {
               className={styles.contact_us}
               // TODO brochure is too large
               // href="https://1drv.ms/b/s!AvV62ePKU4vKi5BaRrqnnAjQ2IuQGw?e=WplGkc"
-              href="/brochure.pdf"
+              href="/IITB RT Sponsorship Brochure 2025.pdf"
               target="_blank"
             >
               View Brochure
