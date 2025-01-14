@@ -1,7 +1,7 @@
 # for quick ignoring a file or dir, prepend with .ignore
 .ignore**
 
-public/team
+# public/team
 
 # dependencies
 /node_modules
