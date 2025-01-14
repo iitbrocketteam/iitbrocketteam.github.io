@@ -4,15 +4,10 @@ import Link from "next/link";
 
 // https://fonts.google.com/?preview.text=TRANSCENDING%20LIMITS%0ADEFYING%20NORMS&preview.size=26&categoryFilters=Appearance:%2FTheme%2FTechno
 // Space_Mono, Orbitron
-import {
-  Orbitron as techno_font_class,
-  Roboto_Mono,
-  Inter,
-} from "next/font/google";
-const techno_font = techno_font_class({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-});
+
+import { Roboto_Mono, Inter, Orbitron } from "next/font/google";
+
+const techno_font = Orbitron({ weight: "400", subsets: ["latin"] });
 const roboto_mono = Roboto_Mono({ weight: "400", subsets: ["latin"] });
 const inter = Inter({
   weight: ["400", "700"],
