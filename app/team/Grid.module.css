@@ -1,16 +1,29 @@
 .list {
   margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
 }
 
 .subsystem h3 {
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
+
+/* TODO
+scrolling animation
+see Ayusha's also
+https://youtu.be/bd9MLIb3DCg
+https://devcom.gymkhana.iitb.ac.in/ourteam 
+seamless grid
+crop and squash photos if needed
+*/
 
 .member_list {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .member {
