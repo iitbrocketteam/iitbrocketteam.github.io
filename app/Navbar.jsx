@@ -32,7 +32,7 @@ export default function Navbar() {
     <Link
       href={link[0]}
       key={link[0]}
-      className={link[0] == pathname ? styles.active :  styles.inactive}
+      className={link[0] == pathname ? styles.active : styles.inactive}
     >
       {link[1]}
     </Link>
@@ -53,7 +53,9 @@ export default function Navbar() {
       <div className={styles.links}>{links_content}</div>
 
       <div className={styles.buttons}>
-        <button className={styles.reach_out}>REACH OUT TO US</button>
+        <Link className={styles.reach_out} href="/contact">
+          REACH OUT TO US
+        </Link>
       </div>
 
       <div className={styles.buttons}>
@@ -64,6 +66,7 @@ export default function Navbar() {
         >
           <FaInstagram />
         </a>
+
         <a
           href="https://in.linkedin.com/company/iitbrocketteam"
           target="_blank"
@@ -71,6 +74,7 @@ export default function Navbar() {
         >
           <FaLinkedin />
         </a>
+
         <a
           href="mailto:iitbrocketteam@gmail.com"
           target="_blank"
