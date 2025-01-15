@@ -9,8 +9,8 @@ const roboto_mono = Roboto_Mono({
   display: "swap",
 });
 
-export default function Rocket({ name, year, data, videoSrc }) {
-  const rows = data.map((element) => (
+export function Table({ props }) {
+  const rows = props.data.map((element) => (
     <tr key={element[0]}>
       <th>{element[0]}</th>
       <td>{element[1]}</td>
@@ -18,18 +18,24 @@ export default function Rocket({ name, year, data, videoSrc }) {
   ));
 
   return (
+    <table className={styles.table + " " + roboto_mono.className}>
+      <thead>
+        <tr>
+          <th>{props.name}</th>
+          <td>{props.year}</td>
+        </tr>
+      </thead>
+
+      <tbody>{rows}</tbody>
+    </table>
+  );
+}
+
+export default function Rocket({ props, videoSrc }) {
+  return (
     <div className={styles.rocket_container}>
       <div>
-        <table className={styles.table + " " + roboto_mono.className}>
-          <thead>
-            <tr>
-              <th>{name}</th>
-              <td>{year}</td>
-            </tr>
-          </thead>
-
-          <tbody>{rows}</tbody>
-        </table>
+        <Table props={props} />
 
         <p className={styles.para}>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla rem
