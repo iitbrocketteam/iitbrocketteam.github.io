@@ -31,7 +31,7 @@ export function Table({ props }) {
   );
 }
 
-export default function Rocket({ props, videoSrc }) {
+export default function Rocket({ props }) {
   return (
     <div className={styles.rocket_container}>
       <div>
@@ -50,7 +50,7 @@ export default function Rocket({ props, videoSrc }) {
       {/* <Image className={styles.video} src="/rocket.png" width={260} height={750} alt="Logo" /> */}
 
       <video className={styles.video} width="356" height="800" loop autoPlay>
-        <source src={videoSrc} type="video/mp4" />
+        <source src={props.videoSrc} type="video/mp4" />
       </video>
     </div>
   );

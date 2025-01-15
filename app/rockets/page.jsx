@@ -1,5 +1,48 @@
 import Rocket from "./Rocket";
+import Slideshow from "./Slideshow";
 import styles from "./rockets.module.css";
+
+const data = [
+  {
+    name: "Adyanta",
+    // name: "1",
+    year: "2023",
+    data: [
+      ["Apogee", "9600m"],
+      ["Motor", "M2500"],
+      ["Fuel", "APCP"],
+      ["Height", "1.5m"],
+      ["Diameter", "20cm"],
+    ],
+    videoSrc: "/nextjs-testing/adyanta01.png",
+  },
+  {
+    name: "Jnr1",
+    // name: "2",
+    year: "2023",
+    data: [
+      ["Apogee", "9600m"],
+      ["Motor", "M2500"],
+      ["Fuel", "APCP"],
+      ["Height", "1.5m"],
+      ["Diameter", "20cm"],
+    ],
+    videoSrc: "/nextjs-testing/adyanta01.png",
+  },
+  {
+    name: "Adhyanta junior",
+    // name: "3",
+    year: "2023",
+    data: [
+      ["Apogee", "9600m"],
+      ["Motor", "M2500"],
+      ["Fuel", "APCP"],
+      ["Height", "1.5m"],
+      ["Diameter", "20cm"],
+    ],
+    videoSrc: "/nextjs-testing/adyanta01.png",
+  },
+];
 
 export default function Rockets() {
   return (
@@ -18,54 +61,11 @@ export default function Rockets() {
             ["Diameter", "20cm"],
             ["Airframe Filament", "Glass Fibre"],
           ],
+          videoSrc: "/nextjs-testing/agastya01.mp4",
         }}
-        videoSrc="/nextjs-testing/agastya01.mp4"
       />
 
-      <Rocket
-        props={{
-          name: "Adyanta",
-          year: "2023",
-          data: [
-            ["Apogee", "9600m"],
-            ["Motor", "M2500"],
-            ["Fuel", "APCP"],
-            ["Height", "1.5m"],
-            ["Diameter", "20cm"],
-          ],
-        }}
-        videoSrc="/nextjs-testing/adyanta01.png"
-      />
-
-      <Rocket
-        props={{
-          name: "Jnr1",
-          year: "2023",
-          data: [
-            ["Apogee", "9600m"],
-            ["Motor", "M2500"],
-            ["Fuel", "APCP"],
-            ["Height", "1.5m"],
-            ["Diameter", "20cm"],
-          ],
-        }}
-        videoSrc="/nextjs-testing/adyanta01.png"
-      />
-
-      <Rocket
-        props={{
-          name: "Adhyanta junior",
-          year: "2023",
-          data: [
-            ["Apogee", "9600m"],
-            ["Motor", "M2500"],
-            ["Fuel", "APCP"],
-            ["Height", "1.5m"],
-            ["Diameter", "20cm"],
-          ],
-        }}
-        videoSrc="/nextjs-testing/adyanta01.png"
-      />
+      <Slideshow rockets_data={data} />
     </div>
   );
 }
