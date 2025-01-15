@@ -3,49 +3,60 @@
 } */
 
 .page {
-  /* background-color: white; */
-  background-image: url("/mountains.png");
+  background-color: white;
+  background-image: url("/nextjs-rt/mountains.png");
   background-repeat: repeat-x;
 
   color: black;
   padding: 2rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 100vw;
   height: 100vh;
   align-items: center;
 }
 
 .heading {
-  font-size: 3rem;
-  margin: 0rem 0rem 1rem 0rem;
+  font-size: 2.4rem;
+  /* margin: 0rem 0rem 1rem 0rem; */
+  width: 100%;
+  text-align: center;
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  font-size: 1.7rem;
-  width: 20rem;
-  background-color: rgb(5, 109, 255);
+  width: 27rem;
+  /* background-color: rgb(5, 109, 255); */
   padding: 1rem;
-  border-radius: 1rem;
+  border-radius: 0.6rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .input {
   margin: 0.3rem 0rem 0.3rem 0rem;
-  font-size: 1.1rem;
-  padding: 0.3rem 0.6rem;
-  border: 1rem red;
-  border-radius: 0.9rem;
-  background-color: black;
-  color: white;
+  font-size: 1.4rem;
+  /* padding: 0.3rem 0.6rem; */
+  padding: 0.8rem;
+  /* border: 1rem red; */
+  border: none;
+  /* border-radius: 0.3rem; */
+  border-bottom: 0.1rem solid black;
+  background-color: transparent;
+  color: black;
 }
 
-.submit {
+.input:focus {
+  background-color: rgb(227, 227, 227);
+
+}
+
+ .submit {
   margin: 0.3rem 0rem 0rem 0rem;
   font-size: 1.3rem;
   background-color: black;
-  border-radius: 0.4rem;
+  border-radius: 0.3rem;
   padding: 0.6rem 0.3rem;
   width: 100%;
   font-weight: 500;
