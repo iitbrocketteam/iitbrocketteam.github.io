@@ -197,6 +197,55 @@ export default function Sponsors() {
         <div className={styles.tier + " " + styles.center_div}>
           <h3 className={styles.silver}>Silver</h3>
         </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Benefits</th>
+              <th>Bronze (Below ₹0.5 Lakh)</th>
+              <th>Silver (₹0.5 Lakh - ₹2 Lakh)</th>
+              <th>Gold (₹2 Lakh - ₹5 Lakh)</th>
+              <th>Platinum (Above ₹5 Lakh)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Interaction with the entire team</td>
+              <td>✓</td>
+              <td>✓</td>
+              <td>✓</td>
+              <td>✓</td>
+            </tr>
+            <tr>
+              <td>Access to resumes of team members</td>
+              <td>✓</td>
+              <td>✓</td>
+              <td>✓</td>
+              <td>✓</td>
+            </tr>
+            <tr>
+              <td>Social media post</td>
+              <td>✓</td>
+              <td>✓</td>
+              <td>✓</td>
+              <td>✓</td>
+            </tr>
+            <tr>
+              <td>Presence on our Website</td>
+              <td>✓</td>
+              <td>✓</td>
+              <td>✓</td>
+              <td>✓</td>
+            </tr>
+            <tr>
+              <td>Logo on official IITB Rocket Team’s T Shirt</td>
+              <td>✓</td>
+              <td>✓</td>
+              <td>✓</td>
+              <td>✓</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </>
   );
