@@ -34,7 +34,11 @@ export default function Navbar() {
     <Link
       href={link[0]}
       key={link[0]}
-      className={link[0] == pathname ? styles.active : styles.inactive}
+      className={
+        styles.subpage_link +
+        " " +
+        (link[0] === pathname ? styles.active : styles.inactive)
+      }
     >
       {link[1]}
     </Link>

@@ -41,22 +41,27 @@ export default function Sponsors() {
           <div
             className={styles.button_container + " " + techno_font.className}
           >
-            <Link
-              className={styles.contact_us}
-              href="/contact"
-              target="_blank" // open in new tab
-            >
-              Contact Us
-            </Link>
-            <Link
-              className={styles.contact_us}
-              // TODO brochure is too large
-              // href="https://1drv.ms/b/s!AvV62ePKU4vKi5BaRrqnnAjQ2IuQGw?e=WplGkc"
-              href="/IITB RT Sponsorship Brochure 2025.pdf"
-              target="_blank"
-            >
-              View Brochure
-            </Link>
+            <div className={styles.button_holder}>
+              <Link
+                className={styles.contact_us}
+                href="/contact"
+                target="_blank" // open in new tab
+              >
+                Contact Us
+              </Link>
+            </div>
+
+            <div className={styles.button_holder}>
+              <Link
+                className={styles.contact_us}
+                // TODO brochure is too large
+                // href="https://1drv.ms/b/s!AvV62ePKU4vKi5BaRrqnnAjQ2IuQGw?e=WplGkc"
+                href="/IITB RT Sponsorship Brochure 2025.pdf"
+                target="_blank"
+              >
+                View Brochure
+              </Link>
+            </div>
           </div>
           <div className={styles.description}>
             Our team is dedicated to elevating Indian amateur rocketry through
