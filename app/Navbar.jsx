@@ -4,8 +4,10 @@ import styles from "./Navbar.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
 import { FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa";
+
+import { Space_Mono } from "next/font/google";
+const font = Space_Mono({ weight: "400", subsets: ["latin"] });
 
 // import {
 //   Helv
@@ -39,7 +41,7 @@ export default function Navbar() {
   ));
 
   return (
-    <nav className={styles.navbar}>
+    <nav className={styles.navbar + " " + font.className}>
       <div className={styles.logo}>
         <Image
           className={styles.logo}
