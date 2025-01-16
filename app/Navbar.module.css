@@ -1,13 +1,16 @@
 .navbar {
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+
+  background-color: #111111b4;
+  backdrop-filter: blur(0.6rem);
+
   display: flex;
   /* justify-content: end; */
   justify-content: space-between;
   align-items: center;
   padding: 0.4em 2em;
-  background-color: #111;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
 }
 
 .logo {
@@ -41,7 +44,7 @@
   /* https://css-irl.info/animating-underlines/ */
   transition: color 0.1s;
   background: none,
-    linear-gradient(to right, rgb(183, 183, 183), rgb(183, 183, 183));
+    linear-gradient(to right, #2262d9, #2262d9);
   background-size: 100% 0.1em, 0 0.1em;
   background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
@@ -49,7 +52,7 @@
 }
 
 .subpage_link:hover {
-  color: gray;
+  color: #2262d9;
   background-size: 0 0.1em, 100% 0.1em;
 }
 
