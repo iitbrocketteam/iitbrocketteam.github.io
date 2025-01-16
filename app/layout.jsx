@@ -9,6 +9,7 @@ const roboto = Roboto({
 });
 
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 export const metadata = {
   title: "IITB Rocket Team",
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
       <body className={roboto.className}>
         <Navbar />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

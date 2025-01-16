@@ -1,0 +1,83 @@
+.footer {
+  background-color: #000;
+  color: white;
+  padding: 2rem 3rem 1rem 3rem;
+}
+
+.footer_container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: auto;
+  height: 12rem;
+}
+
+.footer_sitemap h3 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.footer_sitemap ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  width: 20rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer_sitemap ul li {
+  width: 15ch;
+}
+
+.footer_sitemap ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+.footer_sitemap ul li a:hover {
+  color: #acacac;
+}
+
+/* Social Media Section */
+.footer_social {
+  text-align: left;
+}
+
+.footer_social h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.social_icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social_icon {
+  color: #fff;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.social_icon:hover {
+  color: #8a8a8a;
+}
+
+.footer_bottom {
+  text-align: center;
+
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: #aaa;
+}
