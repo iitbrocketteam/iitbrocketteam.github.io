@@ -46,7 +46,6 @@ export default function Navbar() {
 
   return (
     <nav className={styles.navbar + " " + font.className}>
-      <div className={styles.logo}>
         <Image
           className={styles.logo}
           src="/nextjs-testing/rtlogo1.png"
@@ -54,7 +53,6 @@ export default function Navbar() {
           height={222}
           alt="Logo"
         />
-      </div>
 
       <div className={styles.links}>{links_content}</div>
 

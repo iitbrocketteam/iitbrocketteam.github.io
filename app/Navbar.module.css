@@ -2,6 +2,7 @@
   position: fixed;
   z-index: 100;
   width: 100vw;
+  height: 5rem;
 
   background-color: #000000b4;
   backdrop-filter: blur(0.6rem);
@@ -10,14 +11,14 @@
   /* justify-content: end; */
   justify-content: space-between;
   align-items: center;
-  padding: 0.4em 2em;
+  padding: 0.2em 2em;
 
   --link-highlight: #1768ff;
 }
 
 .logo {
-  width: 9rem; /* indirectly: controls navbar height */
-  height: auto;
+  width: auto;
+  height: 100%;
 
   /* send logo to left */
   /* margin-right: auto; */
