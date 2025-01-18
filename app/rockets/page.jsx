@@ -14,7 +14,7 @@ const data = [
       ["Height", "1.5m"],
       ["Diameter", "20cm"],
     ],
-    videoSrc: "/nextjs-testing/adyanta01.png",
+    videoSrc: "/nextjs-testing/adyanta.mp4",
   },
   {
     name: "Jnr1",
@@ -27,7 +27,7 @@ const data = [
       ["Height", "1.5m"],
       ["Diameter", "20cm"],
     ],
-    videoSrc: "/nextjs-testing/adyanta01.png",
+    videoSrc: "/nextjs-testing/jnr1.mp4",
   },
   {
     name: "Adhyanta junior",
@@ -40,7 +40,7 @@ const data = [
       ["Height", "1.5m"],
       ["Diameter", "20cm"],
     ],
-    videoSrc: "/nextjs-testing/adyanta01.png",
+    videoSrc: "/nextjs-testing/adyanta_junior.mp4",
   },
 ];
 
