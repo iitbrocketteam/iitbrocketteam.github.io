@@ -11,17 +11,14 @@ const font = Montserrat({
 export default function Achievements() {
   const image_list_content = (image_list) =>
     image_list.map((image_name) => (
-      <div className={styles.slide}>
+      <div className={styles.slide} key={image_name}>
         <Image
-          key={image_name}
           width={300}
           height={300}
           src={`/nextjs-testing/achievements/${image_name}.jpg`}
-          // alt="image 1"
+          alt={image_name}
         />
       </div>
-
-      // <p key={image_name}>{`/nextjs-testing/${image_name}.jpg`}</p>
     ));
 
   const events = data.map((event) => (
@@ -44,7 +41,6 @@ export default function Achievements() {
           <li>
             <div className={styles.timeline_content}>
               <h2 className={styles.date}>2024</h2>
-              {/* <h1>Heading 1</h1> */}
               <p>19th in our category, 34th worldwide</p>
             </div>
           </li>
@@ -52,7 +48,6 @@ export default function Achievements() {
           <li>
             <div className={styles.timeline_content}>
               <h2 className={styles.date}>2023</h2>
-              {/* <h1>Heading 2</h1> */}
               <div className={styles.bullet_points}>
                 <p>1) First SA cup entry secured first national rank.</p>
                 <p>2) 2nd position in Techzibtion 23 at IIT Roorkee.</p>
@@ -68,14 +63,12 @@ export default function Achievements() {
           <li>
             <div className={styles.timeline_content}>
               <h2 className={styles.date}>2022</h2>
-              {/* <h1>Heading 3</h1> */}
               <p>First Test launch.</p>
             </div>
           </li>
           <li>
             <div className={styles.timeline_content}>
               <h2 className={styles.date}>2019</h2>
-              <h1></h1>
               <p>Team is established.</p>
             </div>
           </li>
@@ -83,6 +76,7 @@ export default function Achievements() {
       </section>
 
       <h1 className={styles.events_heading}>EVENTS</h1>
+
       <div className={styles.events_container}>{events}</div>
     </div>
   );
