@@ -49,13 +49,20 @@ export default function Achievements() {
             <div className={styles.timeline_content}>
               <h2 className={styles.date}>2023</h2>
               <div className={styles.bullet_points}>
-                <p>1) First SA cup entry secured first national rank.</p>
-                <p>2) 2nd position in Techzibtion 23 at IIT Roorkee.</p>
                 <p>
-                  3) 1st position at Engineers Conclave at Inter-IIT tech meet
-                  11.0 in IIT Madras.
+                  1) First SA cup entry secured <span>first national rank</span>
+                  .
                 </p>
-                <p>4) Placed 1st in TechExpo IIT Guwahati.</p>
+                <p>
+                  2) <span>2nd position</span> in Techzibtion 23 at IIT Roorkee.
+                </p>
+                <p>
+                  3) <span>1st position</span> at Engineers Conclave at
+                  Inter-IIT tech meet 11.0 in IIT Madras.
+                </p>
+                <p>
+                  4) <span>Placed 1st</span> in TechExpo IIT Guwahati.
+                </p>
                 <p>5) Aveshaan place third.</p>
               </div>
             </div>

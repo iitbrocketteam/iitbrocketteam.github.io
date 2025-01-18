@@ -8,7 +8,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center; */
-  padding: 9rem 10rem 10rem 10rem;
+  padding: 6.7rem 10rem 10rem 10rem;
 }
 
 .page h1 {
@@ -17,7 +17,7 @@
 }
 
 .timeline {
-  width: 70%;
+  width: 75%;
   /* height: fit-content; */
   margin: 0 auto;
 }
@@ -43,6 +43,12 @@
 
 .timeline ul li:last-child {
   margin-bottom: 0;
+}
+
+.timeline ul li span {
+  text-shadow: rgb(255, 255, 255) 0.1rem 0 0.7rem;
+  /* background-color: white;
+  color: black; */
 }
 
 /* .timeline_content h1 {
