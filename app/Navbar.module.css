@@ -3,7 +3,7 @@
   z-index: 100;
   width: 100vw;
 
-  background-color: #111111b4;
+  background-color: #000000b4;
   backdrop-filter: blur(0.6rem);
 
   display: flex;
@@ -11,6 +11,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.4em 2em;
+
+  --link-highlight: #1768ff;
 }
 
 .logo {
@@ -44,7 +46,7 @@
   /* https://css-irl.info/animating-underlines/ */
   transition: color 0.1s;
   background: none,
-    linear-gradient(to right, #2262d9, #2262d9);
+    linear-gradient(to right, var(--link-highlight), var(--link-highlight));
   background-size: 100% 0.1em, 0 0.1em;
   background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
@@ -52,7 +54,7 @@
 }
 
 .subpage_link:hover {
-  color: #2262d9;
+  color: var(--link-highlight);
   background-size: 0 0.1em, 100% 0.1em;
 }
 

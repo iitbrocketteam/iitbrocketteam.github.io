@@ -134,3 +134,103 @@
     background-color: aqua;
   } */
 /* } */
+
+/* Events Heading */
+.events_heading {
+  font-size: 36px;
+  /* Increased font size */
+  font-weight: bold;
+  /* Made it bold */
+  text-align: center;
+  /* Centered the heading */
+  margin-top: 6rem;
+  margin-bottom: 20px;
+  /* Reduced space below the heading */
+}
+
+.events_container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.events_section h2 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Container for the Slideshow */
+.infinite_slideshow {
+  width: 100%;
+  /* Full width of the parent container */
+  overflow: hidden;
+  /* Prevent horizontal scrollbars */
+  position: relative;
+  /* height: 350px; */
+  /* Spacious container */
+  background-color: white;
+  border: 2px solid #ccc;
+  /* Optional for styling */
+  border-radius: 10px;
+  /* Optional for rounded corners */
+  display: flex;
+  align-items: center;
+  /* Center images vertically */
+  padding: 10px;
+  /* Add padding for a cleaner look */
+  box-sizing: border-box;
+}
+
+/* Slideshow Track */
+
+.slideshow_track {
+  display: flex;
+  animation: scrollLeft 25s linear infinite;
+  /* Slower and smoother scrolling */
+  width: calc(200%);
+  /* Ensure enough space for duplicate images */
+  gap: 10px;
+  /* Reduced spacing between images */
+}
+
+/* Infinite Scrolling Animation */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Individual Slide */
+.slide {
+  /* flex: 0 0 19%; */
+  /* Slightly increased slide width */
+  box-sizing: border-box;
+  margin: 0 4px;
+  /* Reduced margin between slides */
+  border: 1px solid #ddd;
+  /* Optional: Border around each image */
+  border-radius: 8px;
+  /* Smooth corners */
+  background: #f9f9f9;
+  /* Optional: Light background for contrast */
+}
+
+/* Image Styling */
+.slide img {
+  width: auto;
+  /* use this to adjust track height */
+  height: 12rem;
+  /* Fill the slide width */
+  /* Match the container height */
+  object-fit: cover;
+  /* Maintain aspect ratio and crop excess */
+  display: block;
+  border-radius: 5px;
+  /* margin-top: 10rem; */
+  /* Smooth corners */
+}

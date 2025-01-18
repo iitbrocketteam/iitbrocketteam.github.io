@@ -1,6 +1,7 @@
 import styles from "./achievements.module.css";
 import Image from "next/image";
 import { Montserrat } from "next/font/google";
+import data from "./event_data.json";
 
 const font = Montserrat({
   weight: ["400", "700"],
@@ -8,8 +9,35 @@ const font = Montserrat({
 });
 
 export default function Achievements() {
+  const image_list_content = (image_list) =>
+    image_list.map((image_name) => (
+      <div className={styles.slide}>
+        <Image
+          key={image_name}
+          width={300}
+          height={300}
+          src={`/nextjs-testing/achievements/${image_name}.jpg`}
+          // alt="image 1"
+        />
+      </div>
+
+      // <p key={image_name}>{`/nextjs-testing/${image_name}.jpg`}</p>
+    ));
+
+  const events = data.map((event) => (
+    <section key={event.title} className={styles.events_section}>
+      <h2>{event.title}</h2>
+      <div className={styles.infinite_slideshow}>
+        <div className={styles.slideshow_track}>
+          {image_list_content(event.images)}
+          {image_list_content(event.images)}
+        </div>
+      </div>
+    </section>
+  ));
+
   return (
-    <div className={styles.page + ' ' + font.className}>
+    <div className={styles.page + " " + font.className}>
       <h1>ACHIEVEMENTS</h1>
       <section className={styles.timeline}>
         <ul>
@@ -25,7 +53,7 @@ export default function Achievements() {
             <div className={styles.timeline_content}>
               <h2 className={styles.date}>2023</h2>
               {/* <h1>Heading 2</h1> */}
-              <div class="bullet-points">
+              <div className={styles.bullet_points}>
                 <p>1) First SA cup entry secured first national rank.</p>
                 <p>2) 2nd position in Techzibtion 23 at IIT Roorkee.</p>
                 <p>
@@ -53,6 +81,9 @@ export default function Achievements() {
           </li>
         </ul>
       </section>
+
+      <h1 className={styles.events_heading}>EVENTS</h1>
+      <div className={styles.events_container}>{events}</div>
     </div>
   );
 }
