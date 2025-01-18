@@ -16,10 +16,14 @@
 
 .main {
   /*darken bg*/
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/nextjs-testing/agastya03.jpg");
-  background-size: 20%;
-  /* height: 100svh; */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("/nextjs-testing/agastya-5817.jpg");
+  background-size: 100%;
+  /* size of image is 2400x1600 
+  make the div be height of navbar + height of scaled image */
+  background-position: 0 5rem;
+  height: 20rem;
+  height: calc(5rem + 1600 / 2400 * 100vw);
 }
 
 .support_heading {

@@ -202,7 +202,7 @@ export default function Sponsors() {
         <div className={styles.tier + " " + styles.center_div}>
           <h3 className={styles.silver}>Silver</h3>
         </div>
-
+{/* 
         <table>
           <thead>
             <tr>
@@ -250,7 +250,7 @@ export default function Sponsors() {
               <td>✓</td>
             </tr>
           </tbody>
-        </table>
+        </table> */}
       </div>
     </>
   );
