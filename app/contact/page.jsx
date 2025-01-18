@@ -1,6 +1,7 @@
 import styles from "./contact.module.css";
 
 import { Roboto } from "next/font/google";
+import { FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
 
 const font = Roboto({
   weight: ["300", "500", "700"],
@@ -13,45 +14,42 @@ const font = Roboto({
 
 export default function Contact() {
   return (
-    <div className={styles.page + ' ' + font.className}>
-      <form className={styles.form}>
-        <h1 className={styles.heading}>Contact Us</h1>
-        <input
-          placeholder="Organization"
-          className={styles.input}
-          type="text"
-          id="org"
-          name="org"
-        />
+    <div className={styles.container}>
+      <div className={styles.contact_info}>
+        <h1>Contact us.</h1>
+        <p>iitbrocketteam@gmail.com</p>
+        <p>IIT BOMBAY</p>
+        <p>Powai , Mumbai -400076</p>
+        <div className={styles.social_icons}>
+          <a href="https://www.instagram.com/iitb.rocket.team/">
+            <FaInstagram />
+          </a>
+          <a href="https://www.facebook.com/iitbrocketteam">
+            <FaFacebook />
+          </a>
+          <a href="https://www.linkedin.com/company/iitbrocketteam/">
+            <FaLinkedin />
+          </a>
+        </div>
+      </div>
 
-        <input
-          placeholder="Email"
-          className={styles.input}
-          type="email"
-          id="email"
-          name="email"
-        />
+      <div className={styles.contact_form}>
+        <form action="#" method="post">
+          <label htmlFor="first-name">First Name (required)</label>
+          <input type="text" id="first-name" name="first-name" required />
 
-        <input
-          placeholder="Phone"
-          className={styles.input}
-          type="tel"
-          id="phone"
-          name="phone"
-          pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
-        />
+          <label htmlFor="last-name">Last Name (required)</label>
+          <input type="text" id="last-name" name="last-name" required />
 
-        <textarea
-          placeholder="Message"
-          className={styles.input}
-          id="message"
-          name="message"
-          rows="4"
-          cols="20"
-        ></textarea>
+          <label htmlFor="email">Email (required)</label>
+          <input type="email" id="email" name="email" required />
 
-        <input className={styles.submit} type="submit" value="Send Us &rarr;" />
-      </form>
+          <label htmlFor="message">Message (required)</label>
+          <textarea id="message" name="message" rows="4" required />
+
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
     </div>
   );
 }

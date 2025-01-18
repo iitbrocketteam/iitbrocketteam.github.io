@@ -1,71 +1,70 @@
-/* html {
+.container {
+  font-family: Arial, sans-serif;
   background-color: white;
-} */
-
-.page {
-  background-color: white;
-  background-image: url("/nextjs-rt/mountains.png");
-  background-repeat: repeat-x;
-
-  color: black;
-  padding: 2rem;
+  color: navy;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  width: 100vw;
-  height: 100vh;
   align-items: center;
+  height: 100vh;
+  margin: 0;
+
+  display: flex;
+  width: 100vw;
+  padding: 2rem 10rem;
 }
 
-.heading {
-  font-size: 2.4rem;
-  /* margin: 0rem 0rem 1rem 0rem; */
-  width: 100%;
-  text-align: center;
+.contact_info {
+  flex: 1;
+  padding: 20px;
 }
 
-.form {
+.contact_info h1 {
+  font-size: 2em;
+}
+
+.contact_info p {
+  margin: 10px 0;
+}
+
+.contact_info .social_icons {
+  margin-top: 20px;
+}
+
+.contact_info .social_icons a {
+  margin-right: 10px;
+  color: navy;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.contact_form {
+  flex: 2;
+  padding: 20px;
+}
+
+.contact_form form {
   display: flex;
   flex-direction: column;
-  width: 27rem;
-  /* background-color: rgb(5, 109, 255); */
-  padding: 1rem;
-  border-radius: 0.6rem;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.input {
-  margin: 0.3rem 0rem 0.3rem 0rem;
-  font-size: 1.4rem;
-  /* padding: 0.3rem 0.6rem; */
-  padding: 0.8rem;
-  /* border: 1rem red; */
-  border: none;
-  /* border-radius: 0.3rem; */
-  border-bottom: 0.1rem solid black;
-  background-color: transparent;
-  color: black;
+.contact_form label {
+  margin-top: 10px;
 }
 
-.input:focus {
-  background-color: rgb(227, 227, 227);
-
+.contact_form input,
+.contact_form textarea {
+  padding: 10px;
+  /* margin-top: 5px; */
+  border: 2px solid navy;
+  /* border-color: navy; */
+  border-radius: 5px;
+  background-color: #fff;
 }
 
- .submit {
-  margin: 0.3rem 0rem 0rem 0rem;
-  font-size: 1.3rem;
-  background-color: black;
-  border-radius: 0.3rem;
-  padding: 0.6rem 0.3rem;
-  width: 100%;
-  font-weight: 500;
-  border: none;
-}
-
-.submit:hover {
-  background-color: rgb(40, 40, 40);
-}
-.submit:active {
-  background-color: rgb(85, 85, 85);
+.contact_form input[type="submit"] {
+  margin-top: 20px;
+  background-color: navy;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px 8px;
 }
