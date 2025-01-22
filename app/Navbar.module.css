@@ -18,18 +18,22 @@
   --link-highlight: #1768ff;
 }
 
-.logo {
-  width: auto;
-  height: 100%;
-
-  /* send logo to left */
-  /* margin-right: auto; */
+.logo_link {
+  height: 100%; /* of Navbar height*/
 }
 
-.logo img {
+.logo {
+  /* send logo to left */
+  /* margin-right: auto; */
+
   display: block;
-  width: 95%;
-  height: auto;
+  width: auto;
+  height: 98%; /* of Link height */
+  transition: transform 0.1s;
+}
+
+.logo:hover {
+  transform: scale(1.08);
 }
 
 .links {

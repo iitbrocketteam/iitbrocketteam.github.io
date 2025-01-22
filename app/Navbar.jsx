@@ -49,13 +49,15 @@ export default function Navbar() {
 
   return (
     <nav className={styles.navbar + " " + font.className}>
-      <Image
-        className={styles.logo}
-        src="/nextjs-testing/rtlogo1.png"
-        width={384}
-        height={222}
-        alt="Logo"
-      />
+      <Link className={styles.logo_link} href="/">
+        <Image
+          className={styles.logo}
+          src="/nextjs-testing/rtlogo1.png"
+          width={384}
+          height={222}
+          alt="Logo"
+        />
+      </Link>
 
       <div className={styles.links}>{links_content}</div>
 
