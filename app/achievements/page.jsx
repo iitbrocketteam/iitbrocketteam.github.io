@@ -35,13 +35,19 @@ export default function Achievements() {
 
   return (
     <div className={styles.page + " " + font.className}>
-      <h1>ACHIEVEMENTS</h1>
+      <h1 className={styles.h1_achieveme}>ACHIEVEMENTS</h1>
       <section className={styles.timeline}>
         <ul>
           <li>
             <div className={styles.timeline_content}>
-              <h2 className={styles.date}>2024</h2>
-              <p>19th in our category, 34th worldwide</p>
+              <h2 className={styles.date}>2019</h2>
+              <p>Team is established.</p>
+            </div>
+          </li>
+          <li>
+            <div className={styles.timeline_content}>
+              <h2 className={styles.date}>2022</h2>
+              <p>First Test launch.</p>
             </div>
           </li>
 
@@ -67,16 +73,11 @@ export default function Achievements() {
               </div>
             </div>
           </li>
+
           <li>
             <div className={styles.timeline_content}>
-              <h2 className={styles.date}>2022</h2>
-              <p>First Test launch.</p>
-            </div>
-          </li>
-          <li>
-            <div className={styles.timeline_content}>
-              <h2 className={styles.date}>2019</h2>
-              <p>Team is established.</p>
+              <h2 className={styles.date}>2024</h2>
+              <p>19th in our category, 34th worldwide</p>
             </div>
           </li>
         </ul>
