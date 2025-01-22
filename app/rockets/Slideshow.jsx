@@ -41,18 +41,35 @@ export default function Slideshow({ rockets_data }) {
         </button>
 
         {/* Trigerring video src change: https://stackoverflow.com/a/47382850/17100530 */}
-        <Video
-          class_name={styles.video_inactive}
-          src={rockets_data[modulo(active - 1)].videoSrc}
-        />
+
+        <div
+          onClick={() => {
+            setActive(active - 1);
+          }}
+          className={styles.video_button}
+        >
+          <Video
+            class_name={styles.video_inactive}
+            src={rockets_data[modulo(active - 1)].videoSrc}
+          />
+        </div>
+
         <Video
           class_name={styles.video_active}
           src={rockets_data[modulo(active)].videoSrc}
         />
-        <Video
-          class_name={styles.video_inactive}
-          src={rockets_data[modulo(active + 1)].videoSrc}
-        />
+
+        <div
+          onClick={() => {
+            setActive(active - 1);
+          }}
+          className={styles.video_button}
+        >
+          <Video
+            class_name={styles.video_inactive}
+            src={rockets_data[modulo(active + 1)].videoSrc}
+          />
+        </div>
 
         <button
           className={styles.arrow}

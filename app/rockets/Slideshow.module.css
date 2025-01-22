@@ -7,8 +7,9 @@
 .slideshow_top {
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  margin: 2rem 0rem 1rem 0rem;
 }
 
 .arrow {
@@ -16,29 +17,33 @@
   font-weight: 700;
   font-size: 3rem;
   width: 3rem;
-  height: 3rem;
+  height: 10rem;
 
   /* height: 64px; */
   /* TODO else leaves gap */
-  color: black;
-  border-radius: 100%;
+  /* color: black; */
+  /* border-radius: 100%; */
   padding: 0.1rem;
-  background-color: rgba(255, 255, 255, 0.164);
+  /* background-color: rgba(255, 255, 255, 0.164); */
+  background-color: black;
 }
 
 .video_active {
   height: 24rem;
   width: auto;
+  border: 0.2rem solid black;
+  margin: 0rem 3rem;
 }
 
 .video_inactive {
   height: 14rem;
   width: auto;
+  margin: 0rem 3rem;
 
   /* https://stackoverflow.com/a/41144457/17100530 */
-  -webkit-filter: grayscale(100%);
+  /* -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
   -ms-filter: grayscale(100%);
   -o-filter: grayscale(100%);
-  filter: grayscale(100%);
+  filter: grayscale(100%); */
 }

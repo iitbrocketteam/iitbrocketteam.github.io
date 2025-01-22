@@ -65,6 +65,8 @@ export default function Rockets() {
         }}
       />
 
+      <h1 className={styles.heading}>Previous Iterations</h1>
+
       <Slideshow rockets_data={data} />
     </div>
   );
