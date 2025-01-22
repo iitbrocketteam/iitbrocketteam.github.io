@@ -77,10 +77,18 @@
   left: 0;
 }
 
+.page {
+  --pad: 3rem;
+}
+
 .rocket_container {
   display: flex;
   justify-content: space-between;
-  margin: 3rem 0rem 5rem 0rem;
+  margin: 3rem var(--pad) 5rem var(--pad);
+}
+
+.page h1 {
+  margin-left: var(--pad);
 }
 
 .video {
