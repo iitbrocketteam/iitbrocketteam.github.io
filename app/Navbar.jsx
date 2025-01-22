@@ -4,9 +4,9 @@ import styles from "./Navbar.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Space_Mono } from "next/font/google";
 import { FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
-import { Space_Mono } from "next/font/google";
 const font = Space_Mono({ weight: "400", subsets: ["latin"] });
 
 // import {
@@ -46,13 +46,13 @@ export default function Navbar() {
 
   return (
     <nav className={styles.navbar + " " + font.className}>
-        <Image
-          className={styles.logo}
-          src="/nextjs-testing/rtlogo1.png"
-          width={384}
-          height={222}
-          alt="Logo"
-        />
+      <Image
+        className={styles.logo}
+        src="/nextjs-testing/rtlogo1.png"
+        width={384}
+        height={222}
+        alt="Logo"
+      />
 
       <div className={styles.links}>{links_content}</div>
 
