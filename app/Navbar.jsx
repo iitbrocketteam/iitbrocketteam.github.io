@@ -7,7 +7,10 @@ import { usePathname } from "next/navigation";
 import { Space_Mono } from "next/font/google";
 import { FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
-const font = Space_Mono({ weight: "400", subsets: ["latin"] });
+const font = Space_Mono({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+});
 
 // import {
 //   Helv
@@ -61,7 +64,7 @@ export default function Navbar() {
           REACH OUT TO US
         </Link>
       </div>
-
+      {/* 
       <div className={styles.buttons}>
         <a
           href="https://www.instagram.com/iitb.rocket.team/"
@@ -86,7 +89,7 @@ export default function Navbar() {
         >
           <FaEnvelope />
         </a>
-      </div>
+      </div> */}
     </nav>
   );
 }

@@ -1,17 +1,19 @@
 .navbar {
+  height: 7rem;
+  font-size: 1.6rem;
+  padding: 0.2rem 1rem;
+
   position: fixed;
   z-index: 100;
   width: 100vw;
-  height: 5rem;
 
-  background-color: #000000b4;
+  background-color: #000000d0;
   backdrop-filter: blur(0.6rem);
 
   display: flex;
   /* justify-content: end; */
   justify-content: space-between;
   align-items: center;
-  padding: 0.2em 2em;
 
   --link-highlight: #1768ff;
 }
@@ -39,9 +41,8 @@
 .subpage_link {
   text-decoration: none;
   color: white;
-  font-size: 1.4rem;
-  margin: 0 0.6em;
-  font-weight: lighter;
+  margin: 0 0.6rem;
+  /* font-weight: lighter; */
   position: relative;
 
   /* https://css-irl.info/animating-underlines/ */
@@ -67,7 +68,7 @@
 .buttons {
   display: flex;
   gap: 1rem;
-  font-size: 2rem;
+  /* font-size: 2rem; */
 }
 
 .reach_out {
@@ -75,7 +76,6 @@
   margin: 0rem 1.4rem;
   border: none;
   border-radius: 0.3rem;
-  font-size: 1.4rem;
   font-weight: 700;
   cursor: pointer;
   text-transform: uppercase;
