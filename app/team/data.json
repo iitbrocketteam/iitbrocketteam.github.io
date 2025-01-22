@@ -1,5 +1,22 @@
 [
   {
+    "name": "Team Leads",
+    "members": [
+      {
+        "name": "Anish Dahibaokar",
+        "major": "Mechanical Engineering",
+        "role": "Team Lead",
+        "year": "2025"
+      },
+      {
+        "name": "Sayan Vishwakarma",
+        "major": "Aerospace Engineering",
+        "role": "Team Lead",
+        "year": "2025"
+      }
+    ]
+  },
+  {
     "name": "Propulsion",
     "members": [
       {
