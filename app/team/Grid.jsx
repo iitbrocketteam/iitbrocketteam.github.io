@@ -12,13 +12,25 @@ export default function Grid() {
       <ul className={styles.member_list}>
         {subsystem.members.map((member) => (
           <div key={member.name} className={styles.member}>
-            <Image
-              className={styles.profile_pic}
-              src={`/nextjs-testing/team/${member.name}.jpg`}
-              width={400}
-              height={400}
-              alt=""
-            />
+            <div className={styles.img_holder}>
+              <Image
+                className={styles.profile_pic}
+                src={`/nextjs-testing/team/${member.name}.jpg`}
+                width={400}
+                height={400}
+                alt=""
+              />
+              <ul className={styles.popup}>
+                <li>
+                  {/* TODO add linkedin links data */}
+                  <a href="https://www.linkedin.com/in/sayan-vishwakarma-6b2386286">
+                    🔗 LinkedIn
+                  </a>
+                  <li>Graduation Year: {member.year}</li>
+                  <li>Major: {member.major}</li>
+                </li>
+              </ul>
+            </div>
 
             <h4>{member.name}</h4>
             <h5>{member.role}</h5>
