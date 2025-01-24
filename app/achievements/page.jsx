@@ -26,6 +26,8 @@ export default function Achievements() {
       <h2>{event.title}</h2>
       <div className={styles.infinite_slideshow}>
         <div className={styles.slideshow_track}>
+          {/* TODO why need so many? fix in CSS */}
+          {image_list_content(event.images)}
           {image_list_content(event.images)}
           {image_list_content(event.images)}
         </div>
