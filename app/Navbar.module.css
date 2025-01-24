@@ -39,7 +39,6 @@
 .links {
   display: flex;
   gap: 0.5rem;
-  /* margin-right: 2rem; */
 }
 
 .subpage_link {

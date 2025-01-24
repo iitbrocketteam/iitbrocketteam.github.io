@@ -64,6 +64,10 @@
 }
 
 .contact_us {
+  display: block;
+  width: 12ch;
+  text-align: center;
+
   padding: 1rem;
   background-color: rgba(129, 129, 129, 0.092);
   margin: 1rem;
