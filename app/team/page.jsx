@@ -27,9 +27,9 @@ export default function Team() {
             alt="Group Photo"
           />
         </div>
-        <div className={styles.click_command}>
+        {/* <div className={styles.click_command}>
           Click on any of our members below to learn more about them!
-        </div>
+        </div> */}
       </main>
 
       <Grid />
