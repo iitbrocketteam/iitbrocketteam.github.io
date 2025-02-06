@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10rem 2rem 4rem 2rem;
+  padding: calc(5rem + var(--navbar-height)) 2rem 4rem 2rem;
   width: 100vw;
 }
 
@@ -21,9 +21,9 @@
   background-size: 100%;
   /* size of image is 2400x1600 
   make the div be height of navbar + height of scaled image */
-  background-position: 0 5rem;
+  background-position: 0 var(--navbar-height);
   height: 20rem;
-  height: calc(5rem + 1600 / 2400 * 100vw);
+  height: calc(var(--navbar-height) + 1600 / 2400 * 100vw);
 }
 
 .support_heading {

@@ -27,6 +27,7 @@ const links = [
   ["/sponsors", "Sponsors"],
   ["/achievements", "Achievements"],
   ["/rockets", "Rockets"],
+  ["/contact", "Contact"],
 ];
 
 export default function Navbar() {
@@ -61,11 +62,14 @@ export default function Navbar() {
 
       <div className={styles.links}>{links_content}</div>
 
-      <div className={styles.buttons}>
+      {/* for spacing: */}
+      <div></div>
+
+      {/* <div className={styles.buttons}>
         <Link className={styles.reach_out} href="/contact">
           REACH OUT TO US
         </Link>
-      </div>
+      </div> */}
       {/* 
       <div className={styles.buttons}>
         <a

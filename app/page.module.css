@@ -2,7 +2,7 @@
   /* min-height: 100svh; */
   background-color: white;
   color: black;
-  padding: 5rem 0rem 0rem 0rem;
+  padding: var(--navbar-height) 0rem 0rem 0rem;
 }
 
 .header h1 {
