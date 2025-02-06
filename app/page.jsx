@@ -1,10 +1,20 @@
 import styles from "./page.module.css";
 import Link from "next/link";
+import { FaRocket, FaHandshake, FaPeopleArrows } from "react-icons/fa";
+
+import { Roboto_Mono, Inter, Orbitron } from "next/font/google";
+
+const techno_font = Orbitron({ weight: "400", subsets: ["latin"] });
+const roboto_mono = Roboto_Mono({ weight: "400", subsets: ["latin"] });
+const inter = Inter({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+});
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <header className={styles.header}>
+    <div className={styles.page + " " + inter.className}>
+      <header className={styles.header + " " + techno_font.className}>
         <div className={styles.text_container}>
           <h1 className={styles.blast_text}>Welcome to the IITB Rocket Team</h1>
           <div className={styles.trail}></div>
@@ -19,15 +29,12 @@ export default function Home() {
         </div>
         <div className={styles.fade_in_items}>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias
-            error commodi saepe quisquam dolores aspernatur dolorem accusamus,
-            soluta nostrum culpa.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam sunt
-            autem praesentium ducimus omnis est ullam laboriosam vitae qui
-            obcaecati, distinctio facilis rem reprehenderit cumque consequatur
-            quo aliquam? Adipisci, ipsam.
+            Our team is dedicated to elevating Indian amateur rocketry through
+            groundbreaking advancements. Beyond launching rockets, our mission
+            is to cultivate technical skills and promote STEM education at all
+            levels. Your support will empower us to push the boundaries of
+            innovation and inspire the next generation of engineers and
+            scientists.
           </p>
         </div>
       </section>
@@ -54,17 +61,26 @@ export default function Home() {
         <h1>Our Ambitions</h1>
         <div className={styles.cards_container}>
           <div className={styles.card}>
-            <div className={styles.card_icon}>🚀</div>
+            <div className={styles.card_icon}>
+              {/* 🚀 */}
+              <FaRocket />
+            </div>
             <h2>Lorem, ipsum.</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
           </div>
           <div className={styles.card}>
-            <div className={styles.card_icon}>🤝</div>
+            <div className={styles.card_icon}>
+              {/* 🤝 */}
+              <FaHandshake />
+            </div>
             <h2>Lorem, ipsum.</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
           </div>
           <div className={styles.card}>
-            <div className={styles.card_icon}>👥</div>
+            <div className={styles.card_icon}>
+              {/* 👥 */}
+              <FaPeopleArrows />
+            </div>
             <h2>Lorem, ipsum.</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
           </div>
