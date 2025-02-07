@@ -5,11 +5,11 @@ import Link from "next/link";
 // https://fonts.google.com/?preview.text=TRANSCENDING%20LIMITS%0ADEFYING%20NORMS&preview.size=26&categoryFilters=Appearance:%2FTheme%2FTechno
 // Space_Mono, Orbitron
 
-import { Roboto_Mono, Inter, Orbitron } from "next/font/google";
+import { Roboto_Mono, Inter, Orbitron, Poppins } from "next/font/google";
 
 const techno_font = Orbitron({ weight: "400", subsets: ["latin"] });
-const roboto_mono = Roboto_Mono({ weight: "400", subsets: ["latin"] });
-const inter = Inter({
+// const roboto_mono = Roboto_Mono({ weight: "400", subsets: ["latin"] });
+const font = Poppins({
   weight: ["400", "700"],
   subsets: ["latin"],
 });
@@ -19,7 +19,7 @@ export default function Sponsors() {
     <>
       <div
         className={
-          styles.pitch + " " + styles.center_div + " " + roboto_mono.className
+          styles.pitch + " " + styles.center_div + " " + font.className
         }
       >
         <main className={styles.main + " " + styles.center_div}>
@@ -157,7 +157,7 @@ export default function Sponsors() {
 
       <div
         className={
-          styles.thanks + " " + styles.center_div + " " + inter.className
+          styles.thanks + " " + styles.center_div + " " + font.className
         }
       >
         <div className={styles.thanks_msg + " " + styles.center_div}>
@@ -202,7 +202,7 @@ export default function Sponsors() {
         <div className={styles.tier + " " + styles.center_div}>
           <h3 className={styles.silver}>Silver</h3>
         </div>
-{/* 
+        {/* 
         <table>
           <thead>
             <tr>

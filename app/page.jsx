@@ -2,18 +2,18 @@ import styles from "./page.module.css";
 import Link from "next/link";
 import { FaRocket, FaHandshake, FaPeopleArrows } from "react-icons/fa";
 
-import { Roboto_Mono, Inter, Orbitron } from "next/font/google";
+import { Roboto_Mono, Inter, Orbitron, Poppins } from "next/font/google";
 
 const techno_font = Orbitron({ weight: "400", subsets: ["latin"] });
-const roboto_mono = Roboto_Mono({ weight: "400", subsets: ["latin"] });
-const inter = Inter({
+// const roboto_mono = Roboto_Mono({ weight: "400", subsets: ["latin"] });
+const font = Poppins({
   weight: ["400", "700"],
   subsets: ["latin"],
 });
 
 export default function Home() {
   return (
-    <div className={styles.page + " " + inter.className}>
+    <div className={styles.page + " " + font.className}>
       <header className={styles.header + " " + techno_font.className}>
         <div className={styles.text_container}>
           <h1 className={styles.blast_text}>Welcome to the IITB Rocket Team</h1>

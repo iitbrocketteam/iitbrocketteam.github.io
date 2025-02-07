@@ -4,13 +4,14 @@ import styles from "./Navbar.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Space_Mono } from "next/font/google";
+import { Space_Mono, Poppins } from "next/font/google";
 import { FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
-const font = Space_Mono({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-});
+// const font = Space_Mono({
+//   weight: ["400", "700"],
+//   subsets: ["latin"],
+// });
+const font = Poppins({ weight: "400", subsets: ["latin"] });
 
 // import {
 //   Helv

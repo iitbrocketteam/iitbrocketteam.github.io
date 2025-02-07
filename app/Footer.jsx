@@ -8,8 +8,9 @@ import {
   FaCopyright,
 } from "react-icons/fa";
 
-import { Space_Mono } from "next/font/google";
-const font = Space_Mono({ weight: "400", subsets: ["latin"] });
+import { Space_Mono, Poppins } from "next/font/google";
+// const font = Space_Mono({ weight: "400", subsets: ["latin"] });
+const font = Poppins({ weight: "400", subsets: ["latin"] });
 
 export default function Footer() {
   return (

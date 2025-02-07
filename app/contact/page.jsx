@@ -1,9 +1,9 @@
 import styles from "./contact.module.css";
 
-import { Roboto } from "next/font/google";
+import { Roboto, Poppins } from "next/font/google";
 import { FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
 
-const font = Roboto({
+const font = Poppins({
   weight: ["300", "500", "700"],
   subsets: ["latin"],
   display: "swap",
