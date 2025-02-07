@@ -73,40 +73,46 @@ export default function Sponsors() {
           </div>
         </main>
 
-        <div className={styles.reasons}>
+        <div className={styles.tables}>
           <h3>&gt; Why you should sponsor us</h3>
-          <ol>
+
+          <ol className={styles.reasons}>
             <li>
-              <h4>1. CSR and Tax Exemption</h4>
+              <h4>CSR and Tax Exemption</h4>
               <p>
-                Contributions to the IITB Rocket Team qualify for tax rebates
+                {/* Contributions to the IITB Rocket Team qualify for tax rebates
                 under the relevant sections of the Income Tax Act for scientific
                 research. This presents an opportunity to support scientific
-                innovation and research while benefiting from tax advantages
+                innovation and research while benefiting from tax advantages */}
+                Contributions qualify for tax rebates under the Income Tax Act
+                for scientific research. This is an opportunity to support
+                scientific innovation and research
               </p>
             </li>
 
             <li>
-              <h4>2. Branding Avenues</h4>
+              <h4>Branding Avenues</h4>
               <p>
-                As a sponsor, your brand will gain global exposure at the
+                {/* As a sponsor, your brand will gain global exposure at the
                 Spaceport America Cup, Techfest, and Tech & RnD Expo, reaching
                 thousands of attendees and industry professionals. Your logo
                 will be featured on our rocket, T-shirts, and banners, plus
                 across our website and social media (40k+ followers). You will
-                also connect with talented IIT Bombay students for internships.
+                also connect with talented IIT Bombay students for internships. */}
+                Your brand will gain global exposure at launch events, reaching
+                thousands of attendees. Your logo will be featured on our
+                rocket, T-shirts, and social media (40k+ followers). You will
+                also connect with talented IITB students for internships.
               </p>
             </li>
 
             <li>
-              <h4>3. Soar 30000 feet high</h4>
+              <h4>Soar 30000 feet high</h4>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Corporis commodi, voluptas, veniam assumenda officiis odio optio
                 quae asperiores nisi error nihil modi quos similique quod neque
-                delectus vel perspiciatis quas. Recusandae ea aliquam atque
-                accusantium corporis ducimus impedit vero animi obcaecati
-                aspernatur, neque eum. Ipsam aut quasi hic amet perferendis.
+                delectus vel perspiciatis quas.
               </p>
             </li>
           </ol>
@@ -115,7 +121,7 @@ export default function Sponsors() {
           <br />
 
           <h3>&gt; How you can help us</h3>
-          <ol>
+          <ol className={styles.help}>
             <li>
               <h4>1. Financial support</h4>
               <p>
@@ -155,6 +161,7 @@ export default function Sponsors() {
         </div>
       </div>
 
+      {/* 
       <div
         className={
           styles.thanks + " " + styles.center_div + " " + font.className
@@ -202,7 +209,7 @@ export default function Sponsors() {
         <div className={styles.tier + " " + styles.center_div}>
           <h3 className={styles.silver}>Silver</h3>
         </div>
-        {/* 
+         
         <table>
           <thead>
             <tr>
@@ -250,8 +257,9 @@ export default function Sponsors() {
               <td>✓</td>
             </tr>
           </tbody>
-        </table> */}
-      </div>
+        </table> 
+      </div> 
+      */}
     </>
   );
 }
