@@ -23,11 +23,19 @@ export default function Grid() {
               <ul className={styles.popup}>
                 <li>
                   {/* TODO add linkedin links data */}
-                  <a href="https://www.linkedin.com/in/sayan-vishwakarma-6b2386286">
-                    🔗 LinkedIn
-                  </a>
-                  <li>Graduation Year: {member.year}</li>
-                  <li>Major: {member.major}</li>
+                  {member.linkedin ? (
+                    <a href="https://www.linkedin.com/in/sayan-vishwakarma-6b2386286">
+                      🔗 LinkedIn
+                    </a>
+                  ) : (
+                    <a></a>
+                  )}
+                  {member.year ? (
+                    <li>Graduation Year: {member.year}</li>
+                  ) : (
+                    <li></li>
+                  )}
+                  {member.major ? <li>Major: {member.major}</li> : <li></li>}
                 </li>
               </ul>
             </div>
