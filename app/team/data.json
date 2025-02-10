@@ -1,17 +1,30 @@
 [
   {
+    "name": "Faculty Advisors",
+    "members": [
+      {
+        "name": "Prof. Neeraj Kumbhakarna"
+      },
+      {
+        "name": "Prof. Nagendra Kumar"
+      }
+    ]
+  },
+  {
     "name": "Team Leads",
     "members": [
       {
         "name": "Anish Dahibaokar",
         "major": "Mechanical Engineering",
         "role": "Team Lead",
+        "linkedin": "",
         "year": "2025"
       },
       {
         "name": "Sayan Vishwakarma",
         "major": "Aerospace Engineering",
         "role": "Team Lead",
+        "linkedin": "",
         "year": "2025"
       }
     ]
@@ -23,66 +36,77 @@
         "name": "Venu Arravinth R",
         "major": "Mechanical Engineering",
         "role": "Subsytem Lead",
+        "linkedin": "",
         "year": "2027"
       },
       {
         "name": "Aditya Parsekar",
         "major": "Chemical Engineering",
         "role": "Lead",
+        "linkedin": "",
         "year": "2026"
       },
       {
         "name": "Soham Sahasrabuddhe",
         "major": "Engineering Physics",
         "role": "Senior Engineer",
+        "linkedin": "",
         "year": "2027"
       },
       {
         "name": "Arin Pendharkar",
         "major": "Metallurgy and material Science",
         "role": "Senior Engineer",
+        "linkedin": "",
         "year": "2027"
       },
       {
         "name": "Om Nunase",
         "major": "Aerospace Engineering",
         "role": "Senior Engineer",
+        "linkedin": "",
         "year": "2027"
       },
       {
         "name": "Anshit Singh",
         "major": "Energy Science and Engineering",
         "role": "Junior Engineer",
+        "linkedin": "",
         "year": "2028"
       },
       {
         "name": "Shrestha Khatri",
         "major": "Aerospace Engineering",
         "role": "Junior Engineer",
+        "linkedin": "",
         "year": "2028"
       },
       {
         "name": "Siddhant Patil",
         "major": "Mechanical Engineering",
         "role": "Junior Engineer",
+        "linkedin": "",
         "year": "2028"
       },
       {
         "name": "Aryan Shah",
         "major": "Mechanical Engineering",
         "role": "Junior Engineer",
+        "linkedin": "",
         "year": "2028"
       },
       {
         "name": "Deepika Kale",
         "major": "Electrical Engineering",
         "role": "Junior Engineer",
+        "linkedin": "",
         "year": "2028"
       },
       {
         "name": "Dev Shrivastava",
         "major": "Aerospace Engineering",
         "role": "Junior Engineer",
+        "linkedin": "",
         "year": "2028"
       }
     ]
@@ -93,66 +117,77 @@
     "members": [
       {
         "major": "Mechanical Engineering",
+        "linkedin": "",
         "year": "2026",
         "name": "Sarvesh Patil",
         "role": "Subsytem Lead"
       },
       {
         "major": "Aerospace Engineering",
+        "linkedin": "",
         "year": "2025",
         "name": "Hitaishi Modi",
         "role": "Senior Member"
       },
       {
         "major": "Electrical Engineering",
+        "linkedin": "",
         "year": "2027",
         "name": "Kartik Daga",
         "role": "Senior Engineer"
       },
       {
         "major": "Aerospace Engineering",
+        "linkedin": "",
         "year": "2027",
         "name": "Krishang Singh",
         "role": "Senior Engineer"
       },
       {
         "major": "Aerospace Engineering",
+        "linkedin": "",
         "year": "2027",
         "name": "Vrushabh Patil",
         "role": "Senior Engineer"
       },
       {
         "major": "Aerospace Engineering",
+        "linkedin": "",
         "year": "2028",
         "name": "Aaryan Barupal",
         "role": "Junior Engineer"
       },
       {
         "major": "Civil Engineering",
+        "linkedin": "",
         "year": "2028",
         "name": "Ram Jyothy",
         "role": "Junior Engineer"
       },
       {
         "major": "Chemical Engineering",
+        "linkedin": "",
         "year": "2028",
         "name": "Abhinav Badegaonkar",
         "role": "Junior Engineer"
       },
       {
         "major": "Electrical Engineering",
+        "linkedin": "",
         "year": "2029",
         "name": "Aarav Malde",
         "role": "Junior Engineer"
       },
       {
         "major": "Aerospace Engineering",
+        "linkedin": "",
         "year": "2028",
         "name": "Upajna Kansara",
         "role": "Junior Engineer"
       },
       {
         "major": "Engineering Physics",
+        "linkedin": "",
         "year": "2028",
         "name": "Adithya Ravi",
         "role": "Junior Engineer"
@@ -165,96 +200,112 @@
       {
         "name": "Stuti Singla",
         "major": "Aerospace Engineering",
+        "linkedin": "",
         "year": "2026",
         "role": "Subsytem Lead"
       },
       {
         "name": "Medhavin Chabra",
         "major": "Aerospace Engineering",
+        "linkedin": "",
         "year": "2026",
         "role": "Subsytem Lead"
       },
       {
         "name": "Arnav Dhamankar",
         "major": "Civil Engineering",
+        "linkedin": "",
         "year": "2026",
         "role": "Subsytem Lead"
       },
       {
         "name": "Akshay Gaikwad",
         "major": "Computer Science Engineering",
+        "linkedin": "",
         "year": "2027",
         "role": "Senior Member"
       },
       {
         "name": "Nikhil Khandelwal",
         "major": "Metallurgy and Material Science",
+        "linkedin": "",
         "year": "2027",
         "role": "Senior Engineer"
       },
       {
         "name": "Hemang Dave",
         "major": "Electrical Engineering",
+        "linkedin": "",
         "year": "2028",
         "role": "Senior Engineer"
       },
       {
         "name": "Harsh Mehta",
         "major": "Metallurgy and Material Science ",
+        "linkedin": "",
         "year": "2027",
         "role": "Senior Engineer"
       },
       {
         "name": "Sameer Gupta",
         "major": "Metallurgy and Material Science",
+        "linkedin": "",
         "year": "2027",
         "role": "Senior Engineer"
       },
       {
         "name": "Ayusha Hongekar",
         "major": "Industrial Engineering and Operations Research",
+        "linkedin": "",
         "year": "2028",
         "role": "Junior Engineer"
       },
       {
         "name": "Jai Bellare",
         "major": "Electrical Engineering",
+        "linkedin": "",
         "year": "2028",
         "role": "Junior Engineer"
       },
       {
         "name": "Ruchir Barhate",
         "major": "Industrial Engineering and Operations Research",
+        "linkedin": "",
         "year": "2028",
         "role": "Junior Engineer"
       },
       {
         "name": "Anushree khisti",
         "major": "Engineering Physics",
+        "linkedin": "",
         "year": "2028",
         "role": "Junior Engineer"
       },
       {
         "name": "Samiran Das",
         "major": "Electrical Engineering",
+        "linkedin": "",
         "year": "2028",
         "role": "Junior Engineer"
       },
       {
         "name": "Aarush Gupta",
         "major": "Electrical Engineering",
+        "linkedin": "",
         "year": "2028",
         "role": "Junior Engineer"
       },
       {
         "name": "Ayushman soni",
         "major": "Civil Engineering",
+        "linkedin": "",
         "year": "2028",
         "role": "Junior Engineer"
       },
       {
         "name": "Tanya Menghani",
         "major": "Aerospace Engineering",
+        "linkedin": "",
         "year": "2028",
         "role": "Junior Engineer"
       }
@@ -267,6 +318,7 @@
       {
         "name": "Dhara Rangari",
         "major": "Chemical Engineering",
+        "linkedin": "",
         "year": "2027",
         "role": "Senior Member"
       },
@@ -274,6 +326,7 @@
       {
         "name": "Abhinav",
         "major": "Chemical Engineering",
+        "linkedin": "",
         "year": "2027",
         "role": "Senior Engineer"
       },
@@ -281,6 +334,7 @@
       {
         "name": "Anushka Bharti",
         "major": "Aerospace Engineering",
+        "linkedin": "",
         "year": "2027",
         "role": "Senior Engineer"
       },
@@ -288,6 +342,7 @@
       {
         "name": "Riya Agrawal",
         "major": "Civil Engineering",
+        "linkedin": "",
         "year": "2027",
         "role": "Senior Engineer"
       }
