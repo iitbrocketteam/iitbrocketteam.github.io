@@ -20,6 +20,8 @@ export default function Contact() {
         <p>iitbrocketteam@gmail.com</p>
         <p>IIT BOMBAY</p>
         <p>Powai , Mumbai -400076</p>
+        <h2>Resources</h2>
+        <a href="https://drive.google.com/drive/folders/1Nb8fV42-rMY1Dj-B-6YNH9x0v0Vwfh9y">https://drive.google.com/drive/folders/1Nb8fV42-rMY1Dj-B-6YNH9x0v0Vwfh9y</a>
         <div className={styles.social_icons}>
           <a href="https://www.instagram.com/iitb.rocket.team/">
             <FaInstagram />
