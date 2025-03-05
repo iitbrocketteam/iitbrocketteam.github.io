@@ -97,7 +97,7 @@ export default function Sponsors() {
         <h3>&gt; How you can help us</h3>
         <ol className={styles.help}>
           <li>
-            <h4>1. Financial support</h4>
+            <h4>Financial support</h4>
             <p>
               We seek monetary contributions to cover essential expenses such as
               competition fees, materials, travel allowances, outreach,
@@ -107,7 +107,7 @@ export default function Sponsors() {
           </li>
 
           <li>
-            <h4>2. Value in Kind</h4>
+            <h4>Value in Kind</h4>
             <p>
               The IIT Rocket Team designs and builds high-quality engineering
               prototypes. We invite in-kind sponsorships to support our work,
@@ -120,7 +120,7 @@ export default function Sponsors() {
           </li>
 
           <li>
-            <h4>3. Services and collabs</h4>
+            <h4>Services and collabs</h4>
             <p>
               We seek services such as shipping, accommodation, travel planning,
               and packaging. Access to your technical experts for guidance would

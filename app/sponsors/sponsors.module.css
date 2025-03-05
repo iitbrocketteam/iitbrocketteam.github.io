@@ -22,7 +22,7 @@
   background-position: 50% var(--navbar-height);
 
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
 
   padding-top: calc(5rem + var(--navbar-height));
   /* padding-left: 10%;
@@ -83,19 +83,17 @@
 }
 
 .description {
-  margin: 3rem 0rem;
+  margin: 1rem 0rem 3rem 0rem;
   /* padding: 0rem 17rem; */
-  width: min(50rem, 90vw);
+  width: min(50rem, 85vw);
   text-align: justify;
   font-size: 1.4rem;
 }
 
 .tables {
   width: 100vw;
-  padding: 3rem 10rem;
+  padding: 3rem 6vw;
   position: relative;
-
-  display: none;
 }
 
 /* grid background */
@@ -119,7 +117,7 @@
 
 .tables h3 {
   font-size: 3rem;
-  margin-bottom: 0rem;
+  margin-bottom: 1rem;
 }
 
 .tables ol {
@@ -131,9 +129,9 @@
 }
 
 .tables h4 {
-  margin: 3rem 0rem 0.8rem 0rem;
-  position: relative;
-  width: fit-content;
+  margin: 0rem 0rem 0.8rem 0rem;
+  /* position: relative; */
+  /* width: fit-content; */
   font-size: 1.7rem;
 }
 
@@ -155,18 +153,21 @@
 
 .reasons,
 .help {
-  display: flex;
+  display: grid;
   /* justify-content: space-between; */
   width: 100%;
   /* grid-template-columns: repeat(3, 1fr); */
-
-  --gap: 8%;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  --gap: 4%;
   gap: var(--gap);
 }
 
 .tables li {
-  /* width: 10rem; */
-  width: calc((100% - 2 * var(--gap)) / 3);
+  height: fit-content;
+  padding: 0.6rem;
+  background-color: rgba(67, 67, 67, 0.3);
+  border-radius: 0.6rem;
+  border: 0.1rem solid rgba(128, 128, 128, 0.616);
 }
 
 /* ------------ THANKS ------------------ */
