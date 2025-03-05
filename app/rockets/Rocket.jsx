@@ -1,9 +1,9 @@
 import styles from "./rockets.module.css";
 import Image from "next/image";
 
-import { Roboto_Mono } from "next/font/google";
+import { Roboto_Mono, Poppins } from "next/font/google";
 
-const roboto_mono = Roboto_Mono({
+const font = Poppins({
   weight: ["300", "500", "700"],
   subsets: ["latin"],
   display: "swap",
@@ -18,7 +18,7 @@ export function Table({ props }) {
   ));
 
   return (
-    <table className={styles.table + " " + roboto_mono.className}>
+    <table className={styles.table + " " + font.className}>
       <thead>
         <tr>
           <th>{props.name}</th>

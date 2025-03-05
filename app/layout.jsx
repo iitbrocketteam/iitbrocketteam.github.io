@@ -1,12 +1,15 @@
 import "./globals.css";
-import { Roboto } from "next/font/google";
+import { Roboto, Poppins } from "next/font/google";
 
-const roboto = Roboto({
-  weight: ["400", "700"],
-  style: ["normal", "italic"],
-  subsets: ["latin"],
-  display: "swap",
-});
+// const font = Roboto({
+//   weight: ["400", "700"],
+//   style: ["normal", "italic"],
+//   subsets: ["latin"],
+//   display: "swap",
+// });
+
+const font = Poppins({ weight: "400", subsets: ["latin"] });
+
 
 import Navbar from "./Navbar";
 import Footer from "./Footer";
@@ -19,7 +22,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
+      <body className={font.className}>
         <Navbar />
         <main>{children}</main>
         <Footer />

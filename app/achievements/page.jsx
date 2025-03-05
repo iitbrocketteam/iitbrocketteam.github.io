@@ -1,9 +1,9 @@
 import styles from "./achievements.module.css";
 import Image from "next/image";
-import { Montserrat } from "next/font/google";
+import { Montserrat, Poppins } from "next/font/google";
 import data from "./event_data.json";
 
-const font = Montserrat({
+const font = Poppins({
   weight: ["400", "700"],
   subsets: ["latin"],
 });

@@ -4,13 +4,14 @@ import styles from "./Navbar.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Space_Mono } from "next/font/google";
+import { Space_Mono, Poppins } from "next/font/google";
 import { FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
-const font = Space_Mono({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-});
+// const font = Space_Mono({
+//   weight: ["400", "700"],
+//   subsets: ["latin"],
+// });
+const font = Poppins({ weight: "400", subsets: ["latin"] });
 
 // import {
 //   Helv
@@ -27,6 +28,7 @@ const links = [
   ["/sponsors", "Sponsors"],
   ["/achievements", "Achievements"],
   ["/rockets", "Rockets"],
+  ["/contact", "Contact"],
 ];
 
 export default function Navbar() {
@@ -61,11 +63,14 @@ export default function Navbar() {
 
       <div className={styles.links}>{links_content}</div>
 
-      <div className={styles.buttons}>
+      {/* for spacing: */}
+      <div></div>
+
+      {/* <div className={styles.buttons}>
         <Link className={styles.reach_out} href="/contact">
           REACH OUT TO US
         </Link>
-      </div>
+      </div> */}
       {/* 
       <div className={styles.buttons}>
         <a
