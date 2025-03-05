@@ -2,15 +2,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: calc(5rem + var(--navbar-height)) 2rem 4rem 2rem;
-  width: 100vw;
 }
 
 .pitch {
   font-size: 2rem;
-  /* background-color: white; */
   color: rgb(255, 255, 255);
-  /* height: 80rem; */
   padding: 0rem;
 }
 
@@ -18,41 +14,53 @@
   /*darken bg*/
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("/nextjs-testing/agastya-5817.jpg");
-  background-size: 100%;
-  /* size of image is 2400x1600 
-  make the div be height of navbar + height of scaled image */
-  background-position: 0 var(--navbar-height);
-  height: 20rem;
-  height: calc(var(--navbar-height) + 1600 / 2400 * 100vw);
+
+  /* so shows the full height on mobile and full width on desktop */
+  background-size: cover;
+  /* shift the image down so starts below Navbar */
+  /* centre it horizontally */
+  background-position: 50% var(--navbar-height);
+
+  width: 100vw;
+  height: 100vh;
+
+  padding-top: calc(5rem + var(--navbar-height));
+  /* padding-left: 10%;
+  padding-right: 10%; */
 }
 
 .support_heading {
-  margin: 2rem;
   text-align: center;
   text-transform: uppercase;
 
-  padding: 0;
+  /* width: min(30%, ); */
+  /* --fontsize: max(3.5rem, 90%); */
+  --fontsize: min(3.5rem, 7vw);
 
+  /* margin: 2rem; */
+  padding: 0;
   text-align: center;
 }
 
 .support_heading h2 {
-  font-size: 3.5rem;
+  font-size: var(--fontsize);
 }
 
 .support_heading h1 {
-  font-size: 4.9rem;
-  transform: translateY(-1.6rem);
+  font-size: calc(var(--fontsize) * 1.4);
 }
 
 .button_container {
-  margin: 2rem;
+  margin: 2rem 2rem 0rem 2rem;
   color: white;
   text-shadow: rgb(255, 255, 255) 0.1rem 0 0.7rem;
   font-size: 1.6rem;
   transition: transform 100ms;
 
+  width: min(50rem, 90vw);
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .button_holder {
@@ -76,7 +84,8 @@
 
 .description {
   margin: 3rem 0rem;
-  padding: 0rem 17rem;
+  /* padding: 0rem 17rem; */
+  width: min(50rem, 90vw);
   text-align: justify;
   font-size: 1.4rem;
 }
@@ -85,6 +94,8 @@
   width: 100vw;
   padding: 3rem 10rem;
   position: relative;
+
+  display: none;
 }
 
 /* grid background */
@@ -142,8 +153,8 @@
   flex-wrap: wrap;
 }
 
-
-.reasons, .help {
+.reasons,
+.help {
   display: flex;
   /* justify-content: space-between; */
   width: 100%;
@@ -151,7 +162,6 @@
 
   --gap: 8%;
   gap: var(--gap);
-
 }
 
 .tables li {

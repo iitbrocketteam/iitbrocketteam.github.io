@@ -10,11 +10,16 @@ const font = Poppins({
 });
 
 export default function Sponsors() {
+  // structure:
+  // .pitch
+  //   - .main
+  //   - .tables
+
   return (
     <div
       className={styles.pitch + " " + styles.center_div + " " + font.className}
     >
-      <main className={styles.main + " " + styles.center_div}>
+      <div className={styles.main + " " + styles.center_div}>
         <div className={styles.support_heading + " " + techno_font.className}>
           <h2>Transcending Limits</h2>
           <h1>Defying Norms</h1>
@@ -50,7 +55,7 @@ export default function Sponsors() {
           innovation and inspire the next generation of engineers and
           scientists.
         </div>
-      </main>
+      </div>
 
       <div className={styles.tables}>
         <h3>&gt; Why you should sponsor us</h3>
