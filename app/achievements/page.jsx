@@ -1,9 +1,9 @@
 import styles from "./achievements.module.css";
 import Image from "next/image";
-import { Montserrat, Poppins } from "next/font/google";
+import { Montserrat, Poppins, Inter } from "next/font/google";
 import data from "./event_data.json";
 
-const font = Poppins({
+const font = Inter({
   weight: ["400", "700"],
   subsets: ["latin"],
 });
@@ -38,52 +38,50 @@ export default function Achievements() {
   return (
     <div className={styles.page + " " + font.className}>
       <h1 className={styles.h1_achieveme}>ACHIEVEMENTS</h1>
-      <section className={styles.timeline}>
-        <ul>
-          <li>
-            <div className={styles.timeline_content}>
-              <h2 className={styles.date}>2019</h2>
-              <p>Team is established.</p>
-            </div>
-          </li>
-          <li>
-            <div className={styles.timeline_content}>
-              <h2 className={styles.date}>2022</h2>
-              <p>First Test launch.</p>
-            </div>
+      <section className={styles.achievements}>
+        <ul className={styles.timeline}>
+
+          {/* TODO set this with js expr. also n */}
+          <li style={{"--i": 1}}>
+            <p>
+              <span>First National Rank</span> at SA cup
+            </p>
           </li>
 
-          <li>
-            <div className={styles.timeline_content}>
-              <h2 className={styles.date}>2023</h2>
-              <div className={styles.bullet_points}>
-                <p>
-                  1) First SA cup entry secured <span>first national rank</span>
-                  .
-                </p>
-                <p>
-                  2) <span>2nd position</span> in Techzibtion 23 at IIT Roorkee.
-                </p>
-                <p>
-                  3) <span>1st position</span> at Engineers Conclave at
-                  Inter-IIT tech meet 11.0 in IIT Madras.
-                </p>
-                <p>
-                  4) <span>Placed 1st</span> in TechExpo IIT Guwahati.
-                </p>
-                <p>5) Aveshaan place third.</p>
-              </div>
-            </div>
+          <li style={{"--i": 2}}>
+            <p>
+              <span>1st Position</span>
+              at Techexpo, IIT Guwahati {/* 2023 */}
+            </p>
           </li>
 
-          <li>
-            <div className={styles.timeline_content}>
-              <h2 className={styles.date}>2024</h2>
-              <p>19th in our category, 34th worldwide</p>
-            </div>
+          <li style={{"--i": 3}}>
+            <p><span>1st Position</span> in Engineer's Conclave, IIT Madras {/* 2023 */}</p>
           </li>
+
+          <li style={{"--i": 4}}>
+            <p><span>2nd Position</span> in Techzibition</p>
+          </li>
+
+          <li style={{"--i": 5}}>
+            <p>
+              <span>Finalists</span> of Techkriti {/* 2023 */}
+            </p>
+          </li>
+
+          {/* <li>
+            <span>2nd Runner Up</span> in Anveshan 2023
+          </li> */}
+
+          {/* <li>
+            <span>Finalists</span> of Debris-o-Locus
+          </li> */}
+
+          {/* 19th in our category, 34th worldwide */}
         </ul>
       </section>
+
+      {/* events images */}
 
       <h1 className={styles.events_heading}>EVENTS</h1>
 
