@@ -13,6 +13,8 @@
   padding: 2rem 10rem;
 }
 
+/* TODO see for eg Unreal Engine's form for nice buttons, animations */
+
 .contact_info {
   flex: 1;
   padding: 20px;
@@ -48,7 +50,8 @@
 }
 
 .contact_form label {
-  margin-top: 10px;
+  margin-top: 1.0rem;
+  font-size: 1.6rem;
 }
 
 .contact_form input,
@@ -59,12 +62,17 @@
   /* border-color: navy; */
   border-radius: 5px;
   background-color: #fff;
+  color: black;
+  font-size: 1.6rem;
 }
 
-.contact_form input[type="submit"] {
+.contact_form button {
+  font-size: 1.6rem;
   margin-top: 20px;
   background-color: navy;
-  color: #fff;
+  /* color: #fff; */
   cursor: pointer;
   padding: 8px 8px;
+  border-radius: 5px;
+  border: none;
 }

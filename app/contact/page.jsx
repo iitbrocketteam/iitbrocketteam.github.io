@@ -1,20 +1,43 @@
+"use client";
+
 import styles from "./contact.module.css";
 
-import { Roboto, Poppins } from "next/font/google";
+import { Roboto, Poppins, Inter } from "next/font/google";
 import { FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
 
-const font = Poppins({
+const font = Inter({
   weight: ["300", "500", "700"],
   subsets: ["latin"],
   display: "swap",
 });
 
-// TODO use https://www.npmjs.com/package/react-modal
-// this https://www.npmjs.com/package/reactjs-popup gives uses client error
+// Send Form results to Google Sheet:
+// https://github.com/levinunnink/html-form-to-google-sheet
+// SHEET: https://docs.google.com/spreadsheets/d/1HWI5mobyBb-3KjCRrCiLHj-tHKyDQj-W9S4o7nJTwk8/edit?usp=sharing
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  console.log(e);
+  const data = new FormData(e.target);
+  const action = e.target.action;
+
+  console.log(data, action);
+
+  fetch(action, {
+    method: "POST",
+    body: data,
+  })
+    .then(() => {
+      console.log("Success!");
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
 
 export default function Contact() {
   return (
-    <div className={styles.container}>
+    <div className={styles.container + ' ' + font.className}>
       <div className={styles.contact_info}>
         <h1>Contact us.</h1>
         <p>iitbrocketteam@gmail.com</p>
@@ -34,20 +57,21 @@ export default function Contact() {
       </div>
 
       <div className={styles.contact_form}>
-        <form action="#" method="post">
-          <label htmlFor="first-name">First Name (required)</label>
-          <input type="text" id="first-name" name="first-name" required />
-
-          <label htmlFor="last-name">Last Name (required)</label>
-          <input type="text" id="last-name" name="last-name" required />
+        <form
+          method="POST"
+          action="https://script.google.com/macros/s/AKfycbxc837YAmC-9N9e7Zjs69MoXy2DBdugmGJafxfJKRgV8-Id4dI8jBodtGk5M4TBgBLn/exec"
+          onSubmit={handleSubmit}
+        >
+          <label htmlFor="name">First Name (required)</label>
+          <input type="text" id="name" name="name" required />
 
           <label htmlFor="email">Email (required)</label>
           <input type="email" id="email" name="email" required />
 
           <label htmlFor="message">Message (required)</label>
-          <textarea id="message" name="message" rows="4" required />
+          <textarea id="message" name="message" rows="6" required />
 
-          <input type="submit" value="Submit" />
+          <button type="submit">Send</button>
         </form>
       </div>
     </div>

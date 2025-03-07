@@ -22,6 +22,8 @@ const font = Poppins({ weight: "400", subsets: ["latin"] });
 //   subsets: ["latin"],
 // });
 
+// TODO add social media links as well as links to share the website
+
 const links = [
   ["/", "Home"],
   ["/team", "Team"],
