@@ -79,7 +79,7 @@ export default function Footer() {
 
       <div className={styles.footer_bottom}>
         <FaCopyright />
-        2024 IIT-B Rocket Team
+        2025 IIT-B Rocket Team
       </div>
     </footer>
   );

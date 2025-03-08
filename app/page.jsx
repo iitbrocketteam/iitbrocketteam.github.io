@@ -1,5 +1,6 @@
 import styles from "./page.module.css";
 import Link from "next/link";
+import Image from "next/image";
 import { FaRocket, FaHandshake, FaPeopleArrows } from "react-icons/fa";
 
 import { Roboto_Mono, Inter, Orbitron, Poppins } from "next/font/google";
@@ -23,20 +24,29 @@ export default function Home() {
       </header>
 
       <section className={styles.vision}>
-        <h2>Our Vision</h2>
-        <div className={styles.typewriter_container}>
-          <p className={styles.typewriter_text}></p>
+        <div className={styles.team_info}>
+          <h2>Rocket Team</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam ipsam doloremque eum quod temporibus magni veritatis recusandae deleniti. Quo, ratione?</p>
         </div>
-        <div className={styles.fade_in_items}>
-          <p>
-            Our team is dedicated to elevating Indian amateur rocketry through
-            groundbreaking advancements. Beyond launching rockets, our mission
-            is to cultivate technical skills and promote STEM education at all
-            levels. Your support will empower us to push the boundaries of
-            innovation and inspire the next generation of engineers and
-            scientists.
-          </p>
+        <div className={styles.other}>
+          <div className={styles.achieve}>
+            <h2>Achievements</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, consequatur.</p>
+          </div>
+          <div className={styles.compi}>
+            <h2>Competitions</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, ut?</p>
+          </div>
+          <div className={styles.rnd}>
+            <h2>RnD in Fuel</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, deleniti?</p>
+          </div>
+          <div className={styles.vis}>
+            <h2>Vision</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, eum.</p>
+          </div>
         </div>
+
       </section>
 
       <section className={styles.stats_section}>
@@ -57,34 +67,37 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.section}>
-        <h1>Our Ambitions</h1>
-        <div className={styles.cards_container}>
-          <div className={styles.card}>
-            <div className={styles.card_icon}>
-              {/* 🚀 */}
-              <FaRocket />
+      <section className={styles.slidercontainer}>
+        <div className={styles.slides}>
+
+          <div className={styles.rocketContainer}>
+            {/* Rocket Info */}
+            <div className={styles.info}>
+              <h2>Rocket Akash</h2>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni ducimus beatae nemo ad omnis explicabo atque aut assumenda quae repellat!</p>
             </div>
-            <h2>Lorem, ipsum.</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+
+            {/* Image beside the info */}
+            <div className={styles.imageContainer}>
+              <img src="/public/rtlogo1.png" alt="Rocket Akash" className={styles.rocketImage} />
+            </div>
           </div>
-          <div className={styles.card}>
-            <div className={styles.card_icon}>
-              {/* 🤝 */}
-              <FaHandshake />
+
+          <div className={styles.rocketContainer}>
+            {/* Rocket Info */}
+            <div className={styles.info}>
+              <h2>Rocket Advyant</h2>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni ducimus beatae nemo ad omnis explicabo atque aut assumenda quae repellat!</p>
             </div>
-            <h2>Lorem, ipsum.</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
-          </div>
-          <div className={styles.card}>
-            <div className={styles.card_icon}>
-              {/* 👥 */}
-              <FaPeopleArrows />
+
+            {/* Image beside the info */}
+            <div className={styles.imageContainer}>
+              <img src="/public/rtlogo1.png" alt="Rocket Akash" className={styles.rocketImage} />
             </div>
-            <h2>Lorem, ipsum.</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
           </div>
         </div>
+
+
       </section>
     </div>
   );

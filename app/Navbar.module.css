@@ -2,7 +2,7 @@
   height: var(--navbar-height);
   font-size: 1.1rem;
   padding: 0.2rem 1rem;
-
+  
   position: fixed;
   z-index: 100;
   width: 100vw;
@@ -16,17 +16,22 @@
   align-items: center;
 
   --link-highlight: #1768ff;
+  justify-content: center;
 }
 
 .logo_link {
-  height: 100%; /* of Navbar height*/
+  height: 100%; 
+  top: 0%;
+  left: 0;
+  position: fixed;/* of Navbar height*/
 }
 
 .logo {
   /* send logo to left */
-  /* margin-right: auto; */
+  /* margin-right: 100%;*/ 
 
   display: block;
+  position: absolute;
   width: auto;
   height: 98%; /* of Link height */
   transition: transform 0.1s;
@@ -38,6 +43,7 @@
 
 .links {
   display: flex;
+ 
   gap: 0.5rem;
 }
 
@@ -74,21 +80,4 @@
   /* font-size: 2rem; */
 }
 
-.reach_out {
-  padding: 0.5rem 0.8rem;
-  margin: 0rem 1.4rem;
-  border: none;
-  border-radius: 0.3rem;
-  font-weight: 700;
-  cursor: pointer;
-  text-transform: uppercase;
-  transition: background-color 0.3s, color 0.3s;
 
-  background-color: #ffffff;
-  color: #000;
-  transition: transform 100ms;
-}
-
-.reach_out:hover {
-  transform: scale(1.1);
-}

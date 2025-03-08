@@ -50,6 +50,7 @@
 /* Social Media Section */
 .footer_social {
   text-align: left;
+  transform: translateX(-40);
 }
 
 .footer_social h3 {
@@ -68,6 +69,7 @@
   color: #fff;
   font-size: 2rem;
   text-decoration: none;
+  transform: translateX(20);
 }
 
 .social_icon:hover {

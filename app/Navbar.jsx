@@ -58,10 +58,13 @@ export default function Navbar() {
           width={384}
           height={222}
           alt="Logo"
+         
         />
+        
       </Link>
+      {links_content}
 
-      <div className={styles.links}>{links_content}</div>
+      
 
       {/* for spacing: */}
       <div></div>
