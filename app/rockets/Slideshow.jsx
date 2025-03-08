@@ -81,7 +81,11 @@ export default function Slideshow({ rockets_data }) {
         </button>
       </div>
 
-      <Table props={rockets_data[modulo(active)]} />
+      <div className={styles.info_container}>
+        <Table props={rockets_data[modulo(active)]} />
+
+        <p>{rockets_data[modulo(active)].description} </p>
+      </div>
     </div>
   );
 }

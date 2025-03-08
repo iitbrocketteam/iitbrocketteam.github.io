@@ -1,6 +1,6 @@
 .navbar {
   height: var(--navbar-height);
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   padding: 0.2rem 1rem;
   
   position: fixed;
@@ -9,11 +9,6 @@
 
   background-color: #000000d0;
   backdrop-filter: blur(0.6rem);
-
-  display: flex;
-  /* justify-content: end; */
-  justify-content: space-between;
-  align-items: center;
 
   --link-highlight: #1768ff;
   justify-content: center;
@@ -27,13 +22,8 @@
 }
 
 .logo {
-  /* send logo to left */
-  /* margin-right: 100%;*/ 
-
-  display: block;
-  position: absolute;
   width: auto;
-  height: 98%; /* of Link height */
+  height: 94%; /* of Link height */
   transition: transform 0.1s;
 }
 
@@ -41,10 +31,20 @@
   transform: scale(1.08);
 }
 
-.links {
-  display: flex;
- 
-  gap: 0.5rem;
+@media (min-aspect-ratio: 1/1) {
+  .links {
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: calc(var(--navbar-height) / 2);
+    left: 50vw;
+
+    display: flex;
+    gap: 1rem;
+  }
+
+  .mobile_active {
+    display: none;
+  }
 }
 
 .subpage_link {
@@ -77,7 +77,61 @@
 .buttons {
   display: flex;
   gap: 1rem;
-  /* font-size: 2rem; */
 }
 
+@media (max-aspect-ratio: 1/1) {
+  .navbar {
+    font-size: 1.35rem;
+  }
 
+  .links {
+    width: 13ch; /* achievements */
+    position: fixed;
+    right: 0.5rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    background-color: rgb(0, 0, 0);
+    border-radius: 0.4rem;
+    padding: 0.4rem 0rem;
+  }
+
+  .mobile_active {
+    width: 13ch;
+    background-color: rgb(0, 0, 0);
+    border-radius: 0.4rem;
+    padding: 0.4rem;
+
+    position: fixed;
+    right: 0.5rem;
+    top: calc(var(--navbar-height) / 2);
+    transform: translateY(-50%);
+
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .dropdown_closed {
+    display: none;
+  }
+}
+
+/* .reach_out {
+  padding: 0.5rem 0.8rem;
+  margin: 0rem 1.4rem;
+  border: none;
+  border-radius: 0.3rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s, color 0.3s;
+
+  background-color: #ffffff;
+  color: #000;
+  transition: transform 100ms;
+}
+
+.reach_out:hover {
+  transform: scale(1.1);
+} */

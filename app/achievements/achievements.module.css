@@ -4,168 +4,60 @@
   height: fit-content;
   color: black;
 
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; */
-  padding: calc(1.7rem + var(--navbar-height)) 2rem 10rem 2rem;
+  padding-top: calc(1rem + var(--navbar-height));
+}
+
+.timeline {
+  width: 100vw;
+  display: grid;
+  margin-top: 1rem;
+
+  counter-reset: i;
+  --n: 5;
+  --h1-height: 2rem;
+  --y-shift: 5rem;
+
+  /* only 1 parameter to change shape: element height */
+  /* find everything in terms of that. eg theta = arctan(element-height / 100vw) */
+  /* use var(--i) and var(--n) in translateY and clip-path */
+
+  /* https://css-tricks.com/clipping-masking-css/ */
+  /* https://bennettfeely.com/clippy/ : parallelogram */
+
+  --element-height: 10rem;
+  --timeline-height: calc(100vh - var(--navbar-height) - var(--h1-height));
+
+  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+  gap: 1rem;
+  padding: 0rem 4vw 0rem 4vw;
 }
 
 .page h1 {
   text-align: center;
+  vertical-align: middle;
+  height: var(--h1-height);
 }
 
-.timeline {
-  /* width: 75%; */
-  /* height: fit-content; */
-  /* margin: 0 auto; */
-
-  /* todo need this coz 2023 overflows */
-  /* using height 0 for timeline */
-  /* margin-bottom: 16rem; */
-  height: 5rem;
-  margin-top: 18rem;
-  /* background-color: aqua; */
-}
-/* max-width: 800px;
-  position: relative; */
-
-/* transform: translateY(-55px); */
-/* .timeline h1 {
+.timeline li {
   text-align: center;
-} */
-
-.timeline ul {
-  width: 100%;
-  height: 100%;
-
-  list-style: none;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
 
-  --card-height: 12rem;
+  font-size: 1.3rem;
+  padding: 0.7rem;
+  /* background-color: rgba(179, 179, 179, 0.671); */
+  border-radius: 0.6rem;
+  border: 0.15rem solid rgba(8, 131, 255, 0.616);
 }
 
-.timeline ul li {
-  width: fit-content;
-  max-width: 20rem;
-  height: var(--card-height);
-  /* background-color: red; */
-
-  color: white;
-  /* margin-bottom: 20px; */
+.timeline span {
+  font-weight: bold;
+  display: block;
 }
 
-.timeline_content {
-  background-color: #1e1f22;
-  padding: 1rem;
-  border-radius: 1rem;
-}
+/* Events */
 
-.timeline_content p {
-  font-size: 1rem;
-  line-height: 1.3rem;
-  font-weight: 300;
-}
-
-/* .timeline ul li:last-child {
-  margin-bottom: 0;
-} */
-
-.timeline ul li span {
-  text-shadow: rgb(255, 255, 255) 0.1rem 0 0.7rem;
-  /* background-color: white;
-  color: black; */
-}
-
-/* .timeline_content h1 {
-  font-weight: 500;
-  font-size: 25px;
-  line-height: 30px;
-  margin-bottom: 10px;
-  text-decoration: #fff;
-} */
-
-/* .timeline_content h2 {
-  color: black;
-} */
-
-/* .timeline_content .date {
-  font-size: 12px;
-  font-weight: 300;
-  margin-bottom: 10px;
-  letter-spacing: 2px;
-} */
-
-/* @media only screen and (min-width: 768px) { */
-
-/* the actual line: */
-.timeline ul::before {
-  content: "";
-  position: absolute;
-  /* not needed? starts out at centre */
-  /* top: 50%; */
-  left: 0;
-  height: 2px;
-  width: 100%;
-  background-color: black;
-}
-
-.timeline ul li:nth-child(even) {
-  transform: translateY(calc(0.5 * var(--card-height)));
-  border-radius: 20px 0px 20px 20px;
-  padding-top: 1rem;
-}
-
-.timeline ul li:nth-child(odd) {
-  padding-bottom: 1rem;
-  transform: translateY(calc(-0.5 * var(--card-height)));
-  border-radius: 0px 20px 20px 20px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-}
-
-.timeline_content {
-  height: fit-content;
-}
-
-.timeline ul li::before {
-  content: "";
-  position: absolute;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  background-color: black;
-  /* top: 0px; */
-}
-
-.timeline ul li:nth-child(odd)::before {
-  /* transform: translate(calc(50% + var(--axis_spacing)), -50%); */
-  transform: translateY(50%);
-  bottom: 0px;
-}
-
-.timeline ul li:nth-child(even)::before {
-  /* transform: translate(calc(-50% - var(--axis_spacing)), -50%); */
-  transform: translateY(-50%);
-  top: 0px;
-}
-
-/* ??? */
-/* .timeline_content .date {
-  position: absolute;
-  top: -30px;
-} */
-
-/* .timeline ul li:hover::before {
-    background-color: aqua;
-  } */
-/* } */
-
-/* Events Heading */
 .events_heading {
   font-size: 36px;
   /* Increased font size */
@@ -173,8 +65,7 @@
   /* Made it bold */
   text-align: center;
   /* Centered the heading */
-  margin-top: 6rem;
-  margin-bottom: 20px;
+  margin-top: 3rem;
   /* Reduced space below the heading */
 }
 

@@ -47,3 +47,13 @@
   -o-filter: grayscale(100%);
   filter: grayscale(100%); */
 }
+
+.info_container {
+  display: flex;
+  gap: 2rem;
+}
+
+.info_container p {
+  width: 28rem;
+  font-size: 1.4rem;
+}

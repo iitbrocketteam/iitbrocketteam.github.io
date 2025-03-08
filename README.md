@@ -1,4 +1,14 @@
+
+
 ## Run
+
+First:
+
+```
+npm install
+```
+
+Then to display on localhost:
 
 ```sh
 npm run dev

@@ -1,5 +1,5 @@
 # for quick ignoring a file or dir, prepend with .ignore
-.ignore**
+.ig**
 
 # public/team
 

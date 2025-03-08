@@ -28,6 +28,9 @@ const data = [
       ["Diameter", "20cm"],
     ],
     videoSrc: "/nextjs-testing/jnr1.mp4",
+    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo fugit
+repellendus unde tempore labore recusandae consectetur deserunt,
+veniam distinctio rem consequuntur libero, facilis deleniti? Explicabo`,
   },
   {
     name: "Adhyanta junior",
