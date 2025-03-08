@@ -4,23 +4,11 @@ import styles from "./Navbar.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Space_Mono, Poppins } from "next/font/google";
+import { Space_Mono, Poppins, Inter } from "next/font/google";
 import { FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { useState } from "react";
 
-// const font = Space_Mono({
-//   weight: ["400", "700"],
-//   subsets: ["latin"],
-// });
-const font = Poppins({ weight: "400", subsets: ["latin"] });
-
-// import {
-//   Helv
-//   Inter,
-// } from "next/font/google";
-// const techno_font = techno_font_class({
-//   weight: ["400", "700"],
-//   subsets: ["latin"],
-// });
+const font = Inter({ weight: "400", subsets: ["latin"] });
 
 // TODO add social media links as well as links to share the website
 
@@ -35,7 +23,19 @@ const links = [
 
 export default function Navbar() {
   const pathname = usePathname();
-  console.log(pathname);
+
+  const [dropdown_closed, set_dropdown_closed] = useState(true);
+
+  const mobile_active = (
+    <div
+      className={styles.mobile_active}
+      onClick={() => {
+        set_dropdown_closed(!dropdown_closed);
+      }}
+    >
+      {links.find((link) => link[0] === pathname)[1]}
+    </div>
+  );
 
   const links_content = links.map((link) => (
     <Link
@@ -46,6 +46,10 @@ export default function Navbar() {
         " " +
         (link[0] === pathname ? styles.active : styles.inactive)
       }
+      onClick={() => {
+        set_dropdown_closed(true);
+        console.log("hello", dropdown_closed);
+      }}
     >
       {link[1]}
     </Link>
@@ -63,10 +67,14 @@ export default function Navbar() {
         />
       </Link>
 
-      <div className={styles.links}>{links_content}</div>
-
-      {/* for spacing: */}
-      <div></div>
+      {mobile_active}
+      <div
+        className={
+          styles.links + (dropdown_closed ? " " + styles.dropdown_closed : "")
+        }
+      >
+        {links_content}
+      </div>
 
       {/* <div className={styles.buttons}>
         <Link className={styles.reach_out} href="/contact">
