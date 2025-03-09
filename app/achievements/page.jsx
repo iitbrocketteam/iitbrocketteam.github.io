@@ -56,7 +56,7 @@ export default function Achievements() {
           </li>
 
           <li style={{"--i": 3}}>
-            <p><span>1st Position</span> in Engineer's Conclave, IIT Madras {/* 2023 */}</p>
+            <p><span>1st Position</span> in Engineers Conclave, IIT Madras {/* 2023 */}</p>
           </li>
 
           <li style={{"--i": 4}}>
