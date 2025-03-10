@@ -99,6 +99,31 @@ export default function Home() {
 
 
       </section>
+      <section className={styles.subsystem}>
+        <div className={styles.sub_info}>
+          <h2>Rocket Team</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam ipsam doloremque eum quod temporibus magni veritatis recusandae deleniti. Quo, ratione?</p>
+        </div>
+        <div className={styles.other_one}>
+          <div className={styles.avionics}>
+            <h2>Avionics</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, consequatur.</p>
+          </div>
+          <div className={styles.propulsion}>
+            <h2>Propulsion</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, ut?</p>
+          </div>
+          <div className={styles.airframe}>
+            <h2>Airframe</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, deleniti?</p>
+          </div>
+          <div className={styles.business}>
+            <h2>Business</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, eum.</p>
+          </div>
+        </div>
+
+      </section>  
     </div>
   );
 }
