@@ -64,16 +64,17 @@ export default function Navbar() {
           width={384}
           height={222}
           alt="Logo"
-         
         />
-        
       </Link>
-      {links_content}
 
-      
-
-      {/* for spacing: */}
-      <div></div>
+      {mobile_active}
+      <div
+        className={
+          styles.links + (dropdown_closed ? " " + styles.dropdown_closed : "")
+        }
+      >
+        {links_content}
+      </div>
 
       {/* <div className={styles.buttons}>
         <Link className={styles.reach_out} href="/contact">
