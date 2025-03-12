@@ -64,29 +64,35 @@ export default function Sponsors() {
           <li>
             <h4>CSR and Tax Exemption</h4>
             <p>
-              Contributions qualify for tax rebates under the Income Tax Act for
-              scientific research. This is an opportunity to support scientific
-              innovation and research
+              Support groundbreaking scientific innovation with the IIT Bombay
+              Rocket Team! Your contributions qualify for tax rebates under the
+              Income Tax Act for scientific research. This is a unique
+              opportunity to promote cutting-edge technology, empower young
+              innovators, and make a meaningful impact on the future of space
+              exploration and scientific advancement.
             </p>
           </li>
 
           <li>
             <h4>Branding Avenues</h4>
             <p>
-              Your brand will gain global exposure at launch events, reaching
-              thousands of attendees. Your logo will be featured on our rocket,
-              T-shirts, and social media (40k+ followers). You will also connect
-              with talented IITB students for internships.
+              Gain global exposure by sponsoring the IIT Bombay Rocket Team!
+              Your logo will shine on our rocket soaring 30,000 feet, featured
+              at launch events, on T-shirts, and across social media (40k+
+              followers). Connect with thousands of attendees and talented IITB
+              students for internships while supporting cutting-edge innovation
+              and space exploration
             </p>
           </li>
 
           <li>
             <h4>Soar 30000 feet high</h4>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
-              commodi, voluptas, veniam assumenda officiis odio optio quae
-              asperiores nisi error nihil modi quos similique quod neque
-              delectus vel perspiciatis quas.
+              Partner with us and watch your brand reach new heights—literally!
+              By sponsoring the IIT Bombay Rocket Team, your logo will soar an
+              incredible 30,000 feet into the sky on our cutting-edge rocket.
+              Join us in pushing the boundaries of innovation while showcasing
+              your brand to a global audience.
             </p>
           </li>
         </ol>
@@ -97,38 +103,39 @@ export default function Sponsors() {
         <h3>&gt; How you can help us</h3>
         <ol className={styles.help}>
           <li>
-            <h4>Financial support</h4>
+            <h4>Monetary Contributions </h4>
             <p>
-              We seek monetary contributions to cover essential expenses such as
+              We seek monetary support to cover essential expenses, including
               competition fees, materials, travel allowances, outreach,
-              publicity, and event costs. Your support will help us manage
-              operational expenses and focus on innovation and success
+              publicity, and event costs. Your contributions will enable us to
+              manage operational expenses efficiently, allowing the IIT Bombay
+              Rocket Team to focus on innovation, engineering excellence, and
+              achieving success in national and international competitions.
             </p>
           </li>
 
           <li>
-            <h4>Value in Kind</h4>
+            <h4>In-Kind Sponsorships</h4>
             <p>
-              The IIT Rocket Team designs and builds high-quality engineering
-              prototypes. We invite in-kind sponsorships to support our work,
-              including the provision of mechanical and electrical components,
-              specialized materials, tools, machinery, and other essential
-              supplies for rocket manufacturing. Your contribution will directly
-              aid in advancing our projects and achieving engineering
-              excellence.
+              The IIT Bombay Rocket Team designs and builds high-quality
+              engineering prototypes. We invite in-kind sponsorships to provide
+              mechanical and electrical components, specialized materials,
+              tools, machinery, and other essential supplies for rocket
+              manufacturing. Your contributions will directly support our
+              projects, helping us achieve engineering excellence and advance
+              the boundaries of scientific innovation.
             </p>
           </li>
 
           <li>
-            <h4>Services and collabs</h4>
+            <h4>Services and Mentorship</h4>
             <p>
               We seek services such as shipping, accommodation, travel planning,
               and packaging. Access to your technical experts for guidance would
-              greatly support our efforts. We value scientific mentorship,
-              assistance in connecting with key stakeholders, securing purchase
-              discounts, and collaborating on joint marketing initiatives like
-              press releases and social media campaigns to maximize visibility
-              and impact.
+              be invaluable. We value mentorship, assistance in connecting with
+              stakeholders, securing purchase discounts, and collaborating on
+              joint marketing initiatives like press releases and social media
+              campaigns to maximize visibility and impact.
             </p>
           </li>
         </ol>
