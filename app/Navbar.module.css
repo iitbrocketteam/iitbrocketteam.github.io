@@ -2,7 +2,7 @@
   height: var(--navbar-height);
   font-size: 1.4rem;
   padding: 0.2rem 1rem;
-  
+
   position: fixed;
   z-index: 100;
   width: 100vw;
@@ -12,14 +12,10 @@
   display: flex;
 
   --link-highlight: #1768ff;
-  justify-content: center;
 }
 
 .logo_link {
-  height: 100%; 
-  top: 0%;
-  left: 0;
-  position: fixed;/* of Navbar height*/
+  height: 100%; /* of Navbar height*/
 }
 
 .logo {

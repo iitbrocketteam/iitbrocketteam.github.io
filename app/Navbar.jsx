@@ -23,8 +23,14 @@ const links = [
 
 export default function Navbar() {
   const pathname = usePathname();
+  const current_link = links.find((link) => link[0] === pathname);
 
   const [dropdown_closed, set_dropdown_closed] = useState(true);
+
+  // link may not exist - eg if gonna 404
+  if (!current_link) {
+    return null;
+  }
 
   const mobile_active = (
     <div
@@ -33,7 +39,7 @@ export default function Navbar() {
         set_dropdown_closed(!dropdown_closed);
       }}
     >
-      {links.find((link) => link[0] === pathname)[1]}
+      {current_link[1]}
     </div>
   );
 
@@ -64,16 +70,17 @@ export default function Navbar() {
           width={384}
           height={222}
           alt="Logo"
-         
         />
-        
       </Link>
-      {links_content}
 
-      
-
-      {/* for spacing: */}
-      <div></div>
+      {mobile_active}
+      <div
+        className={
+          styles.links + (dropdown_closed ? " " + styles.dropdown_closed : "")
+        }
+      >
+        {links_content}
+      </div>
 
       {/* <div className={styles.buttons}>
         <Link className={styles.reach_out} href="/contact">

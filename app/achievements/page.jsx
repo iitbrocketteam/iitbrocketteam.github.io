@@ -40,34 +40,43 @@ export default function Achievements() {
       <h1 className={styles.h1_achieveme}>ACHIEVEMENTS</h1>
       <section className={styles.achievements}>
         <ul className={styles.timeline}>
-
           {/* TODO set this with js expr. also n */}
-          <li style={{"--i": 1}}>
+          <li>
             <p>
-              <span>First National Rank</span> at SA cup
+              <span>First National Rank</span> at SA cup &apos;23
+            </p>
+          </li>
+          <li>
+            <p>
+              <span>34th Rank</span> at SA cup &apos;23
             </p>
           </li>
 
-          <li style={{"--i": 2}}>
+          <li>
+            <p>
+              <span>1st Position</span> in Engineers Conclave, IIT Madras{" "}
+              {/* 2023 */}
+            </p>
+          </li>
+
+          <li>
             <p>
               <span>1st Position</span>
               at Techexpo, IIT Guwahati {/* 2023 */}
             </p>
           </li>
 
-          <li style={{"--i": 3}}>
-            <p><span>1st Position</span> in Engineer's Conclave, IIT Madras {/* 2023 */}</p>
-          </li>
-
-          <li style={{"--i": 4}}>
-            <p><span>2nd Position</span> in Techzibition</p>
-          </li>
-
-          <li style={{"--i": 5}}>
+          <li>
             <p>
-              <span>Finalists</span> of Techkriti {/* 2023 */}
+              <span>2nd Position</span> in Techzibition
             </p>
           </li>
+
+          {/* <li>
+            <p>
+              <span>Finalists</span> of Techkriti
+            </p>
+          </li> */}
 
           {/* <li>
             <span>2nd Runner Up</span> in Anveshan 2023
