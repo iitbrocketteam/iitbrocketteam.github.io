@@ -448,7 +448,7 @@
   /* overflow: hidden; */
   position: relative;
   display: flex;
-  gap: 40px;
+  gap: 30px;
 }
 
 .sub_info {

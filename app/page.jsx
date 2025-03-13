@@ -107,19 +107,20 @@ export default function Home() {
         <div className={styles.other_one}>
           <div className={styles.avionics}>
             <h2>Avionics</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, consequatur.</p>
+            <p>Design, development and manufacturing of the electronics systems inside the rocket and supporting equipment</p>
           </div>
           <div className={styles.propulsion}>
             <h2>Propulsion</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, ut?</p>
+            <p>Research, analyze, and characterize new propellants that can be utilized to achieve better performance for the rocket. Developing new alternatives for propellant manufacturing for better scalability and  reliability</p>
           </div>
           <div className={styles.airframe}>
             <h2>Airframe</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, deleniti?</p>
+            <p>Develop and manufacture the rocket’s airframe and aerodynamic surfaces for stability, strength, and optimal flight performance.
+            </p>
           </div>
           <div className={styles.business}>
-            <h2>Business</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, eum.</p>
+            <h2>Payload</h2>
+            <p>Design of payloads, its mechanical movements and supporting hardware to gather key data for the rocket</p>
           </div>
         </div>
 
