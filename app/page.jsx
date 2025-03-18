@@ -153,6 +153,32 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className={styles.subsystem}>
+        <div className={styles.sub_info}>
+          <h2>Rocket Team</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam ipsam doloremque eum quod temporibus magni veritatis recusandae deleniti. Quo, ratione?</p>
+        </div>
+        <div className={styles.other_one}>
+          <div className={styles.avionics}>
+            <h2>Avionics</h2>
+            <p>Design, development and manufacturing of the electronics systems inside the rocket and supporting equipment</p>
+          </div>
+          <div className={styles.propulsion}>
+            <h2>Propulsion</h2>
+            <p>Research, analyze, and characterize new propellants that can be utilized to achieve better performance for the rocket. Developing new alternatives for propellant manufacturing for better scalability and  reliability</p>
+          </div>
+          <div className={styles.airframe}>
+            <h2>Airframe</h2>
+            <p>Develop and manufacture the rocket’s airframe and aerodynamic surfaces for stability, strength, and optimal flight performance.
+            </p>
+          </div>
+          <div className={styles.business}>
+            <h2>Payload</h2>
+            <p>Design of payloads, its mechanical movements and supporting hardware to gather key data for the rocket</p>
+          </div>
+        </div>
+
+      </section>  
     </div>
   );
 }

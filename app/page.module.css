@@ -375,6 +375,99 @@
     transform: translateX(0%);
   }
 }
+.subsystem{
+  clip-path: polygon(0 14%, 100% 0%, 100% 100%, 0% 100%);
+  /* margin-bottom: auto; */
+  transform: translateY(10px);
+  padding: 120px 100px 50px 100px;
+  text-align: center;
+  background: navy;
+  color: white;
+  /* overflow: hidden; */
+  position: relative;
+  display: flex;
+  gap: 30px;
+}
+
+.sub_info {
+  margin-left: 0;
+  transform: translateX(-65px);
+  /* transform: translate(-40px, -30px); */
+}
+
+.sub_info h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: white;
+  font-weight: 200;
+  
+
+}
+
+.sub_info p {
+  text-align: left;
+  font-size: 20;
+  width: 500px;
+  word-wrap: break-word;
+  margin-top: auto;
+
+}
+
+.other_one{
+  display: grid;
+  grid-template-columns: repeat(2, 300px);
+  gap: 70px;
+  transform: translateX(-75px);
+  /* transform: translate(30px, -50px); */
+}
+
+.avionics h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: white;
+  font-weight: 200;
+  transform: translateX(-47px);
+}
+
+.avionics p {
+  font-size: 17;
+}
+
+.propulsion h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: white;
+  font-weight: 200;
+  transform: translateX(-47px);
+}
+
+.propulsion p {
+  font-size: 17;
+}
+
+.airframe h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: white;
+  font-weight: 200;
+  transform: translateX(-47px);
+}
+
+.airframe p {
+  font-size: 17;
+}
+
+.business h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: white;
+  font-weight: 200;
+  transform: translateX(-47px);
+}
+
+.business p {
+  font-size: 17;
+}
 
 .footer {
   background-color: #000;
