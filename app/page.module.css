@@ -23,18 +23,6 @@
   }
 }
 
-/* Keyframes for trailing particles */
-/* @keyframes trailEffect {
-  0% {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(0.5) translateY(50px);
-  }
-} */
-
 /* Text animation */
 .blast_text {
   font-size: 3.5rem;
@@ -52,16 +40,6 @@
   position: relative;
   z-index: -1;
 }
-
-/* Trail effect */
-/* .trail {
-  position: absolute;
-  width: 100%;
-  height: 20px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.8), transparent);
-  animation: trailEffect 1.5s ease-out forwards;
-  z-index: 0;
-} */
 
 /* Header styling */
 .header {
@@ -112,7 +90,7 @@
 }
 
 .section {
-  padding: 60px 20px;
+  padding: 90px 20px;
   text-align: center;
 }
 
@@ -151,7 +129,6 @@
   font-size: 2.5rem;
   margin-bottom: 10px;
   color: black;
-
 }
 
 .team_info p {
@@ -160,13 +137,13 @@
   width: 500px;
   word-wrap: break-word;
   margin-top: auto;
-
 }
 
 .other {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+  padding-bottom: 3rem; /* to prevent clipping of text */
   /* transform: translate(30px, -50px); */
 }
 
@@ -209,17 +186,6 @@
 .vis p {
   font-size: 20;
 }
-
-/*.vision h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: black;
-}
-
-.vision p {
-  text-align: left;
-  font-size: 20;
-}*/
 
 .typewriter_container {
   margin: 20px auto;
@@ -272,11 +238,6 @@
   padding: 0rem 6rem;
 }
 
-/* .fade_in_items p.visible {
-  opacity: 1;
-  transform: translateY(0);
-} */
-
 .stats_section {
   background-color: navy;
   position: relative;
@@ -285,40 +246,25 @@
   /* Replace with your image */
   height: 700px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   transform: translateY(-20px);
+  gap: 0.6rem;
 
   text-align: center;
 }
 
-/* Overlay for darker effect */
-.stats_section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: white(0, 0, 0, 0.6);
-  /* Dark overlay */
-  z-index: 1;
-}
-
 /* Stats container */
 .stats {
-
   display: flex;
   gap: 30px;
   z-index: 2;
 }
 
-.stats h2 {
-  display: inline-block;
+.stats_section h2 {
   color: white;
-  transform: translate(300px, -100px);
   font-size: 2.3rem;
-
 }
 
 /* Single stat box */
@@ -329,7 +275,7 @@
   padding: 20px 40px;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transform: translateX(-100px);
+  /* transform: translateX(-100px); */
 }
 
 /* Stat number */
@@ -355,14 +301,6 @@
     gap: 20px;
   }
 }
-
-/*.section {
-  clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%);
-
-  text-align: center;
-  padding: 50px 20px;
-  background-color: white;
-}*/
 
 .section h1 {
   font-size: 2.5rem;
@@ -437,7 +375,6 @@
     transform: translateX(0%);
   }
 }
-
 
 .footer {
   background-color: #000;
