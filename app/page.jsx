@@ -27,13 +27,7 @@ export default function Home() {
         <div className={styles.team_info}>
           <h2>Rocket Team</h2>
           <p>
-            Our team is a group of 30+ members, including undergraduates, dual
-            degree and PhD students, united by a shared passion for advancing
-            rocketry and space sciences in India. We are dedicated to nurture a
-            robust STEM community and are guided by experienced faculty from
-            ISRO and IIT Bombay, along with a TRA Level-3 certified
-            international mentor who will be our Flyer of Record for the
-            competition.
+            Our team is a group of 30+ members, including undergraduates, dual degree and PhD students, united by a shared passion for advancing rocketry and space sciences in India. We are dedicated to nurture a robust STEM community and are guided by experienced faculty from ISRO and IIT Bombay, along with a TRA Level-3 certified international mentor who will be our Flyer of Record for the competition.
           </p>
         </div>
         <div className={styles.other}>

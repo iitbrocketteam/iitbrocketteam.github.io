@@ -1,3 +1,4 @@
+
 .page {
   /* min-height: 100svh; */
   background-color: white;
@@ -94,6 +95,16 @@
   /* animation: fadeIn 2s ease-out 1.5s forwards; Optional delay for tagline */
   /* opacity: 0; */
 }
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .header p {
+    font-size: 1.2rem;
+  }
+}
+
 
 /* Additional animation for the tagline */
 @keyframes fadeIn {
@@ -112,7 +123,7 @@
 }
 
 .section {
-  padding: 60px 20px;
+  padding: 50px 20px;
   text-align: center;
 }
 
@@ -127,12 +138,29 @@
   max-width: 800px;
   margin: 0 auto;
 }
+@media (max-width: 768px) {
+  .hero-text {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .rocket-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .section {
+    padding: 1rem;
+  }
+}
+
 
 .vision {
-  clip-path: polygon(0 14%, 100% 0, 100% 84%, 0 100%);
+  clip-path: polygon(0 11%, 100% 0%, 100% 89%, 0% 100%);
   /* margin-bottom: auto; */
-  transform: translateY(-100px);
-  padding: 120px 100px 50px 100px;
+  transform: translateY(-150px);
+  padding: 130px 100px 25px 100px;
   text-align: center;
   background: white;
   color: black;
@@ -140,15 +168,18 @@
   position: relative;
   display: flex;
   gap: 40px;
+  
 }
+
 
 .team_info {
   margin-left: 0;
-  /* transform: translate(-40px, -30px); */
+  padding: 1;
+  /*transform: translate(-40px, -30px);*/     
 }
 
 .team_info h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 10px;
   color: black;
 
@@ -156,7 +187,7 @@
 
 .team_info p {
   text-align: left;
-  font-size: 25;
+  font-size: 20;
   width: 500px;
   word-wrap: break-word;
   margin-top: auto;
@@ -172,7 +203,7 @@
 
 .achieve h2 {
   font-size: 2rem;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   color: black;
 }
 
@@ -182,7 +213,7 @@
 
 .compi h2 {
   font-size: 2rem;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   color: black;
 }
 
@@ -192,7 +223,7 @@
 
 .rnd h2 {
   font-size: 2rem;
-  margin-bottom: 10px;
+  margin-bottom: 3px;
   color: black;
 }
 
@@ -202,12 +233,64 @@
 
 .vis h2 {
   font-size: 2rem;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   color: black;
 }
 
 .vis p {
   font-size: 20;
+}
+@media (max-width: 768px) {
+  .vision {
+    clip-path: polygon(0 2%, 100% 0, 100% 98%, 0% 100%);
+    transform: translateY(-40px);
+    padding: 50px 10px;
+    flex-direction: column;
+    
+}
+.team_info h2{
+  transform: none;
+}
+.team_info p{
+  transform: none;
+  font-size: 15px;
+  padding-right: 65px;
+  padding-left: 10px;
+}
+.achieve h2{
+  transform: none;
+  font-size: 1.5rem;
+}
+.achieve p{
+  transform: none;
+  font-size: 15px;
+}
+.compi h2{
+  transform: none;
+  font-size: 1.5rem;
+}
+.compi p{
+  transform: none;
+  font-size: 15px;
+}
+.rnd h2{
+  transform: none;
+  font-size: 1.5rem;
+}
+.rnd p{
+  transform: none;
+  font-size: 15px;
+}
+.vis h2{
+  transform: none;
+  font-size: 1.5rem;
+}
+.vis p{
+  transform: none;
+  font-size: 15px;
+}
+
+
 }
 
 /*.vision h2 {
@@ -350,10 +433,25 @@
 
 /* Responsive design */
 @media (max-width: 768px) {
-  .stats {
-    flex-direction: column;
-    gap: 20px;
+  .stat h1{
+    transform: none;
+    font-size: 2rem;
+    padding-top: 10px;
+    
   }
+  
+  .stats_section {
+    clip-path: polygon(0 2%, 100% 0, 100% 98%, 0% 100%);
+    padding: 50px 20px;
+    flex-direction: column;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-rows: repeat(2, auto); /* 2 rows */
+  }
+  .stats h2{
+    transform: translate(390px,-170px);
+    padding-left: 10px;
+  }
+  
 }
 
 /*.section {
@@ -529,6 +627,61 @@
 
 .business p {
   font-size: 17;
+}
+@media (max-width: 768px) {
+  .subsystem {
+    clip-path: polygon(0 2%, 100% 0, 100% 100%, 0% 100%);
+    flex-direction: column;
+    padding: 50px 20px ;
+    overflow: visible;
+    gap: 10px;
+    
+  }
+  .other_one {
+    grid-template-columns: 1fr;
+    
+  }
+  .sub_info h2{
+    padding-left: 50px;
+  }
+  .sub_info p{
+    font-size: 15;
+    transform: none;
+    padding-left: 62px;
+    
+  }
+  .airframe h2{
+    transform: none;
+    padding-left: 65px;
+  }
+  .airframe p{
+    padding-left: 80px;
+    font-size: 16px;
+  }
+  .avionics h2{
+    transform: none;
+    padding-left: 65px;
+  }
+  .avionics p{
+    padding-left: 80px;
+    font-size: 16px;
+  }
+  .business h2{
+    transform: none;
+    padding-left: 65px;
+  }
+  .business p{
+    padding-left: 80px;
+    font-size: 16px;
+  }
+  .propulsion h2{
+    transform: none;
+    padding-left: 65px;
+  }
+  .propulsion p{
+    padding-left: 80px;
+    font-size: 16px;
+  }
 }
 
 
