@@ -76,8 +76,8 @@ export default function Home() {
       </section>
 
       <section className={styles.stats_section}>
+        <h2>At a Glance </h2>
         <div className={styles.stats}>
-          <h2>At a Glance </h2>
           <div className={styles.stat}>
             <h1>6</h1>
             <p>Rockets</p>

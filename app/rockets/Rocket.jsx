@@ -37,14 +37,7 @@ export default function Rocket({ props }) {
       <div>
         <Table props={props} />
 
-        <p className={styles.para}>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla rem
-          quia commodi ex et porro sequi nisi magnam fugit distinctio nobis
-          dolorem quaerat nam vel neque magni eaque ut, eligendi minus!
-          Consequuntur dolorum fugit inventore, optio, architecto harum facere
-          iusto deserunt molestias totam dolorem. Ratione porro saepe asperiores
-          dignissimos neque!
-        </p>
+        <p className={styles.para}>{props.description}</p>
       </div>
 
       {/* <Image className={styles.video} src="/rocket.png" width={260} height={750} alt="Logo" /> */}
