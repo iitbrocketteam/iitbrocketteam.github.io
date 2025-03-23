@@ -59,7 +59,6 @@
   background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
   transition: background-size 300ms;
-  
 }
 
 .subpage_link:hover {
@@ -70,7 +69,6 @@
 /* TODO active doesn't override .links a. so made separate inactive class */
 .active {
   background-size: 0 0.1em, 100% 0.01em;
-  
 }
 
 .buttons {
@@ -83,11 +81,11 @@
     font-size: 1.35rem;
   }
 
-  .links_content {
-    
+  .links {
+    width: 13ch; /* achievements */
+    position: fixed;
     right: 0.5rem;
     justify-content: center;
-
 
     display: flex;
     flex-direction: column;
