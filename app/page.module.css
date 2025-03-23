@@ -1,6 +1,4 @@
-
 .page {
-  /* min-height: 100svh; */
   background-color: white;
   color: black;
   padding: var(--navbar-height) 0rem 0rem 0rem;
@@ -83,7 +81,6 @@
   }
 }
 
-
 /* Additional animation for the tagline */
 @keyframes fadeIn {
   0% {
@@ -116,6 +113,7 @@
   max-width: 800px;
   margin: 0 auto;
 }
+
 @media (max-width: 768px) {
   .hero-text {
     font-size: 1.5rem;
@@ -133,27 +131,26 @@
   }
 }
 
-
 .vision {
   clip-path: polygon(0 11%, 100% 0%, 100% 89%, 0% 100%);
-  /* margin-bottom: auto; */
   transform: translateY(-150px);
   padding: 130px 100px 25px 100px;
-  text-align: center;
+  /* text-align: center; */
   background: white;
   color: black;
-  /* overflow: hidden; */
   position: relative;
   display: flex;
   gap: 40px;
-  
 }
 
+.vision p {
+  color: #202020;
+}
 
 .team_info {
   margin-left: 0;
   padding: 1;
-  /*transform: translate(-40px, -30px);*/     
+  /*transform: translate(-40px, -30px);*/
 }
 
 .team_info h2 {
@@ -164,8 +161,8 @@
 
 .team_info p {
   text-align: left;
-  font-size: 20;
-  width: 500px;
+  font-size: 20px;
+  width: 400px;
   word-wrap: break-word;
   margin-top: auto;
 }
@@ -173,101 +170,78 @@
 .other {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 30px;
   padding-bottom: 3rem; /* to prevent clipping of text */
-  /* transform: translate(30px, -50px); */
 }
 
-.achieve h2 {
+.other h2 {
   font-size: 2rem;
   margin-bottom: 5px;
   color: black;
 }
 
-.achieve p {
-  font-size: 20;
+.other p {
+  font-size: 20px;
+  color: rgb(67, 67, 67);
 }
 
-.compi h2 {
-  font-size: 2rem;
-  margin-bottom: 5px;
-  color: black;
+.other li {
+  margin-top: 0.3rem;
 }
 
-.compi p {
-  font-size: 20;
+.other a {
+  font-size: 20px;
+  text-decoration: underline;
 }
 
-.rnd h2 {
-  font-size: 2rem;
-  margin-bottom: 3px;
-  color: black;
-}
-
-.rnd p {
-  font-size: 20;
-}
-
-.vis h2 {
-  font-size: 2rem;
-  margin-bottom: 5px;
-  color: black;
-}
-
-.vis p {
-  font-size: 20;
-}
 @media (max-width: 768px) {
   .vision {
     clip-path: polygon(0 2%, 100% 0, 100% 98%, 0% 100%);
     transform: translateY(-40px);
     padding: 50px 10px;
     flex-direction: column;
-    
-}
-.team_info h2{
-  transform: none;
-}
-.team_info p{
-  transform: none;
-  font-size: 15px;
-  padding-right: 65px;
-  padding-left: 10px;
-}
-.achieve h2{
-  transform: none;
-  font-size: 1.5rem;
-}
-.achieve p{
-  transform: none;
-  font-size: 15px;
-}
-.compi h2{
-  transform: none;
-  font-size: 1.5rem;
-}
-.compi p{
-  transform: none;
-  font-size: 15px;
-}
-.rnd h2{
-  transform: none;
-  font-size: 1.5rem;
-}
-.rnd p{
-  transform: none;
-  font-size: 15px;
-}
-.vis h2{
-  transform: none;
-  font-size: 1.5rem;
-}
-.vis p{
-  transform: none;
-  font-size: 15px;
-}
-
-
+  }
+  .team_info h2 {
+    transform: none;
+  }
+  .team_info p {
+    transform: none;
+    font-size: 15px;
+    padding-right: 65px;
+    padding-left: 10px;
+  }
+  .achieve h2 {
+    transform: none;
+    font-size: 1.5rem;
+  }
+  .achieve p {
+    transform: none;
+    font-size: 15px;
+  }
+  .competitions h2 {
+    transform: none;
+    font-size: 1.5rem;
+  }
+  .competitions p {
+    transform: none;
+    font-size: 15px;
+  }
+  .rnd h2 {
+    transform: none;
+    font-size: 1.5rem;
+  }
+  .rnd p {
+    transform: none;
+    font-size: 15px;
+  }
+  .vis h2 {
+    transform: none;
+    font-size: 1.5rem;
+  }
+  .vis p {
+    transform: none;
+    font-size: 15px;
+  }
 }
 
 .typewriter_container {
@@ -379,13 +353,12 @@
 
 /* Responsive design */
 @media (max-width: 768px) {
-  .stat h1{
+  .stat h1 {
     transform: none;
     font-size: 2rem;
     padding-top: 10px;
-    
   }
-  
+
   .stats_section {
     clip-path: polygon(0 2%, 100% 0, 100% 98%, 0% 100%);
     padding: 50px 20px;
@@ -393,11 +366,10 @@
     grid-template-columns: repeat(2, 1fr); /* 2 columns */
     grid-template-rows: repeat(2, auto); /* 2 rows */
   }
-  .stats h2{
-    transform: translate(390px,-170px);
+  .stats h2 {
+    transform: translate(390px, -170px);
     padding-left: 10px;
   }
-  
 }
 
 .section h1 {
@@ -473,7 +445,7 @@
     transform: translateX(0%);
   }
 }
-.subsystem{
+.subsystem {
   clip-path: polygon(0 14%, 100% 0%, 100% 100%, 0% 100%);
   /* margin-bottom: auto; */
   transform: translateY(10px);
@@ -498,8 +470,6 @@
   margin-bottom: 10px;
   color: white;
   font-weight: 200;
-  
-
 }
 
 .sub_info p {
@@ -508,10 +478,9 @@
   width: 500px;
   word-wrap: break-word;
   margin-top: auto;
-
 }
 
-.other_one{
+.other_one {
   display: grid;
   grid-template-columns: repeat(2, 300px);
   gap: 70px;
@@ -570,53 +539,50 @@
   .subsystem {
     clip-path: polygon(0 2%, 100% 0, 100% 100%, 0% 100%);
     flex-direction: column;
-    padding: 50px 20px ;
+    padding: 50px 20px;
     overflow: visible;
     gap: 10px;
-    
   }
   .other_one {
     grid-template-columns: 1fr;
-    
   }
-  .sub_info h2{
+  .sub_info h2 {
     padding-left: 50px;
   }
-  .sub_info p{
+  .sub_info p {
     font-size: 15;
     transform: none;
     padding-left: 62px;
-    
   }
-  .airframe h2{
+  .airframe h2 {
     transform: none;
     padding-left: 65px;
   }
-  .airframe p{
+  .airframe p {
     padding-left: 80px;
     font-size: 16px;
   }
-  .avionics h2{
+  .avionics h2 {
     transform: none;
     padding-left: 65px;
   }
-  .avionics p{
+  .avionics p {
     padding-left: 80px;
     font-size: 16px;
   }
-  .business h2{
+  .business h2 {
     transform: none;
     padding-left: 65px;
   }
-  .business p{
+  .business p {
     padding-left: 80px;
     font-size: 16px;
   }
-  .propulsion h2{
+  .propulsion h2 {
     transform: none;
     padding-left: 65px;
   }
-  .propulsion p{
+  .propulsion p {
     padding-left: 80px;
     font-size: 16px;
   }

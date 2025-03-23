@@ -9,7 +9,6 @@ const techno_font = Orbitron({
   // weight: "400",
   subsets: ["latin"],
 });
-// const roboto_mono = Roboto_Mono({ weight: "400", subsets: ["latin"] });
 
 // const font = Inter({
 //   weight: ["400", "700"],
@@ -31,46 +30,58 @@ export default function Home() {
         <div className={styles.team_info}>
           <h2>Rocket Team</h2>
           <p>
-            Our team is a group of 30+ members, including undergraduates, dual
-            degree and PhD students, united by a shared passion for advancing
-            rocketry and space sciences in India. We are dedicated to nurture a
-            robust STEM community and are guided by experienced faculty from
-            ISRO and IIT Bombay, along with a TRA Level-3 certified
-            international mentor who will be our Flyer of Record for the
-            competition.
+            Our team comprises 30+ members, united by a shared vision for
+            advancing rocketry and the space science community in India.
+            <br />
+            We are guided by experienced faculty from ISRO and IIT Bombay, along
+            with a TRA Level-3 certified international mentor who will be our
+            Flyer of Record for the competition.
           </p>
         </div>
+
         <div className={styles.other}>
+          <div className={styles.competitions}>
+            <h2>Competitions</h2>
+            <p>
+              We are proud to compete on two prestigious platforms:
+              <ul>
+                <li>
+                  1. the Intercollegiate Rocket Engineering Competition (IREC)
+                  at the prestigious <strong>Spaceport America Cup</strong>. At
+                  IREC, we showcase advanced engineering by launching rockets to
+                  altitudes of 10,000m.
+                </li>
+                <li>
+                  2. the <strong>INSPACE</strong> competition, which highlights
+                  our expertise in low-altitude rocketry with deployable
+                  payloads.
+                </li>
+              </ul>
+            </p>
+          </div>
+
           <div className={styles.achieve}>
             <h2>Achievements</h2>
             <p>
-              The IIT Bombay Rocket Team has consistently excelled at the
-              prestigious Spaceport America Cup, the world’s largest
-              intercollegiate rocketry competition. Currently ranked 34th among
-              150+ global teams at SA Cup 2024, we proudly secured the National
-              First Position at SA Cup 2023, solidifying our place as India’s
-              top collegiate rocketry team.
+              We have consistently excelled at the prestigious Spaceport America
+              Cup, the world’s largest intercollegiate rocketry competition.
+              <br />
+              Currently ranked 34th among 150+ global teams at SA Cup 2024, we
+              proudly secured the <strong>National First Position</strong> at SA
+              Cup 2023, solidifying our place as India’s top collegiate rocketry
+              team.
             </p>
+            <a href="/achievements">See all our achievements &rarr;</a>
           </div>
-          <div className={styles.compi}>
-            <h2>Competitions</h2>
-            <p>
-              The IIT Bombay Rocket Team is proud to compete in two prestigious
-              platforms: the Intercollegiate Rocket Engineering Competition
-              (IREC) at Spaceport America Cup and the INSPACE competition. At
-              IREC, we showcase advanced engineering by launching rockets to
-              altitudes of 10,000, while INSPACE highlights our expertise in
-              low-altitude rocketry with deployable payloads.{" "}
-            </p>
-          </div>
+
           <div className={styles.rnd}>
             <h2>RnD in Fuel</h2>
             <p>
-              The IIT Bombay Rocket Team has successfully developed and designed
-              a solid rocket fuel composed of sorbitol and potassium nitrate
-              (KNO₃). This formulation, known as KNSB (potassium
-              nitrate-sorbitol), is widely recognized for its affordability,
-              safety, and high reliability in amateur and student rocketry.
+              We have successfully developed and designed a solid rocket fuel
+              composed of sorbitol and potassium nitrate (KNO₃). This
+              formulation, known as KNSB (potassium nitrate-sorbitol),high
+              reliability affordability, and safety in amateur and student
+              rocketry.
             </p>
           </div>
           <div className={styles.vis}>
