@@ -4,10 +4,9 @@ import Link from "next/link";
 import { Orbitron, Poppins } from "next/font/google";
 
 const techno_font = Orbitron({ weight: "400", subsets: ["latin"] });
-const font = Poppins({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-});
+// const font = Inter({
+//   subsets: ["latin"],
+// });
 
 export default function Sponsors() {
   // structure:
@@ -17,7 +16,9 @@ export default function Sponsors() {
 
   return (
     <div
-      className={styles.pitch + " " + styles.center_div + " " + font.className}
+      className={
+        styles.pitch + " " + styles.center_div /*  + " " + font.className */
+      }
     >
       <div className={styles.main + " " + styles.center_div}>
         <div className={styles.support_heading + " " + techno_font.className}>

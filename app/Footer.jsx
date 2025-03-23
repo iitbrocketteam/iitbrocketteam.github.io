@@ -8,13 +8,13 @@ import {
   FaCopyright,
 } from "react-icons/fa";
 
-import { Space_Mono, Poppins } from "next/font/google";
+// import { Space_Mono, Poppins, Inter } from "next/font/google";
 // const font = Space_Mono({ weight: "400", subsets: ["latin"] });
-const font = Poppins({ weight: "400", subsets: ["latin"] });
+// const font = Inter({ subsets: ["latin"] });
 
 export default function Footer() {
   return (
-    <footer className={styles.footer + " " + font.className}>
+    <footer className={styles.footer /*  + ' ' + font.className */}>
       <div className={styles.footer_container}>
         <Image
           className={styles.logo}

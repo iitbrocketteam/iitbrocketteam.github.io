@@ -1,13 +1,12 @@
 import styles from "./rockets.module.css";
 import Image from "next/image";
 
-import { Roboto_Mono, Poppins } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 
-const font = Poppins({
-  weight: ["300", "500", "700"],
-  subsets: ["latin"],
-  display: "swap",
-});
+// const font = Inter({
+//   subsets: ["latin"],
+//   display: "swap",
+// });
 
 export function Table({ props }) {
   const rows = props.data.map((element) => (
@@ -18,7 +17,7 @@ export function Table({ props }) {
   ));
 
   return (
-    <table className={styles.table + " " + font.className}>
+    <table className={styles.table /* + " " + font.className */}>
       <thead>
         <tr>
           <th>{props.name}</th>

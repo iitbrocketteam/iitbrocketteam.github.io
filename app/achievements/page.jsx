@@ -3,10 +3,10 @@ import Image from "next/image";
 import { Montserrat, Poppins, Inter } from "next/font/google";
 import data from "./event_data.json";
 
-const font = Inter({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-});
+// const font = Inter({
+// weight: ["100","200","300","400","500" "400", "700"],
+//   subsets: ["latin"],
+// });
 
 export default function Achievements() {
   const image_list_content = (image_list) =>
@@ -36,7 +36,7 @@ export default function Achievements() {
   ));
 
   return (
-    <div className={styles.page + " " + font.className}>
+    <div className={styles.page /*  + " " + font.className */}>
       <h1 className={styles.h1_achieveme}>ACHIEVEMENTS</h1>
       <section className={styles.achievements}>
         <ul className={styles.timeline}>

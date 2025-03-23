@@ -4,11 +4,11 @@ import styles from "./Navbar.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Space_Mono, Poppins, Inter } from "next/font/google";
 import { FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { useState } from "react";
 
-const font = Inter({ weight: "400", subsets: ["latin"] });
+// import { Space_Mono, Poppins, Inter } from "next/font/google";
+// const font = Inter({ weight: "400", subsets: ["latin"] });
 
 // TODO add social media links as well as links to share the website
 
@@ -62,7 +62,7 @@ export default function Navbar() {
   ));
 
   return (
-    <nav className={styles.navbar + " " + font.className}>
+    <nav className={styles.navbar /*  + ' ' + font.className */}>
       <Link className={styles.logo_link} href="/">
         <Image
           className={styles.logo}

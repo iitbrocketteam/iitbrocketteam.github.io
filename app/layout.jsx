@@ -1,15 +1,8 @@
 import "./globals.css";
-import { Roboto, Poppins } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 
-// const font = Roboto({
-//   weight: ["400", "700"],
-//   style: ["normal", "italic"],
-//   subsets: ["latin"],
-//   display: "swap",
-// });
-
-const font = Poppins({ weight: "400", subsets: ["latin"] });
-
+// not specifying weights imports all weights
+const font = Inter({ subsets: ["latin"] });
 
 import Navbar from "./Navbar";
 import Footer from "./Footer";

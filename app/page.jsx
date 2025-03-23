@@ -5,16 +5,20 @@ import { FaRocket, FaHandshake, FaPeopleArrows } from "react-icons/fa";
 
 import { Roboto_Mono, Inter, Orbitron, Poppins } from "next/font/google";
 
-const techno_font = Orbitron({ weight: "400", subsets: ["latin"] });
-// const roboto_mono = Roboto_Mono({ weight: "400", subsets: ["latin"] });
-const font = Poppins({
-  weight: ["400", "700"],
+const techno_font = Orbitron({
+  // weight: "400",
   subsets: ["latin"],
 });
+// const roboto_mono = Roboto_Mono({ weight: "400", subsets: ["latin"] });
+
+// const font = Inter({
+//   weight: ["400", "700"],
+//   subsets: ["latin"],
+// });
 
 export default function Home() {
   return (
-    <div className={styles.page + " " + font.className}>
+    <div className={styles.page /*  + ' ' + font.className */}>
       <header className={styles.header + " " + techno_font.className}>
         <div className={styles.text_container}>
           <h1 className={styles.blast_text}>Welcome to the IITB Rocket Team</h1>
@@ -27,7 +31,13 @@ export default function Home() {
         <div className={styles.team_info}>
           <h2>Rocket Team</h2>
           <p>
-            Our team is a group of 30+ members, including undergraduates, dual degree and PhD students, united by a shared passion for advancing rocketry and space sciences in India. We are dedicated to nurture a robust STEM community and are guided by experienced faculty from ISRO and IIT Bombay, along with a TRA Level-3 certified international mentor who will be our Flyer of Record for the competition.
+            Our team is a group of 30+ members, including undergraduates, dual
+            degree and PhD students, united by a shared passion for advancing
+            rocketry and space sciences in India. We are dedicated to nurture a
+            robust STEM community and are guided by experienced faculty from
+            ISRO and IIT Bombay, along with a TRA Level-3 certified
+            international mentor who will be our Flyer of Record for the
+            competition.
           </p>
         </div>
         <div className={styles.other}>
@@ -150,29 +160,45 @@ export default function Home() {
       <section className={styles.subsystem}>
         <div className={styles.sub_info}>
           <h2>Rocket Team</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam ipsam doloremque eum quod temporibus magni veritatis recusandae deleniti. Quo, ratione?</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+            ipsam doloremque eum quod temporibus magni veritatis recusandae
+            deleniti. Quo, ratione?
+          </p>
         </div>
         <div className={styles.other_one}>
           <div className={styles.avionics}>
             <h2>Avionics</h2>
-            <p>Design, development and manufacturing of the electronics systems inside the rocket and supporting equipment</p>
+            <p>
+              Design, development and manufacturing of the electronics systems
+              inside the rocket and supporting equipment
+            </p>
           </div>
           <div className={styles.propulsion}>
             <h2>Propulsion</h2>
-            <p>Research, analyze, and characterize new propellants that can be utilized to achieve better performance for the rocket. Developing new alternatives for propellant manufacturing for better scalability and  reliability</p>
+            <p>
+              Research, analyze, and characterize new propellants that can be
+              utilized to achieve better performance for the rocket. Developing
+              new alternatives for propellant manufacturing for better
+              scalability and reliability
+            </p>
           </div>
           <div className={styles.airframe}>
             <h2>Airframe</h2>
-            <p>Develop and manufacture the rocket’s airframe and aerodynamic surfaces for stability, strength, and optimal flight performance.
+            <p>
+              Develop and manufacture the rocket’s airframe and aerodynamic
+              surfaces for stability, strength, and optimal flight performance.
             </p>
           </div>
           <div className={styles.business}>
             <h2>Payload</h2>
-            <p>Design of payloads, its mechanical movements and supporting hardware to gather key data for the rocket</p>
+            <p>
+              Design of payloads, its mechanical movements and supporting
+              hardware to gather key data for the rocket
+            </p>
           </div>
         </div>
-
-      </section>  
+      </section>
     </div>
   );
 }

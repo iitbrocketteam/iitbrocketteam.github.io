@@ -5,11 +5,11 @@ import styles from "./contact.module.css";
 import { Roboto, Poppins, Inter } from "next/font/google";
 import { FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
 
-const font = Inter({
-  weight: ["300", "500", "700"],
-  subsets: ["latin"],
-  display: "swap",
-});
+// const font = Inter({
+//   weight: ["300", "500", "700"],
+//   subsets: ["latin"],
+//   display: "swap",
+// });
 
 // Send Form results to Google Sheet:
 // https://github.com/levinunnink/html-form-to-google-sheet
@@ -37,14 +37,16 @@ const handleSubmit = (e) => {
 
 export default function Contact() {
   return (
-    <div className={styles.container + ' ' + font.className}>
+    <div className={styles.container /*  + ' ' + font.className */}>
       <div className={styles.contact_info}>
         <h1>Contact us.</h1>
         <p>iitbrocketteam@gmail.com</p>
         <p>IIT BOMBAY</p>
         <p>Powai , Mumbai -400076</p>
         <h2>Resources</h2>
-        <a href="https://drive.google.com/drive/folders/1Nb8fV42-rMY1Dj-B-6YNH9x0v0Vwfh9y">https://drive.google.com/drive/folders/1Nb8fV42-rMY1Dj-B-6YNH9x0v0Vwfh9y</a>
+        <a href="https://drive.google.com/drive/folders/1Nb8fV42-rMY1Dj-B-6YNH9x0v0Vwfh9y">
+          https://drive.google.com/drive/folders/1Nb8fV42-rMY1Dj-B-6YNH9x0v0Vwfh9y
+        </a>
         <div className={styles.social_icons}>
           <a href="https://www.instagram.com/iitb.rocket.team/">
             <FaInstagram />
