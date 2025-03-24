@@ -26,7 +26,7 @@ export default function Home() {
         <p>Achieving New Frontiers in High Powered Rocketry</p>
       </header>
 
-      <section className={styles.vision}>
+      <section className={styles.vision + " " + styles.slant}>
         <div className={styles.team_info}>
           <h2>Rocket Team</h2>
           <p>
@@ -44,19 +44,14 @@ export default function Home() {
             <h2>Competitions</h2>
             <p>
               We are proud to compete on two prestigious platforms:
-              <ul>
-                <li>
-                  1. the Intercollegiate Rocket Engineering Competition (IREC)
-                  at the prestigious <strong>Spaceport America Cup</strong>. At
-                  IREC, we showcase advanced engineering by launching rockets to
-                  altitudes of 10,000m.
-                </li>
-                <li>
-                  2. the <strong>INSPACE</strong> competition, which highlights
-                  our expertise in low-altitude rocketry with deployable
-                  payloads.
-                </li>
-              </ul>
+              <br />
+              1. the Intercollegiate Rocket Engineering Competition (IREC) at
+              the prestigious <strong>Spaceport America Cup</strong>. At IREC,
+              we showcase advanced engineering by launching rockets to altitudes
+              of 10,000m.
+              <br />
+              2. the <strong>INSPACE</strong> competition, which highlights our
+              expertise in low-altitude rocketry with deployable payloads.
             </p>
           </div>
 
@@ -96,7 +91,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.stats_section}>
+      <section className={styles.stats_section + " " + styles.slant}>
         <h2>At a Glance </h2>
         <div className={styles.stats}>
           <div className={styles.stat}>
@@ -113,7 +108,7 @@ export default function Home() {
           </div>
           <div className={styles.stat}>
             <h1>5</h1>
-            <p>Years of Hard Work</p>
+            <p>Years of RnD</p>
           </div>
         </div>
       </section>
@@ -168,24 +163,19 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className={styles.subsystem}>
-        <div className={styles.sub_info}>
-          <h2>Rocket Team</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
-            ipsam doloremque eum quod temporibus magni veritatis recusandae
-            deleniti. Quo, ratione?
-          </p>
-        </div>
-        <div className={styles.other_one}>
-          <div className={styles.avionics}>
+
+      <section className={styles.subsystems_container + " " + styles.slant}>
+          <h2>Subsystems</h2>
+
+        <div className={styles.subsystems}>
+          <div>
             <h2>Avionics</h2>
             <p>
               Design, development and manufacturing of the electronics systems
               inside the rocket and supporting equipment
             </p>
           </div>
-          <div className={styles.propulsion}>
+          <div>
             <h2>Propulsion</h2>
             <p>
               Research, analyze, and characterize new propellants that can be
@@ -194,14 +184,14 @@ export default function Home() {
               scalability and reliability
             </p>
           </div>
-          <div className={styles.airframe}>
+          <div>
             <h2>Airframe</h2>
             <p>
               Develop and manufacture the rocket’s airframe and aerodynamic
               surfaces for stability, strength, and optimal flight performance.
             </p>
           </div>
-          <div className={styles.business}>
+          <div>
             <h2>Payload</h2>
             <p>
               Design of payloads, its mechanical movements and supporting

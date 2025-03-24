@@ -4,6 +4,26 @@
   padding: var(--navbar-height) 0rem 0rem 0rem;
 }
 
+.slant {
+  --slant: 4rem;
+  --extra-padding: 3rem;
+
+  /* content-box means the padding will add to the height, not clipping the text */
+  /* then the clipping is in the pad region */
+  height: fit-content;
+  box-sizing: content-box;
+
+  padding-top: calc(var(--slant) + var(--extra-padding));
+  padding-bottom: calc(var(--slant) + var(--extra-padding));
+
+  clip-path: polygon(
+    0 var(--slant),
+    100% 0,
+    100% calc(100% - var(--slant)),
+    0 100%
+  );
+}
+
 .header h1 {
   font-size: 3rem;
   text-transform: uppercase;
@@ -44,9 +64,9 @@
 .header {
   /* height: 100vh; */
   height: calc(927 / 1454 * 98vw);
-  /* background: linear-gradient(to bottom, #0d1a26, #08121a); */
   background-size: 100%;
   background-image: url("/nextjs-testing/homepage_bg.jpg");
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -71,6 +91,7 @@
   /* animation: fadeIn 2s ease-out 1.5s forwards; Optional delay for tagline */
   /* opacity: 0; */
 }
+
 @media (max-width: 768px) {
   .header h1 {
     font-size: 2rem;
@@ -132,15 +153,20 @@
 }
 
 .vision {
-  clip-path: polygon(0 11%, 100% 0%, 100% 89%, 0% 100%);
-  transform: translateY(-150px);
-  padding: 130px 100px 25px 100px;
+  /* we want the slant to overlap the background of the intro */
+  transform: translateY(calc(-1 * var(--slant)));
+
+  padding-left: 5vw;
+  padding-right: 5vw;
+
   /* text-align: center; */
   background: white;
   color: black;
   position: relative;
   display: flex;
   gap: 40px;
+
+  z-index: 100;
 }
 
 .vision p {
@@ -171,7 +197,6 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
-  padding-bottom: 3rem; /* to prevent clipping of text */
 }
 
 .other h2 {
@@ -183,10 +208,6 @@
 .other p {
   font-size: 20px;
   color: rgb(67, 67, 67);
-}
-
-.other li {
-  margin-top: 0.3rem;
 }
 
 .other a {
@@ -296,19 +317,16 @@
 }
 
 .stats_section {
-  background-color: navy;
   position: relative;
-  clip-path: polygon(0 14%, 100% 0, 100% 87%, 0 100%);
-  /* background: url("#") no-repeat center center/cover; */
-  /* Replace with your image */
-  height: 700px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transform: translateY(-20px);
   gap: 0.6rem;
 
+  /* transform: translateY(-20px); */
+
+  background-color: rgb(7, 7, 40);
   text-align: center;
 }
 
@@ -317,6 +335,7 @@
   display: flex;
   gap: 30px;
   z-index: 2;
+  color: white;
 }
 
 .stats_section h2 {
@@ -340,7 +359,7 @@
   font-size: 4rem;
   margin: 0;
   font-weight: bold;
-  color: #0d1a26;
+  /* color: #0d1a26; */
   text-align: center;
 }
 
@@ -348,7 +367,7 @@
 .stat p {
   margin: 10px 0 0;
   font-size: 1.2rem;
-  color: black;
+  /* color: black; */
 }
 
 /* Responsive design */
@@ -360,7 +379,7 @@
   }
 
   .stats_section {
-    clip-path: polygon(0 2%, 100% 0, 100% 98%, 0% 100%);
+    /* clip-path: polygon(0 2%, 100% 0, 100% 98%, 0% 100%); */
     padding: 50px 20px;
     flex-direction: column;
     grid-template-columns: repeat(2, 1fr); /* 2 columns */
@@ -445,105 +464,59 @@
     transform: translateX(0%);
   }
 }
-.subsystem {
-  clip-path: polygon(0 14%, 100% 0%, 100% 100%, 0% 100%);
-  /* margin-bottom: auto; */
-  transform: translateY(10px);
-  padding: 120px 100px 50px 100px;
+
+.subsystems_container {
+  clip-path: polygon(
+    0 var(--slant),
+    100% 0,
+    100% 100%,
+    /* dont have slant at the bottom as it's the last element*/ 0 100%
+  );
   text-align: center;
-  background: navy;
+  background: rgb(3, 3, 45);
   color: white;
   /* overflow: hidden; */
   position: relative;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 30px;
 }
 
-.sub_info {
-  margin-left: 0;
-  transform: translateX(-65px);
-  /* transform: translate(-40px, -30px); */
+.subsystems_container h2 {
+  font-size: 2rem;
 }
 
-.sub_info h2 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  color: white;
-  font-weight: 200;
-}
-
-.sub_info p {
-  text-align: left;
-  font-size: 20;
-  width: 500px;
-  word-wrap: break-word;
-  margin-top: auto;
-}
-
-.other_one {
+.subsystems {
   display: grid;
   grid-template-columns: repeat(2, 300px);
   gap: 70px;
-  transform: translateX(-75px);
+  text-align: left;
+  /* transform: translateX(-75px); */
   /* transform: translate(30px, -50px); */
 }
 
-.avionics h2 {
+.subsystems h2 {
   font-size: 2rem;
   margin-bottom: 10px;
   color: white;
   font-weight: 200;
-  transform: translateX(-47px);
+  /* transform: translateX(-47px); */
 }
 
-.avionics p {
-  font-size: 17;
+.subsystems p {
+  font-size: 17px;
 }
 
-.propulsion h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: white;
-  font-weight: 200;
-  transform: translateX(-47px);
-}
-
-.propulsion p {
-  font-size: 17;
-}
-
-.airframe h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: white;
-  font-weight: 200;
-  transform: translateX(-47px);
-}
-
-.airframe p {
-  font-size: 17;
-}
-
-.business h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: white;
-  font-weight: 200;
-  transform: translateX(-47px);
-}
-
-.business p {
-  font-size: 17;
-}
 @media (max-width: 768px) {
-  .subsystem {
-    clip-path: polygon(0 2%, 100% 0, 100% 100%, 0% 100%);
+  .subsystems_container {
+    /* clip-path: polygon(0 2%, 100% 0, 100% 100%, 0% 100%); */
     flex-direction: column;
     padding: 50px 20px;
     overflow: visible;
     gap: 10px;
   }
-  .other_one {
+  .subsystems {
     grid-template-columns: 1fr;
   }
   .sub_info h2 {
