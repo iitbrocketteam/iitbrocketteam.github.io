@@ -24,43 +24,6 @@
   );
 }
 
-.header h1 {
-  font-size: 3rem;
-  text-transform: uppercase;
-
-  letter-spacing: 5px;
-}
-
-/* Keyframes for text blast-off effect */
-@keyframes blastOff {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-/* Text animation */
-.blast_text {
-  font-size: 3.5rem;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  color: black;
-  animation: blastOff 500ms ease-out forwards;
-  position: relative;
-  z-index: 1;
-  /* Start invisible */
-  opacity: 0;
-}
-
-.blast_text h1 {
-  position: relative;
-  z-index: -1;
-}
-
-/* Header styling */
 .header {
   /* height: 100vh; */
   height: calc(927 / 1454 * 98vw);
@@ -79,7 +42,7 @@
 .header h1 {
   font-size: 2.5rem;
   text-transform: uppercase;
-  /* letter-spacing: 5px; */
+  letter-spacing: 5px;
   font-weight: 700;
   /* font-family: "Trebuchet MS", Helvetica, sans-serif; */
 }
@@ -88,8 +51,6 @@
   margin-top: 20px;
   font-size: 1.8rem;
   color: black;
-  /* animation: fadeIn 2s ease-out 1.5s forwards; Optional delay for tagline */
-  /* opacity: 0; */
 }
 
 @media (max-width: 768px) {

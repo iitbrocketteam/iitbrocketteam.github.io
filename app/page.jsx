@@ -1,6 +1,9 @@
+"use client";
+
 import styles from "./page.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import { Typewriter } from "react-simple-typewriter";
 import { FaRocket, FaHandshake, FaPeopleArrows } from "react-icons/fa";
 
 import { Roboto_Mono, Inter, Orbitron, Poppins } from "next/font/google";
@@ -19,11 +22,17 @@ export default function Home() {
   return (
     <div className={styles.page /*  + ' ' + font.className */}>
       <header className={styles.header + " " + techno_font.className}>
-        <div className={styles.text_container}>
-          <h1 className={styles.blast_text}>Welcome to the IITB Rocket Team</h1>
-          <div className={styles.trail}></div>
-        </div>
-        <p>Achieving New Frontiers in High Powered Rocketry</p>
+        <h1>Welcome to the IITB Rocket Team</h1>
+
+        <h2>
+          <Typewriter
+            words={["Achieving New Frontiers in High Powered Rocketry"]}
+            loop={0}
+            typeSpeed={30}
+            deleteSpeed={10}
+            delaySpeed={1000000} // keep it there infinitely
+          />
+        </h2>
       </header>
 
       <section className={styles.vision + " " + styles.slant}>
@@ -165,7 +174,7 @@ export default function Home() {
       </section>
 
       <section className={styles.subsystems_container + " " + styles.slant}>
-          <h2>Subsystems</h2>
+        <h2>Subsystems</h2>
 
         <div className={styles.subsystems}>
           <div>
