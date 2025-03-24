@@ -1,0 +1,158 @@
+@keyframes fade_in {
+  0% {
+    opacity: 0;
+    transform: scale(0.5, 0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+
+/* TODO make it animate on appear .. eg using CSS scroll timeline */
+.fade_in {
+  animation-duration: 0.2s;
+  animation-name: fade_in;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+}
+
+.fade_in_delay_0 {
+  animation-delay: 0s;
+}
+.fade_in_delay_1 {
+  animation-delay: 0.1s;
+}
+.fade_in_delay_2 {
+  animation-delay: 0.2s;
+}
+.fade_in_delay_3 {
+  animation-delay: 0.3s;
+}
+.fade_in_delay_4 {
+  animation-delay: 0.4s;
+}
+.fade_in_delay_5 {
+  animation-delay: 0.5s;
+}
+
+/* TODO reduce repetition? */
+
+/* https://css-tricks.com/animating-number-counters/ */
+@property --num1 {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+.stat_1 {
+  counter-reset: num1 var(--num1);
+  animation: counter1 2s ease-in-out infinite normal;
+}
+
+.stat_1 h1::after {
+  content: counter(num1);
+}
+
+@keyframes counter1 {
+  0% {
+    --num1: 0;
+  }
+  /* use to add a delay betwene iterations */
+  50% {
+    --num1: 6;
+  }
+  100% {
+    --num1: 6;
+  }
+}
+
+/*  */
+
+@property --num2 {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+.stat_2 {
+  counter-reset: num2 var(--num2);
+  animation: counter2 2s ease-in-out infinite normal;
+}
+
+.stat_2 h1::after {
+  content: counter(num2);
+}
+
+@keyframes counter2 {
+  0% {
+    --num2: 0;
+  }
+  /* use to add a delay betwene iterations */
+  50% {
+    --num2: 45;
+  }
+  100% {
+    --num2: 45;
+  }
+}
+
+/*  */
+
+@property --num3 {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+.stat_3 {
+  counter-reset: num3 var(--num3);
+  animation: counter3 2s ease-in-out infinite normal;
+}
+
+.stat_3 h1::after {
+  content: counter(num3);
+}
+
+@keyframes counter3 {
+  0% {
+    --num3: 0;
+  }
+  /* use to add a delay betwene iterations */
+  50% {
+    --num3: 4;
+  }
+  100% {
+    --num3: 4;
+  }
+}
+
+/*  */
+
+@property --num4 {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+.stat_4 {
+  counter-reset: num4 var(--num4);
+  animation: counter4 2s ease-in-out infinite normal;
+}
+
+.stat_4 h1::after {
+  content: counter(num4);
+}
+
+@keyframes counter4 {
+  0% {
+    --num4: 0;
+  }
+  /* use to add a delay betwene iterations */
+  50% {
+    --num4: 5;
+  }
+  100% {
+    --num4: 5;
+  }
+}

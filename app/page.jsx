@@ -1,6 +1,7 @@
 "use client";
 
 import styles from "./page.module.css";
+import animations from "./page_animations.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import { Typewriter } from "react-simple-typewriter";
@@ -36,7 +37,11 @@ export default function Home() {
       </header>
 
       <section className={styles.vision + " " + styles.slant}>
-        <div className={styles.team_info}>
+        <div
+          className={
+            styles.team_info + " " + animations.fade_in + " " + animations.fade_in_delay_0
+          }
+        >
           <h2>Rocket Team</h2>
           <p>
             Our team comprises 30+ members, united by a shared vision for
@@ -49,7 +54,7 @@ export default function Home() {
         </div>
 
         <div className={styles.other}>
-          <div className={styles.competitions}>
+          <div className={animations.fade_in + " " + animations.fade_in_delay_1}>
             <h2>Competitions</h2>
             <p>
               We are proud to compete on two prestigious platforms:
@@ -64,7 +69,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className={styles.achieve}>
+          <div className={animations.fade_in + " " + animations.fade_in_delay_2}>
             <h2>Achievements</h2>
             <p>
               We have consistently excelled at the prestigious Spaceport America
@@ -78,7 +83,7 @@ export default function Home() {
             <a href="/achievements">See all our achievements &rarr;</a>
           </div>
 
-          <div className={styles.rnd}>
+          <div className={animations.fade_in + " " + animations.fade_in_delay_3}>
             <h2>RnD in Fuel</h2>
             <p>
               We have successfully developed and designed a solid rocket fuel
@@ -88,7 +93,7 @@ export default function Home() {
               rocketry.
             </p>
           </div>
-          <div className={styles.vis}>
+          <div className={animations.fade_in + " " + animations.fade_in_delay_5}>
             <h2>Vision</h2>
             <p>
               Our team is dedicated to elevate Indian amateur rocketry through
@@ -103,20 +108,20 @@ export default function Home() {
       <section className={styles.stats_section + " " + styles.slant}>
         <h2>At a Glance </h2>
         <div className={styles.stats}>
-          <div className={styles.stat}>
-            <h1>6</h1>
+          <div className={styles.stat + " " + animations.stat_1}>
+            <h1></h1>
             <p>Rockets</p>
           </div>
-          <div className={styles.stat}>
-            <h1>45</h1>
+          <div className={styles.stat + " " + animations.stat_2}>
+            <h1></h1>
             <p>Team members</p>
           </div>
-          <div className={styles.stat}>
-            <h1>4</h1>
+          <div className={styles.stat + " " + animations.stat_3}>
+            <h1></h1>
             <p>Subsytems</p>
           </div>
-          <div className={styles.stat}>
-            <h1>5</h1>
+          <div className={styles.stat + " " + animations.stat_4}>
+            <h1></h1>
             <p>Years of RnD</p>
           </div>
         </div>
