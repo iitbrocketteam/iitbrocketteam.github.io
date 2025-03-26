@@ -79,6 +79,10 @@
   margin-top: 10px;
 }
 
+.icon {
+  margin-left: 1rem;
+}
+
 .section {
   padding: 50px 20px;
   text-align: center;
@@ -279,7 +283,6 @@
   font-size: 1.2rem;
   /* color: black; */
 }
-
 
 /* Responsive design */
 @media (max-width: 768px) {

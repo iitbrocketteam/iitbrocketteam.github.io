@@ -5,7 +5,15 @@ import animations from "./page_animations.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import { Typewriter } from "react-simple-typewriter";
-import { FaRocket, FaHandshake, FaPeopleArrows } from "react-icons/fa";
+import {
+  FaRocket,
+  FaHandshake,
+  FaPeopleArrows,
+  FaShieldAlt,
+  FaTrophy,
+  FaFlask,
+  FaGlobe,
+} from "react-icons/fa";
 
 import { Roboto_Mono, Inter, Orbitron, Poppins } from "next/font/google";
 
@@ -39,10 +47,19 @@ export default function Home() {
       <section className={styles.vision + " " + styles.slant}>
         <div
           className={
-            styles.team_info + " " + animations.fade_in + " " + animations.fade_in_delay_0
+            styles.team_info +
+            " " +
+            animations.fade_in +
+            " " +
+            animations.fade_in_delay_0
           }
         >
-          <h2>Rocket Team</h2>
+          <h2>
+            Rocket Team
+            <span className={styles.icon}>
+              <FaRocket />
+            </span>
+          </h2>
           <p>
             Our team comprises 30+ members, united by a shared vision for
             advancing rocketry and the space science community in India.
@@ -54,8 +71,15 @@ export default function Home() {
         </div>
 
         <div className={styles.other}>
-          <div className={animations.fade_in + " " + animations.fade_in_delay_1}>
-            <h2>Competitions</h2>
+          <div
+            className={animations.fade_in + " " + animations.fade_in_delay_1}
+          >
+            <h2>
+              Competitions
+              <span className={styles.icon}>
+                <FaShieldAlt />
+              </span>
+            </h2>
             <p>
               We are proud to compete on two prestigious platforms:
               <br />
@@ -69,8 +93,15 @@ export default function Home() {
             </p>
           </div>
 
-          <div className={animations.fade_in + " " + animations.fade_in_delay_2}>
-            <h2>Achievements</h2>
+          <div
+            className={animations.fade_in + " " + animations.fade_in_delay_2}
+          >
+            <h2>
+              Achievements
+              <span className={styles.icon}>
+                <FaTrophy />
+              </span>
+            </h2>
             <p>
               We have consistently excelled at the prestigious Spaceport America
               Cup, the world’s largest intercollegiate rocketry competition.
@@ -83,8 +114,15 @@ export default function Home() {
             <a href="/achievements">See all our achievements &rarr;</a>
           </div>
 
-          <div className={animations.fade_in + " " + animations.fade_in_delay_3}>
-            <h2>RnD in Fuel</h2>
+          <div
+            className={animations.fade_in + " " + animations.fade_in_delay_3}
+          >
+            <h2>
+              RnD in Fuel
+              <span className={styles.icon}>
+                <FaFlask />
+              </span>
+            </h2>
             <p>
               We have successfully developed and designed a solid rocket fuel
               composed of sorbitol and potassium nitrate (KNO₃). This
@@ -93,8 +131,15 @@ export default function Home() {
               rocketry.
             </p>
           </div>
-          <div className={animations.fade_in + " " + animations.fade_in_delay_5}>
-            <h2>Vision</h2>
+          <div
+            className={animations.fade_in + " " + animations.fade_in_delay_5}
+          >
+            <h2>
+              Vision
+              <span className={styles.icon}>
+                <FaGlobe />
+              </span>
+            </h2>
             <p>
               Our team is dedicated to elevate Indian amateur rocketry through
               groundbreaking advancements. Beyond launching rockets, our mission
