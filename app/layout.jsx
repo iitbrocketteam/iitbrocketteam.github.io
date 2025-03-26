@@ -6,6 +6,7 @@ const font = Inter({ subsets: ["latin"] });
 
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import Stars from "./Stars";
 
 export const metadata = {
   title: "IITB Rocket Team",
@@ -19,6 +20,8 @@ export default function RootLayout({ children }) {
         <Navbar />
         <main>{children}</main>
         <Footer />
+
+        <Stars />
       </body>
     </html>
   );

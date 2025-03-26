@@ -1,7 +1,19 @@
+"use client";
+
 import styles from "./page.module.css";
+import animations from "./animations.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import { FaRocket, FaHandshake, FaPeopleArrows } from "react-icons/fa";
+import { Typewriter } from "react-simple-typewriter";
+import {
+  FaRocket,
+  FaHandshake,
+  FaPeopleArrows,
+  FaShieldAlt,
+  FaTrophy,
+  FaFlask,
+  FaGlobe,
+} from "react-icons/fa";
 
 import { Roboto_Mono, Inter, Orbitron, Poppins } from "next/font/google";
 
@@ -19,19 +31,36 @@ export default function Home() {
   return (
     <div className={styles.page /*  + ' ' + font.className */}>
       <header className={styles.header + " " + techno_font.className}>
-        <div className={styles.text_container}>
-          <h1 className={styles.blast_text}>Welcome to the IITB Rocket Team</h1>
-          <div className={styles.trail}></div>
-        </div>
-        <p>Achieving New Frontiers in High Powered Rocketry</p>
+        <h1>Welcome to the IITB Rocket Team</h1>
+
+        <h2>
+          <Typewriter
+            words={["Achieving New Frontiers in High Powered Rocketry"]}
+            loop={0}
+            typeSpeed={30}
+            deleteSpeed={10}
+            delaySpeed={1000000} // keep it there infinitely
+          />
+        </h2>
       </header>
 
       <section className={styles.vision + " " + styles.slant}>
-        <div className={styles.team_info}>
-          <div className={styles.stars}>
-          <div className ={styles.star}></div>
-  
-          <h2>Rocket Team</h2>
+        <div
+          className={
+            styles.team_info +
+            " " +
+            animations.fade_in +
+            " " +
+            animations.fade_in_delay_0
+          }
+        >
+          <h2>
+            Rocket Team
+            <span className={styles.icon}>
+              <FaRocket />
+            </span>
+          </h2>
+
           <p>
             Our team comprises 30+ members, united by a shared vision for
             advancing rocketry and the space science community in India.
@@ -40,12 +69,18 @@ export default function Home() {
             with a TRA Level-3 certified international mentor who will be our
             Flyer of Record for the competition.
           </p>
-          </div>
         </div>
 
         <div className={styles.other}>
-          <div className={styles.competitions}>
-            <h2>Competitions</h2>
+          <div
+            className={animations.fade_in + " " + animations.fade_in_delay_1}
+          >
+            <h2>
+              Competitions
+              <span className={styles.icon}>
+                <FaShieldAlt />
+              </span>
+            </h2>
             <p>
               We are proud to compete on two prestigious platforms:
               <br />
@@ -59,8 +94,15 @@ export default function Home() {
             </p>
           </div>
 
-          <div className={styles.achieve}>
-            <h2>Achievements</h2>
+          <div
+            className={animations.fade_in + " " + animations.fade_in_delay_2}
+          >
+            <h2>
+              Achievements
+              <span className={styles.icon}>
+                <FaTrophy />
+              </span>
+            </h2>
             <p>
               We have consistently excelled at the prestigious Spaceport America
               Cup, the world’s largest intercollegiate rocketry competition.
@@ -73,8 +115,15 @@ export default function Home() {
             <a href="/achievements">See all our achievements &rarr;</a>
           </div>
 
-          <div className={styles.rnd}>
-            <h2>RnD in Fuel</h2>
+          <div
+            className={animations.fade_in + " " + animations.fade_in_delay_3}
+          >
+            <h2>
+              RnD in Fuel
+              <span className={styles.icon}>
+                <FaFlask />
+              </span>
+            </h2>
             <p>
               We have successfully developed and designed a solid rocket fuel
               composed of sorbitol and potassium nitrate (KNO₃). This
@@ -83,8 +132,15 @@ export default function Home() {
               rocketry.
             </p>
           </div>
-          <div className={styles.vis}>
-            <h2>Vision</h2>
+          <div
+            className={animations.fade_in + " " + animations.fade_in_delay_5}
+          >
+            <h2>
+              Vision
+              <span className={styles.icon}>
+                <FaGlobe />
+              </span>
+            </h2>
             <p>
               Our team is dedicated to elevate Indian amateur rocketry through
               groundbreaking advancements. Beyond launching rockets, our mission
@@ -98,20 +154,20 @@ export default function Home() {
       <section className={styles.stats_section + " " + styles.slant}>
         <h2>At a Glance </h2>
         <div className={styles.stats}>
-          <div className={styles.stat}>
-            <h1>6</h1>
+          <div className={styles.stat + " " + animations.stat_1}>
+            <h1></h1>
             <p>Rockets</p>
           </div>
-          <div className={styles.stat}>
-            <h1>45</h1>
+          <div className={styles.stat + " " + animations.stat_2}>
+            <h1></h1>
             <p>Team members</p>
           </div>
-          <div className={styles.stat}>
-            <h1>4</h1>
+          <div className={styles.stat + " " + animations.stat_3}>
+            <h1></h1>
             <p>Subsytems</p>
           </div>
-          <div className={styles.stat}>
-            <h1>5</h1>
+          <div className={styles.stat + " " + animations.stat_4}>
+            <h1></h1>
             <p>Years of RnD</p>
           </div>
         </div>
@@ -169,7 +225,7 @@ export default function Home() {
       </section>
 
       <section className={styles.subsystems_container + " " + styles.slant}>
-          <h2>Subsystems</h2>
+        <h2>Subsystems</h2>
 
         <div className={styles.subsystems}>
           <div>

@@ -2,6 +2,7 @@ import styles from "./achievements.module.css";
 import Image from "next/image";
 import { Montserrat, Poppins, Inter } from "next/font/google";
 import data from "./event_data.json";
+import animations from "../animations.module.css";
 
 // const font = Inter({
 // weight: ["100","200","300","400","500" "400", "700"],
@@ -41,32 +42,32 @@ export default function Achievements() {
       <section className={styles.achievements}>
         <ul className={styles.timeline}>
           {/* TODO set this with js expr. also n */}
-          <li>
+          <li className={animations.fade_in + " " + animations.fade_in_delay_0}>
             <p>
               <span>First National Rank</span> at SA cup &apos;23
             </p>
           </li>
-          <li>
+          <li className={animations.fade_in + " " + animations.fade_in_delay_1}>
             <p>
               <span>34th Rank</span> at SA cup &apos;23
             </p>
           </li>
 
-          <li>
+          <li className={animations.fade_in + " " + animations.fade_in_delay_2}>
             <p>
               <span>1st Position</span> in Engineers Conclave, IIT Madras{" "}
               {/* 2023 */}
             </p>
           </li>
 
-          <li>
+          <li className={animations.fade_in + " " + animations.fade_in_delay_3}>
             <p>
               <span>1st Position</span>
               at Techexpo, IIT Guwahati {/* 2023 */}
             </p>
           </li>
 
-          <li>
+          <li className={animations.fade_in + " " + animations.fade_in_delay_4}>
             <p>
               <span>2nd Position</span> in Techzibition
             </p>
