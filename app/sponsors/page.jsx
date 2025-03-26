@@ -1,8 +1,8 @@
 import styles from "./sponsors.module.css";
+import animations from "../animations.module.css";
 import Link from "next/link";
 
 import { Orbitron, Poppins } from "next/font/google";
-
 
 const techno_font = Orbitron({ weight: "400", subsets: ["latin"] });
 // const font = Inter({
@@ -22,13 +22,31 @@ export default function Sponsors() {
       }
     >
       <div className={styles.main + " " + styles.center_div}>
-        <div className={styles.support_heading + " " + techno_font.className}>
+        <div
+          className={
+            styles.support_heading +
+            " " +
+            techno_font.className +
+            " " +
+            animations.fade_in +
+            " " +
+            animations.fade_in_delay_0
+          }
+        >
           <h2>Transcending Limits</h2>
           <h1>Defying Norms</h1>
         </div>
 
         <div className={styles.button_container + " " + techno_font.className}>
-          <div className={styles.button_holder}>
+          <div
+            className={
+              styles.button_holder +
+              " " +
+              animations.fade_in +
+              " " +
+              animations.fade_in_delay_1
+            }
+          >
             <Link
               className={styles.contact_us}
               href="/contact"
@@ -38,7 +56,15 @@ export default function Sponsors() {
             </Link>
           </div>
 
-          <div className={styles.button_holder}>
+          <div
+            className={
+              styles.button_holder +
+              " " +
+              animations.fade_in +
+              " " +
+              animations.fade_in_delay_2
+            }
+          >
             <Link
               className={styles.contact_us}
               // TODO brochure is too large, takes time to load
@@ -49,7 +75,16 @@ export default function Sponsors() {
             </Link>
           </div>
         </div>
-        <div className={styles.description}>
+
+        <div
+          className={
+            styles.description +
+            " " +
+            animations.fade_in +
+            " " +
+            animations.fade_in_delay_3
+          }
+        >
           Our team is dedicated to elevating Indian amateur rocketry through
           groundbreaking advancements. Beyond launching rockets, our mission is
           to cultivate technical skills and promote STEM education at all
@@ -59,7 +94,15 @@ export default function Sponsors() {
         </div>
       </div>
 
-      <div className={styles.tables}>
+      <div
+        className={
+          styles.tables +
+          " " +
+          animations.fade_in +
+          " " +
+          animations.fade_in_delay_5
+        }
+      >
         <h3>&gt; Why you should sponsor us</h3>
 
         <ol className={styles.reasons}>
@@ -91,10 +134,10 @@ export default function Sponsors() {
             <h4>Soar 30000 feet high</h4>
             <p>
               Partner with us and watch your brand reach new heights—literally!
-              By sponsoring us, your logo will soar an
-              incredible 30,000 feet into the sky on our cutting-edge rocket.
-              Join us in pushing the boundaries of innovation while showcasing
-              your brand to a global audience.
+              By sponsoring us, your logo will soar an incredible 30,000 feet
+              into the sky on our cutting-edge rocket. Join us in pushing the
+              boundaries of innovation while showcasing your brand to a global
+              audience.
             </p>
           </li>
         </ol>
@@ -110,21 +153,21 @@ export default function Sponsors() {
               We seek monetary support to cover essential expenses, including
               competition fees, materials, travel allowances, outreach,
               publicity, and event costs. Your contributions will enable us to
-              manage operational expenses efficiently, allowing us to focus on innovation, engineering excellence, and
-              achieving success in national and international competitions.
+              manage operational expenses efficiently, allowing us to focus on
+              innovation, engineering excellence, and achieving success in
+              national and international competitions.
             </p>
           </li>
 
           <li>
             <h4>In-Kind Sponsorships</h4>
             <p>
-              We design and builds high-quality
-              engineering prototypes. We invite in-kind sponsorships to provide
-              mechanical and electrical components, specialized materials,
-              tools, machinery, and other essential supplies for rocket
-              manufacturing. Your contributions will directly support our
-              projects, helping us achieve engineering excellence and advance
-              the boundaries of scientific innovation.
+              We design and builds high-quality engineering prototypes. We
+              invite in-kind sponsorships to provide mechanical and electrical
+              components, specialized materials, tools, machinery, and other
+              essential supplies for rocket manufacturing. Your contributions
+              will directly support our projects, helping us achieve engineering
+              excellence and advance the boundaries of scientific innovation.
             </p>
           </li>
 

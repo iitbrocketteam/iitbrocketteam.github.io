@@ -1,7 +1,7 @@
 "use client";
 
 import styles from "./page.module.css";
-import animations from "./page_animations.module.css";
+import animations from "./animations.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import { Typewriter } from "react-simple-typewriter";
