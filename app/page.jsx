@@ -28,6 +28,9 @@ export default function Home() {
 
       <section className={styles.vision + " " + styles.slant}>
         <div className={styles.team_info}>
+          <div className={styles.stars}>
+          <div className ={styles.star}></div>
+  
           <h2>Rocket Team</h2>
           <p>
             Our team comprises 30+ members, united by a shared vision for
@@ -37,6 +40,7 @@ export default function Home() {
             with a TRA Level-3 certified international mentor who will be our
             Flyer of Record for the competition.
           </p>
+          </div>
         </div>
 
         <div className={styles.other}>

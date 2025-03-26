@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { Orbitron, Poppins } from "next/font/google";
 
+
 const techno_font = Orbitron({ weight: "400", subsets: ["latin"] });
 // const font = Inter({
 //   subsets: ["latin"],
@@ -90,7 +91,7 @@ export default function Sponsors() {
             <h4>Soar 30000 feet high</h4>
             <p>
               Partner with us and watch your brand reach new heights—literally!
-              By sponsoring the IIT Bombay Rocket Team, your logo will soar an
+              By sponsoring us, your logo will soar an
               incredible 30,000 feet into the sky on our cutting-edge rocket.
               Join us in pushing the boundaries of innovation while showcasing
               your brand to a global audience.
@@ -109,8 +110,7 @@ export default function Sponsors() {
               We seek monetary support to cover essential expenses, including
               competition fees, materials, travel allowances, outreach,
               publicity, and event costs. Your contributions will enable us to
-              manage operational expenses efficiently, allowing the IIT Bombay
-              Rocket Team to focus on innovation, engineering excellence, and
+              manage operational expenses efficiently, allowing us to focus on innovation, engineering excellence, and
               achieving success in national and international competitions.
             </p>
           </li>
@@ -118,7 +118,7 @@ export default function Sponsors() {
           <li>
             <h4>In-Kind Sponsorships</h4>
             <p>
-              The IIT Bombay Rocket Team designs and builds high-quality
+              We design and builds high-quality
               engineering prototypes. We invite in-kind sponsorships to provide
               mechanical and electrical components, specialized materials,
               tools, machinery, and other essential supplies for rocket
