@@ -1,8 +1,9 @@
 .page {
-  padding: calc(2rem + var(--navbar-height)) 10rem 3rem 10rem;
+  padding: calc(2rem + var(--navbar-height)) 10vw 3rem 10vw;
   background-color: white;
   color: black;
 }
+
 
 .table {
   /* background-color: darkblue; */
@@ -43,6 +44,17 @@
   margin: 2rem 0rem 0rem 0rem;
 }
 
+@media(max-width:768px) {
+  .para {
+    width: 75vw;
+
+  }
+  .table{
+    width: 25rem;
+    padding-left: 10vw;
+  }
+}
+
 .table tr {
   position: relative;
 }
@@ -81,10 +93,22 @@
   --pad: 3rem;
 }
 
+@media(max-width:768px) {
+  .page {
+    /* padding-left: 0; */
+  }
+}
+
 .rocket_container {
   display: flex;
   justify-content: space-between;
   margin: 3rem var(--pad) 5rem var(--pad);
+}
+
+@media(max-width:768px) {
+  .rocket_container {
+    flex-direction: column;
+  }
 }
 
 .page h1 {

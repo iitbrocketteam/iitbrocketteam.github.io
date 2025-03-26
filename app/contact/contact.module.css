@@ -12,6 +12,14 @@
   width: 100vw;
   padding: 2rem 10rem;
 }
+@media (max-width: 768px){
+  .container{
+    flex-direction: column;
+   /*overflow: hidden;*/
+    padding-top: 70px;
+    height: max-content;
+  }
+}
 
 /* TODO see for eg Unreal Engine's form for nice buttons, animations */
 
@@ -76,3 +84,4 @@
   border-radius: 5px;
   border: none;
 }
+
