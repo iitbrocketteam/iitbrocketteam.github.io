@@ -30,9 +30,9 @@ const techno_font = Orbitron({
 export default function Home() {
   return (
     <div className={styles.page /*  + ' ' + font.className */}>
-<div className={styles.stars}>
-<div className ={styles.star}></div>
-
+      <div className={styles.stars}>
+        <div className={styles.star}></div>
+      </div>
 
       <header className={styles.header + " " + techno_font.className}>
         <h1>Welcome to the IITB Rocket Team</h1>
@@ -49,7 +49,7 @@ export default function Home() {
       </header>
 
       <section className={styles.vision + " " + styles.slant}>
-      <div
+        <div
           className={
             styles.team_info +
             " " +
@@ -58,15 +58,13 @@ export default function Home() {
             animations.fade_in_delay_0
           }
         >
-
-
-
           <h2>
             Rocket Team
             <span className={styles.icon}>
               <FaRocket />
             </span>
           </h2>
+
           <p>
             Our team comprises 30+ members, united by a shared vision for
             advancing rocketry and the space science community in India.
@@ -75,7 +73,6 @@ export default function Home() {
             with a TRA Level-3 certified international mentor who will be our
             Flyer of Record for the competition.
           </p>
-          </div>
         </div>
 
         <div className={styles.other}>
