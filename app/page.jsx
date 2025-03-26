@@ -30,10 +30,6 @@ const techno_font = Orbitron({
 export default function Home() {
   return (
     <div className={styles.page /*  + ' ' + font.className */}>
-      <div className={styles.stars}>
-        <div className={styles.star}></div>
-      </div>
-
       <header className={styles.header + " " + techno_font.className}>
         <h1>Welcome to the IITB Rocket Team</h1>
 
