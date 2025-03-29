@@ -4,13 +4,20 @@ import styles from "./page.module.css";
 import animations from "./animations.module.css";
 import {
   FaRocket,
-  FaHandshake,
-  FaPeopleArrows,
+
+  // vision icons
   FaShieldAlt,
   FaTrophy,
   FaFlask,
   FaGlobe,
+
+  // subsystems
+  FaBolt,
+  FaFire,
+  FaPlane,
+  FaParachuteBox,
 } from "react-icons/fa";
+
 import { Roboto_Mono, Inter, Orbitron, Poppins } from "next/font/google";
 
 import Link from "next/link";
@@ -60,9 +67,7 @@ export default function Home() {
         >
           <h2>
             Rocket Team
-            <span className={styles.icon}>
-              <FaRocket size={icon_size} />
-            </span>
+            <FaRocket size={icon_size} style={{ marginLeft: "1rem" }} />
           </h2>
 
           <p>
@@ -81,9 +86,7 @@ export default function Home() {
           >
             <h2>
               Competitions
-              <span className={styles.icon}>
-                <FaShieldAlt size={icon_size} />
-              </span>
+              <FaShieldAlt size={icon_size} style={{ marginLeft: "1rem" }} />
             </h2>
             <p>
               We are proud to compete on two prestigious platforms:
@@ -103,9 +106,7 @@ export default function Home() {
           >
             <h2>
               Achievements
-              <span className={styles.icon}>
-                <FaTrophy size={icon_size} />
-              </span>
+              <FaTrophy size={icon_size} style={{ marginLeft: "1rem" }} />
             </h2>
             <p>
               We have consistently excelled at the prestigious Spaceport America
@@ -124,9 +125,7 @@ export default function Home() {
           >
             <h2>
               RnD in Fuel
-              <span className={styles.icon}>
-                <FaFlask size={icon_size} />
-              </span>
+              <FaFlask size={icon_size} style={{ marginLeft: "1rem" }} />
             </h2>
             <p>
               We have successfully developed and designed a solid rocket fuel
@@ -244,14 +243,20 @@ export default function Home() {
 
         <div className={styles.subsystems}>
           <div>
-            <h2>Avionics</h2>
+            <h2>
+              Avionics
+              <FaBolt size={icon_size} style={{ marginLeft: "1rem" }} />
+            </h2>
             <p>
               Design, development and manufacturing of the electronics systems
               inside the rocket and supporting equipment
             </p>
           </div>
           <div>
-            <h2>Propulsion</h2>
+            <h2>
+              Propulsion
+              <FaFire size={icon_size} style={{ marginLeft: "1rem" }} />
+            </h2>
             <p>
               Research, analyze, and characterize new propellants that can be
               utilized to achieve better performance for the rocket. Developing
@@ -260,14 +265,20 @@ export default function Home() {
             </p>
           </div>
           <div>
-            <h2>Airframe</h2>
+            <h2>
+              Airframe
+              <FaPlane size={icon_size} style={{ marginLeft: "1rem" }} />
+            </h2>
             <p>
               Develop and manufacture the rocket’s airframe and aerodynamic
               surfaces for stability, strength, and optimal flight performance.
             </p>
           </div>
           <div>
-            <h2>Payload</h2>
+            <h2>
+              Payload
+              <FaParachuteBox size={icon_size} style={{ marginLeft: "1rem" }} />
+            </h2>
             <p>
               Design of payloads, its mechanical movements and supporting
               hardware to gather key data for the rocket

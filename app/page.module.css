@@ -77,10 +77,6 @@
   margin-top: 10px;
 }
 
-.icon {
-  margin-left: 1rem;
-}
-
 @media (max-width: 768px) {
   .hero-text {
     font-size: 1.5rem;
