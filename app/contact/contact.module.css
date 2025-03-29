@@ -87,3 +87,8 @@
   border-radius: 5px;
   border: none;
 }
+
+.resources {
+  font-size: 0.8rem;
+  color: rgb(179, 179, 179);
+}
