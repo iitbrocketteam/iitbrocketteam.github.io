@@ -11,6 +11,8 @@
   display: flex;
   width: 100vw;
   padding: 2rem 10rem;
+
+  --highlight: rgb(84, 109, 255);
 }
 
 @media (max-width: 768px) {
@@ -43,7 +45,7 @@
 
 .contact_info .social_icons a {
   margin-right: 10px;
-  color: navy;
+  color: var(--highlight);
   text-decoration: none;
   font-size: 1.5em;
 }
@@ -67,10 +69,10 @@
 .contact_form textarea {
   padding: 10px;
   /* margin-top: 5px; */
-  border: 2px solid navy;
+  border: 2px solid var(--highlight);
   /* border-color: navy; */
   border-radius: 5px;
-  background-color: #fff;
+  background-color: #47474742;
   color: black;
   font-size: 1.6rem;
 }
@@ -78,11 +80,10 @@
 .contact_form button {
   font-size: 1.6rem;
   margin-top: 20px;
-  background-color: navy;
+  background-color: var(--highlight);
   /* color: #fff; */
   cursor: pointer;
   padding: 8px 8px;
   border-radius: 5px;
   border: none;
 }
-
