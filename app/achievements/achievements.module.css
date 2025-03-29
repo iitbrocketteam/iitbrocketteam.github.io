@@ -1,8 +1,8 @@
 .page {
-  background-color: white;
+  /* background-color: white; */
   /* min-height: 100svh; */
   height: fit-content;
-  color: black;
+  color: rgb(255, 255, 255);
 
   padding-top: calc(1rem + var(--navbar-height));
 }
@@ -48,7 +48,7 @@
   padding: 0.7rem;
   /* background-color: rgba(179, 179, 179, 0.671); */
   border-radius: 0.6rem;
-  border: 0.15rem solid rgba(8, 131, 255, 0.616);
+  border: 0.15rem solid rgb(56, 156, 255);
 }
 
 .timeline span {
@@ -90,8 +90,8 @@
   position: relative;
   /* height: 350px; */
   /* Spacious container */
-  background-color: white;
-  border: 2px solid #ccc;
+  background-color: rgb(22, 22, 22);
+  /* border: 2px solid #ccc; */
   /* Optional for styling */
   border-radius: 10px;
   /* Optional for rounded corners */
@@ -133,11 +133,11 @@
   box-sizing: border-box;
   margin: 0 4px;
   /* Reduced margin between slides */
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
   /* Optional: Border around each image */
   border-radius: 8px;
   /* Smooth corners */
-  background: #f9f9f9;
+  /* background: #f9f9f9; */
   /* Optional: Light background for contrast */
 }
 

@@ -48,11 +48,10 @@
   filter: grayscale(100%); */
 }
 
-@media(max-width:768px) {
+@media (max-width: 768px) {
   .video_inactive {
     display: none;
   }
-
 }
 
 .info_container {
@@ -62,10 +61,11 @@
 
 .info_container p {
   width: 28rem;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+  color: rgb(206, 206, 206);
 }
 
-@media(max-width:768px) {
+@media (max-width: 768px) {
   .info_container {
     flex-direction: column;
     padding-left: 8vw;

@@ -2,7 +2,6 @@ import styles from "./Stars.module.css";
 
 function Star({ x, y, scale, delay, color }) {
   // SVG from https://storybook.js.org/
-  console.log(scale, delay);
   return (
     <div
       className={styles.star}
@@ -45,10 +44,12 @@ export default function Stars() {
       const y = Math.random() * 100;
       const scale = Math.random() * 1.3;
       const delay = Math.random() * 3;
-      const color = 255 - Math.random() * 100;
+
+      // increase multiplied to decrease brightness: make visible on white backgrounds if needed
+      const color = 255 - Math.random() * 0;
       return (
         <Star key={i} x={x} y={y} scale={scale} delay={delay} color={color} />
       );
     });
-  return <div className="stars">{stars}</div>;
+  return <div className={styles.stars}>{stars}</div>;
 }

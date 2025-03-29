@@ -1,6 +1,5 @@
 .page {
-  background-color: white;
-  color: black;
+  color: rgb(255, 255, 255);
   padding: var(--navbar-height) 0rem 0rem 0rem;
 }
 
@@ -50,7 +49,6 @@
 .header p {
   margin-top: 20px;
   font-size: 1.8rem;
-  color: black;
 }
 
 @media (max-width: 768px) {
@@ -83,23 +81,6 @@
   margin-left: 1rem;
 }
 
-.section {
-  padding: 50px 20px;
-  text-align: center;
-}
-
-.section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.section p {
-  font-size: 1rem;
-  color: #666;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
 @media (max-width: 768px) {
   .hero-text {
     font-size: 1.5rem;
@@ -125,8 +106,7 @@
   padding-right: 5vw;
 
   /* text-align: center; */
-  background: white;
-  color: black;
+  /* background: white; */
   position: relative;
   display: flex;
   gap: 40px;
@@ -135,7 +115,7 @@
 }
 
 .vision p {
-  color: #202020;
+  color: #c9c9c9;
 }
 
 .team_info {
@@ -147,7 +127,6 @@
 .team_info h2 {
   font-size: 2rem;
   margin-bottom: 10px;
-  color: black;
 }
 
 .team_info p {
@@ -167,12 +146,10 @@
 .other h2 {
   font-size: 2rem;
   margin-bottom: 5px;
-  color: black;
 }
 
 .other p {
   font-size: 20px;
-  color: rgb(67, 67, 67);
 }
 
 .other a {
@@ -259,7 +236,6 @@
   display: flex;
   gap: 30px;
   z-index: 2;
-  color: white;
 }
 
 .stats_section h2 {
@@ -283,7 +259,6 @@
   font-size: 4rem;
   margin: 0;
   font-weight: bold;
-  /* color: #0d1a26; */
   text-align: center;
 }
 
@@ -291,7 +266,6 @@
 .stat p {
   margin: 10px 0 0;
   font-size: 1.2rem;
-  /* color: black; */
 }
 
 /* Responsive design */
@@ -497,12 +471,4 @@
     padding-left: 80px;
     font-size: 16px;
   }
-}
-
-.footer {
-  background-color: #000;
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
-  font-family: Arial, sans-serif;
 }

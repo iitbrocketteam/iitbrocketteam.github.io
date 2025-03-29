@@ -1,13 +1,14 @@
 .stars {
-  width: 100%;
-  height: 100%;
-
-  z-index: 1000;
+  /* width: 100%; */
+  /* height: 100%; */
+  /* background-color: red; */
+  z-index: -1;
 }
 
 .star {
   position: fixed;
   animation: rotateStar 3s infinite alternate linear;
+  z-index: -1;
 }
 
 @keyframes rotateStar {

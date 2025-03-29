@@ -1,9 +1,8 @@
 .page {
   padding: calc(2rem + var(--navbar-height)) 10vw 3rem 10vw;
-  background-color: white;
-  color: black;
+  /* background-color: white; */
+  color: white;
 }
-
 
 .table {
   /* background-color: darkblue; */
@@ -27,7 +26,7 @@
 
 .table thead th {
   color: rgb(111, 111, 255);
-  text-shadow: rgb(111, 111, 255) 0.1rem 0 0.7rem;
+  text-shadow: rgb(111, 111, 255) 0.1rem 0 0.9rem;
   text-align: left;
 }
 
@@ -38,18 +37,18 @@
 }
 
 .para {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   width: 28rem;
   text-align: justify;
   margin: 2rem 0rem 0rem 0rem;
+  color: rgb(206, 206, 206);
 }
 
-@media(max-width:768px) {
+@media (max-width: 768px) {
   .para {
     width: 75vw;
-
   }
-  .table{
+  .table {
     width: 25rem;
     padding-left: 10vw;
   }
@@ -93,7 +92,7 @@
   --pad: 3rem;
 }
 
-@media(max-width:768px) {
+@media (max-width: 768px) {
   .page {
     /* padding-left: 0; */
   }
@@ -105,7 +104,7 @@
   margin: 3rem var(--pad) 5rem var(--pad);
 }
 
-@media(max-width:768px) {
+@media (max-width: 768px) {
   .rocket_container {
     flex-direction: column;
   }

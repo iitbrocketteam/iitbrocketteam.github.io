@@ -1,14 +1,14 @@
 .page {
-  background-color: white;
+  /* background-color: white; */
   min-height: 100svh;
-  color: black;
+  color: rgb(255, 255, 255);
 
   padding: calc(3rem + var(--navbar-height)) 10rem 0rem 10rem;
 }
 
 .page h2 {
   font-size: 2em;
-  color: rgb(0, 51, 102);
+  color: rgb(49, 152, 255);
   margin-bottom: 1rem;
 }
 

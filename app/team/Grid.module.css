@@ -9,7 +9,7 @@
 }
 
 .tabs li {
-  /* background-color: rgb(220, 220, 220); */
+  background-color: rgb(34, 34, 34);
   padding: 1rem;
   font-weight: 700;
 
@@ -18,7 +18,7 @@
 
 .tabs li:hover {
   cursor: pointer;
-  background-color: rgb(197, 196, 196);
+  background-color: rgb(66, 66, 66);
 }
 
 .tabs li::after {

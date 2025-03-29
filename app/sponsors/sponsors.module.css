@@ -97,7 +97,7 @@
 }
 
 /* grid background */
-.tables::before {
+/* .tables::before {
   position: absolute;
   left: 0;
   top: 0;
@@ -113,7 +113,7 @@
       transparent 1px
     ),
     linear-gradient(to bottom, rgb(49, 49, 49) 1px, transparent 1px);
-}
+} */
 
 .tables h3 {
   font-size: 3rem;

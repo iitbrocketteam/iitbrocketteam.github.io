@@ -1,7 +1,7 @@
 .container {
   /* font-family: Arial, sans-serif; */
-  background-color: white;
-  color: navy;
+  /* background-color: white; */
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,10 +12,11 @@
   width: 100vw;
   padding: 2rem 10rem;
 }
-@media (max-width: 768px){
-  .container{
+
+@media (max-width: 768px) {
+  .container {
     flex-direction: column;
-   /*overflow: hidden;*/
+    /*overflow: hidden;*/
     padding-top: 70px;
     height: max-content;
   }
@@ -58,7 +59,7 @@
 }
 
 .contact_form label {
-  margin-top: 1.0rem;
+  margin-top: 1rem;
   font-size: 1.6rem;
 }
 
