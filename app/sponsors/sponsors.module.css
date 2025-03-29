@@ -135,15 +135,16 @@
   font-size: 1.7rem;
 }
 
-.tables h4::after {
+/* blue line separator */
+/* .tables h4::after {
   position: absolute;
   content: "";
   width: 100%;
   height: 0.19rem;
   background-color: rgb(47, 106, 255);
-  top: 103%;
+  top: 100%;
   left: 0;
-}
+} */
 
 .tables p {
   color: #c0c0c0;
