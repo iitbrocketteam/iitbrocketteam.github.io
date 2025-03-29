@@ -29,6 +29,8 @@ const techno_font = Orbitron({
 //   subsets: ["latin"],
 // });
 
+const icon_size = "1.5rem";
+
 export default function Home() {
   return (
     <div className={styles.page /*  + ' ' + font.className */}>
@@ -59,7 +61,7 @@ export default function Home() {
           <h2>
             Rocket Team
             <span className={styles.icon}>
-              <FaRocket />
+              <FaRocket size={icon_size} />
             </span>
           </h2>
 
@@ -80,7 +82,7 @@ export default function Home() {
             <h2>
               Competitions
               <span className={styles.icon}>
-                <FaShieldAlt />
+                <FaShieldAlt size={icon_size} />
               </span>
             </h2>
             <p>
@@ -102,7 +104,7 @@ export default function Home() {
             <h2>
               Achievements
               <span className={styles.icon}>
-                <FaTrophy />
+                <FaTrophy size={icon_size} />
               </span>
             </h2>
             <p>
@@ -123,7 +125,7 @@ export default function Home() {
             <h2>
               RnD in Fuel
               <span className={styles.icon}>
-                <FaFlask />
+                <FaFlask size={icon_size} />
               </span>
             </h2>
             <p>
@@ -140,7 +142,7 @@ export default function Home() {
             <h2>
               Vision
               <span className={styles.icon}>
-                <FaGlobe />
+                <FaGlobe size={icon_size} />
               </span>
             </h2>
             <p>

@@ -109,6 +109,7 @@
   /* background: white; */
   position: relative;
   display: flex;
+  flex-direction: column;
   gap: 40px;
 
   z-index: 100;
@@ -132,7 +133,7 @@
 .team_info p {
   text-align: left;
   font-size: 20px;
-  width: 400px;
+  /* width: 400px; */
   word-wrap: break-word;
   margin-top: auto;
 }
