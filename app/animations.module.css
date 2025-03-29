@@ -47,11 +47,25 @@
 
 .stat_1 {
   counter-reset: num1 var(--num1);
-  animation: counter1 2s ease-in-out infinite normal;
+  /* TODO should remove this for scroll anim */
+  animation: counter1 2s ease-in-out;
+}
+
+.stat_1 h1 {
+  /* animation: fade 1s ease-in-out infinite normal; */
 }
 
 .stat_1 h1::after {
   content: counter(num1);
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes counter1 {

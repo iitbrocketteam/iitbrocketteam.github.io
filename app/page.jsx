@@ -2,9 +2,6 @@
 
 import styles from "./page.module.css";
 import animations from "./animations.module.css";
-import Link from "next/link";
-import Image from "next/image";
-import { Typewriter } from "react-simple-typewriter";
 import {
   FaRocket,
   FaHandshake,
@@ -14,8 +11,13 @@ import {
   FaFlask,
   FaGlobe,
 } from "react-icons/fa";
-
 import { Roboto_Mono, Inter, Orbitron, Poppins } from "next/font/google";
+
+import Link from "next/link";
+import Image from "next/image";
+
+import { Typewriter } from "react-simple-typewriter";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const techno_font = Orbitron({
   // weight: "400",
@@ -155,7 +157,18 @@ export default function Home() {
         <h2>At a Glance </h2>
         <div className={styles.stats}>
           <div className={styles.stat + " " + animations.stat_1}>
-            <h1></h1>
+            {/* <ScrollAnimation
+              fadeIn="fade"
+              afterAnimatedIn={function afterAnimatedIn(v) {
+                var t = "Animate In finished.\n";
+                t += "v.onScreen: " + v.onScreen + "\n";
+                t += "v.inViewport: " + v.inViewport;
+                alert(t);
+              }}
+            > */}
+            <h1>{/* a */}</h1>
+            {/* </ScrollAnimation> */}
+
             <p>Rockets</p>
           </div>
           <div className={styles.stat + " " + animations.stat_2}>
