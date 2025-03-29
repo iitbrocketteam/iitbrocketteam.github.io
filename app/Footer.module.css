@@ -62,14 +62,13 @@
 
 .social_icons {
   display: flex;
-  gap: 1rem;
+  justify-content: space-between;
 }
 
 .social_icon {
   color: #fff;
   font-size: 2rem;
   text-decoration: none;
-  transform: translateX(20);
 }
 
 .social_icon:hover {
