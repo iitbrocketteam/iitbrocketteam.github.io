@@ -24,7 +24,10 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { Typewriter } from "react-simple-typewriter";
-import ScrollAnimation from "react-animate-on-scroll";
+
+// add npm dep: "react-animate-on-scroll": "^2.1.9"
+// this conflicts with react, so have to add --force in npm install
+// import ScrollAnimation from "react-animate-on-scroll";
 
 const techno_font = Orbitron({
   // weight: "400",
