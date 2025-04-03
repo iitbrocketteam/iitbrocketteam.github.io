@@ -52,7 +52,7 @@
 }
 
 .stat_1 h1 {
-  /* animation: fade 1s ease-in-out infinite normal; */
+  animation: counter1 1s ease-in-out infinite normal;
 }
 
 .stat_1 h1::after {

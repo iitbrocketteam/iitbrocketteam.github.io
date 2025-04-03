@@ -161,18 +161,7 @@ export default function Home() {
         <h2>At a Glance </h2>
         <div className={styles.stats}>
           <div className={styles.stat + " " + animations.stat_1}>
-            {/* <ScrollAnimation
-              fadeIn="fade"
-              afterAnimatedIn={function afterAnimatedIn(v) {
-                var t = "Animate In finished.\n";
-                t += "v.onScreen: " + v.onScreen + "\n";
-                t += "v.inViewport: " + v.inViewport;
-                alert(t);
-              }}
-            > */}
-            <h1>{/* a */}</h1>
-            {/* </ScrollAnimation> */}
-
+            <h1></h1>
             <p>Rockets</p>
           </div>
           <div className={styles.stat + " " + animations.stat_2}>
@@ -181,7 +170,7 @@ export default function Home() {
           </div>
           <div className={styles.stat + " " + animations.stat_3}>
             <h1></h1>
-            <p>Subsytems</p>
+            <p>Subsystems</p>
           </div>
           <div className={styles.stat + " " + animations.stat_4}>
             <h1></h1>
