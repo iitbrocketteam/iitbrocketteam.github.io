@@ -42,16 +42,9 @@
       {
         "name": "Aditya Parsekar",
         "major": "Chemical Engineering",
-        "role": "Lead",
+        "role": "Subsystem Lead",
         "linkedin": "",
         "year": "2026"
-      },
-      {
-        "name": "Soham Sahasrabuddhe",
-        "major": "Engineering Physics",
-        "role": "Senior Engineer",
-        "linkedin": "",
-        "year": "2027"
       },
       {
         "name": "Arin Pendharkar",
@@ -115,6 +108,13 @@
   {
     "name": "Airframe",
     "members": [
+      {
+        "name": "Stuti Singla",
+        "major": "Aerospace Engineering",
+        "linkedin": "",
+        "year": "2026",
+        "role": "Subsytem Lead"
+      },
       {
         "major": "Mechanical Engineering",
         "linkedin": "",
@@ -198,13 +198,6 @@
     "name": "Avionics",
     "members": [
       {
-        "name": "Stuti Singla",
-        "major": "Aerospace Engineering",
-        "linkedin": "",
-        "year": "2026",
-        "role": "Subsytem Lead"
-      },
-      {
         "name": "Medhavin Chabra",
         "major": "Aerospace Engineering",
         "linkedin": "",
@@ -219,11 +212,11 @@
         "role": "Subsytem Lead"
       },
       {
-        "name": "Akshay Gaikwad",
-        "major": "Computer Science Engineering",
+        "name": "Arnav Prativ",
+        "major": "Aerospace Engineering",
         "linkedin": "",
         "year": "2027",
-        "role": "Senior Member"
+        "role": "Senior Engineer"
       },
       {
         "name": "Nikhil Khandelwal",
@@ -263,7 +256,7 @@
       {
         "name": "Jai Bellare",
         "major": "Electrical Engineering",
-        "linkedin": "",
+        "linkedin": "https://www.linkedin.com/in/jai-bellare/",
         "year": "2028",
         "role": "Junior Engineer"
       },
@@ -284,20 +277,6 @@
       {
         "name": "Samiran Das",
         "major": "Electrical Engineering",
-        "linkedin": "",
-        "year": "2028",
-        "role": "Junior Engineer"
-      },
-      {
-        "name": "Aarush Gupta",
-        "major": "Electrical Engineering",
-        "linkedin": "",
-        "year": "2028",
-        "role": "Junior Engineer"
-      },
-      {
-        "name": "Ayushman soni",
-        "major": "Civil Engineering",
         "linkedin": "",
         "year": "2028",
         "role": "Junior Engineer"
