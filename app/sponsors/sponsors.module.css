@@ -13,13 +13,13 @@
 .main {
   /*darken bg*/
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("/agastya-5817.jpg");
+    url("/agastya-5815.jpg");
 
   /* so shows the full height on mobile and full width on desktop */
   background-size: cover;
   /* shift the image down so starts below Navbar */
   /* centre it horizontally */
-  background-position: 50% var(--navbar-height);
+  background-position: 50% -6rem;
 
   width: 100vw;
   /* height: 100vh; */
@@ -27,6 +27,12 @@
   padding-top: calc(5rem + var(--navbar-height));
   /* padding-left: 10%;
   padding-right: 10%; */
+}
+
+@media (max-aspect-ratio: 1/1) {
+  .main {
+    background-position: 50% 0rem;
+  }
 }
 
 .support_heading {
