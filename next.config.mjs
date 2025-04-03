@@ -9,10 +9,10 @@ const nextConfig = {
    */
   output: "export",
 
-  basePath: "/nextjs-testing",
+  basePath: "/",
 
   // TODO doesn't work:
-  assetPrefix: "/nextjs-testing/", // needs trailing slash!
+  assetPrefix: "/", // needs trailing slash!
   
   // https://nextjs.org/docs/app/api-reference/next-config-js/basePath
   // https://stackoverflow.com/a/67971972
