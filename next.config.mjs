@@ -9,7 +9,7 @@ const nextConfig = {
    */
   output: "export",
 
-  basePath: "/",
+  basePath: "",
 
   // TODO doesn't work:
   assetPrefix: "/", // needs trailing slash!
