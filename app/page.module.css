@@ -27,7 +27,7 @@
   /* height: 100vh; */
   height: calc(927 / 1454 * 98vw);
   background-size: 100%;
-  background-image: url("/nextjs-testing/homepage_bg.jpg");
+  background-image: url("/homepage_bg.jpg");
 
   display: flex;
   flex-direction: column;

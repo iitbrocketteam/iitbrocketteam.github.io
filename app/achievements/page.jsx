@@ -16,7 +16,7 @@ export default function Achievements() {
         <Image
           width={300}
           height={300}
-          src={`/nextjs-testing/achievements/${image_name}.jpg`}
+          src={`/achievements/${image_name}.jpg`}
           alt={image_name}
         />
       </div>

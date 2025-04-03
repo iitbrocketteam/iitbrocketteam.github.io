@@ -30,7 +30,7 @@ export default function Team() {
               " " +
               animations.fade_in_delay_2
             }
-            src="/nextjs-testing/group_photo_800_cropped.jpg"
+            src="/group_photo_800_cropped.jpg"
             width={800}
             height={418}
             alt="Group Photo"

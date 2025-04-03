@@ -13,7 +13,7 @@
 .main {
   /*darken bg*/
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("/nextjs-testing/agastya-5817.jpg");
+    url("/agastya-5817.jpg");
 
   /* so shows the full height on mobile and full width on desktop */
   background-size: cover;

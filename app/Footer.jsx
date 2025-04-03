@@ -18,7 +18,7 @@ export default function Footer() {
       <div className={styles.footer_container}>
         <Image
           className={styles.logo}
-          src="/nextjs-testing/rtlogo1.png"
+          src="/rtlogo1.png"
           width={384}
           height={222}
           alt="Logo"
