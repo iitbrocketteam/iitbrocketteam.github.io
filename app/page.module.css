@@ -36,6 +36,25 @@
   text-align: center;
   overflow: hidden;
   color: black;
+
+  
+  --slant: 4rem;
+  --extra-padding: 3rem;
+
+  /* content-box means the padding will add to the height, not clipping the text */
+  /* then the clipping is in the pad region */
+  /* height: fit-content; */
+  /* box-sizing: content-box; */
+
+  /* padding-top: calc(var(--slant) + var(--extra-padding)); */
+  /* padding-bottom: calc(var(--slant) + var(--extra-padding)); */
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - var(--slant)),
+    0 100%
+  );
 }
 
 .header h1 {
