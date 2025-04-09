@@ -48,11 +48,7 @@
 .stat_1 {
   counter-reset: num1 var(--num1);
   /* TODO should remove this for scroll anim */
-  animation: counter1 2s ease-in-out;
-}
-
-.stat_1 h1 {
-  animation: counter1 1s ease-in-out infinite normal;
+  animation: counter1 2s ease-in-out infinite normal;
 }
 
 .stat_1 h1::after {
