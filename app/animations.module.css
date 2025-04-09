@@ -66,7 +66,7 @@
 
 @keyframes counter1 {
   0% {
-    --num1: 0;
+    --num1: 6;
   }
   /* use to add a delay betwene iterations */
   50% {
@@ -96,7 +96,7 @@
 
 @keyframes counter2 {
   0% {
-    --num2: 0;
+    --num2: 45;
   }
   /* use to add a delay betwene iterations */
   50% {
@@ -126,7 +126,7 @@
 
 @keyframes counter3 {
   0% {
-    --num3: 0;
+    --num3: 4;
   }
   /* use to add a delay betwene iterations */
   50% {
@@ -156,7 +156,7 @@
 
 @keyframes counter4 {
   0% {
-    --num4: 0;
+    --num4: 5;
   }
   /* use to add a delay betwene iterations */
   50% {
