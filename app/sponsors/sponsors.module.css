@@ -13,7 +13,7 @@
 .main {
   /*darken bg*/
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("/agastya-5815.jpg");
+    url("/sponsors_bg.jpg");
 
   /* so shows the full height on mobile and full width on desktop */
   background-size: cover;
