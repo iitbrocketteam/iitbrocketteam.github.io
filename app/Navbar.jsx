@@ -5,7 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { ThemeContext } from "./Theme";
 
 // import { Space_Mono, Poppins, Inter } from "next/font/google";
 // const font = Inter({ weight: "400", subsets: ["latin"] });
@@ -61,6 +62,8 @@ export default function Navbar() {
     </Link>
   ));
 
+  const { theme, toggleTheme } = useContext(ThemeContext);
+
   return (
     <nav className={styles.navbar /*  + ' ' + font.className */}>
       <Link className={styles.logo_link} href="/">
@@ -81,6 +84,8 @@ export default function Navbar() {
       >
         {links_content}
       </div>
+
+      <button onClick={() => toggleTheme()}>{theme}</button>
 
       {/* <div className={styles.buttons}>
         <Link className={styles.reach_out} href="/contact">

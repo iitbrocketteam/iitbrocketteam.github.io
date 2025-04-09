@@ -1,3 +1,5 @@
+"use client";
+
 import "./globals.css";
 import { Inter, Poppins } from "next/font/google";
 
@@ -8,14 +10,19 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Stars from "./Stars";
 
-export const metadata = {
-  title: "IITB Rocket Team",
-  description: "Admire the rockets, view past launches, and meet the team",
-};
+import { ThemeProvider, ThemeContext } from "./Theme";
+import { useContext } from "react";
 
-export default function RootLayout({ children }) {
+// export const metadata = {
+//   title: "IITB Rocket Team",
+//   description: "Admire the rockets, view past launches, and meet the team",
+// };
+
+const App = ({ children }) => {
+  const { theme } = useContext(ThemeContext);
+
   return (
-    <html lang="en">
+    <html lang="en" className={theme}>
       <body className={font.className}>
         <Stars />
         <Navbar />
@@ -23,5 +30,13 @@ export default function RootLayout({ children }) {
         <Footer />
       </body>
     </html>
+  );
+};
+
+export default function RootLayout({ children }) {
+  return (
+    <ThemeProvider>
+      <App>{children}</App>
+    </ThemeProvider>
   );
 }

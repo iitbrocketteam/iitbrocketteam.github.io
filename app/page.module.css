@@ -1,5 +1,4 @@
 .page {
-  color: rgb(255, 255, 255);
   padding: var(--navbar-height) 0rem 0rem 0rem;
 }
 
@@ -131,7 +130,7 @@
 }
 
 .vision p {
-  color: #c9c9c9;
+  color: var(--fg-2);
 }
 
 .team_info {
@@ -244,6 +243,7 @@
   /* transform: translateY(-20px); */
 
   background-color: rgb(7, 7, 40);
+  color: white;
   text-align: center;
 }
 
