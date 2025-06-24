@@ -28,6 +28,8 @@ export default function Navbar() {
 
   const [dropdown_closed, set_dropdown_closed] = useState(true);
 
+  const { theme, toggleTheme } = useContext(ThemeContext);
+
   // link may not exist - eg if gonna 404
   if (!current_link) {
     return null;
@@ -62,8 +64,6 @@ export default function Navbar() {
     </Link>
   ));
 
-  const { theme, toggleTheme } = useContext(ThemeContext);
-
   return (
     <nav className={styles.navbar /*  + ' ' + font.className */}>
       <Link className={styles.logo_link} href="/">
@@ -85,7 +85,7 @@ export default function Navbar() {
         {links_content}
       </div>
 
-      <button onClick={() => toggleTheme()}>{theme}</button>
+      {/* <button onClick={() => toggleTheme()}>{theme}</button> */}
 
       {/* <div className={styles.buttons}>
         <Link className={styles.reach_out} href="/contact">

@@ -7,6 +7,7 @@ import React, { useEffect, createContext, useState } from "react";
 const ThemeContext = createContext();
 
 const getTheme = () => {
+  // FIXME giving error ReferenceError: localStorage is not defined
   const theme = localStorage.getItem("theme");
   if (!theme) {
     // Default theme is taken as dark-theme
