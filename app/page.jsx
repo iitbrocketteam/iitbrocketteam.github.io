@@ -94,12 +94,12 @@ export default function Home() {
             <p>
               We are proud to compete on two prestigious platforms:
               <br />
-              1. the Intercollegiate Rocket Engineering Competition (IREC) at
+              1. The Intercollegiate Rocket Engineering Competition (IREC) at
               the prestigious <strong>Spaceport America Cup</strong>. At IREC,
               we showcase advanced engineering by launching rockets to altitudes
               of 10,000m.
               <br />
-              2. the <strong>INSPACE</strong> competition, which highlights our
+              2. The <strong>INSPACE</strong> competition, which highlights our
               expertise in low-altitude rocketry with deployable payloads.
             </p>
           </div>
@@ -131,6 +131,7 @@ export default function Home() {
               <FaFlask size={icon_size} style={{ marginLeft: "1rem" }} />
             </h2>
             <p>
+              {/* TODO we have progressed beyond this. add hybird motor info */}
               We have successfully developed and designed a solid rocket fuel
               composed of sorbitol and potassium nitrate (KNO₃). This
               formulation, known as KNSB (potassium nitrate-sorbitol),high
@@ -197,11 +198,12 @@ export default function Home() {
 
             {/* Image beside the info */}
             <div className={styles.imageContainer}>
-              <img
+              {/* FIXME add Ahiliya image */}
+              {/* <img
                 src="/public/rtlogo1.png"
                 alt="Rocket Ahiliya"
                 className={styles.rocketImage}
-              />
+              /> */}
             </div>
           </div>
 
@@ -220,11 +222,12 @@ export default function Home() {
 
             {/* Image beside the info */}
             <div className={styles.imageContainer}>
-              <img
+              {/* FIXME add Akarsh image */}
+              {/* <img
                 src="/public/rtlogo1.png"
                 alt="Rocket Akarsh"
                 className={styles.rocketImage}
-              />
+              /> */}
             </div>
           </div>
         </div>
