@@ -45,7 +45,7 @@ export default function Home() {
   return (
     <div className={styles.page /*  + ' ' + font.className */}>
       <header className={styles.header + " " + techno_font.className}>
-        <h1>Welcome to the IITB Rocket Team</h1>
+        <h1>Welcome to the IIT Bombay Rocket Team</h1>
 
         <h2>
           <Typewriter
@@ -69,7 +69,7 @@ export default function Home() {
           }
         >
           <h2>
-            Rocket Team
+            Who are we?
             <FaRocket size={icon_size} style={{ marginLeft: "1rem" }} />
           </h2>
 
@@ -79,7 +79,7 @@ export default function Home() {
             <br />
             We are guided by experienced faculty from ISRO and IIT Bombay, along
             with a TRA Level-3 certified international mentor who will be our
-            Flyer of Record for the competition.
+            Flyer of Record for the IREC competition.
           </p>
         </div>
 
@@ -94,8 +94,7 @@ export default function Home() {
             <p>
               We are proud to compete on two prestigious platforms:
               <br />
-              1. The Intercollegiate Rocket Engineering Competition (IREC) at
-              the prestigious <strong>Spaceport America Cup</strong>. At IREC,
+              1. At the Intercollegiate Rocket Engineering Competition (IREC),
               we showcase advanced engineering by launching rockets to altitudes
               of 10,000m.
               <br />
@@ -113,13 +112,15 @@ export default function Home() {
             </h2>
             <p>
               We have consistently excelled at the prestigious Spaceport America
-              Cup, the world’s largest intercollegiate rocketry competition.
+              Cup, the world's largest intercollegiate rocketry competition.
               <br />
-              Currently ranked 34th among 150+ global teams at SA Cup 2024, we
-              proudly secured the <strong>National First Position</strong> at SA
-              Cup 2023, solidifying our place as India’s top collegiate rocketry
+              We ranked 34th among 150+ global teams at SA Cup 2024.
+              <br />
+              We secured the <strong>National First Position</strong> at SA Cup
+              2023, solidifying our place as India’s top collegiate rocketry
               team.
             </p>
+            <br />
             <a href="/achievements">See all our achievements &rarr;</a>
           </div>
 
@@ -145,13 +146,13 @@ export default function Home() {
             <h2>
               Vision
               <span className={styles.icon}>
-                <FaGlobe size={icon_size} />
+                <FaGlobe size={icon_size} style={{ marginLeft: "1rem" }} />
               </span>
             </h2>
             <p>
               Our team is dedicated to elevate Indian amateur rocketry through
-              groundbreaking advancements. Beyond launching rockets, our mission
-              is to cultivate technical skills and promote STEM education at all
+              groundbreaking advancements. Beyond launching rockets, we aim to
+              cultivate technical skills and promote STEM education at all
               levels.
             </p>
           </div>
