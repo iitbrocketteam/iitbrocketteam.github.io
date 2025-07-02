@@ -4,7 +4,8 @@ import styles from "./Navbar.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaChevronDown } from "react-icons/fa";
+// TODO add social media
 import { useState, useContext } from "react";
 // import { ThemeContext } from "./Theme";
 
@@ -43,6 +44,8 @@ export default function Navbar() {
       }}
     >
       {current_link[1]}
+
+      <FaChevronDown style={{ marginLeft: "" }} />
     </div>
   );
 
