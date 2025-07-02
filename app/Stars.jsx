@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import styles from "./Stars.module.css";
 
@@ -39,7 +41,7 @@ function Star({ x, y, scale, delay, color }) {
 
 export default function Stars() {
   // Math.random should only be called on client
-  // "use client"; won't fix this as it still renders initial html on server ??
+  // just "use client"; won't fix this as it still renders initial html on server ??
   const [stars, setStars] = useState([]);
 
   useEffect(() => {
