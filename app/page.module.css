@@ -36,24 +36,9 @@
   overflow: hidden;
   color: black;
 
-  
   --slant: 4rem;
-  --extra-padding: 3rem;
 
-  /* content-box means the padding will add to the height, not clipping the text */
-  /* then the clipping is in the pad region */
-  /* height: fit-content; */
-  /* box-sizing: content-box; */
-
-  /* padding-top: calc(var(--slant) + var(--extra-padding)); */
-  /* padding-bottom: calc(var(--slant) + var(--extra-padding)); */
-
-  clip-path: polygon(
-    0 0,
-    100% 0,
-    100% calc(100% - var(--slant)),
-    0 100%
-  );
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--slant)), 0 100%);
 }
 
 .header h1 {
@@ -64,51 +49,18 @@
   /* font-family: "Trebuchet MS", Helvetica, sans-serif; */
 }
 
-.header p {
-  margin-top: 20px;
-  font-size: 1.8rem;
-}
+/* .header h2 {
+  font-size: 2.1rem;
+  margin-top: 10px;
+} */
 
 @media (max-width: 768px) {
   .header h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
-  .header p {
-    font-size: 1.2rem;
-  }
-}
-
-/* Additional animation for the tagline */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.header p {
-  font-size: 3 rem;
-  margin-top: 10px;
-}
-
-@media (max-width: 768px) {
-  .hero-text {
-    font-size: 1.5rem;
-    text-align: center;
-    padding: 0 10px;
-  }
-
-  .rocket-image {
-    width: 100%;
-    height: auto;
-  }
-
-  .section {
-    padding: 1rem;
+  .header h2 {
+    font-size: 1.1rem;
   }
 }
 
@@ -119,8 +71,6 @@
   padding-left: 5vw;
   padding-right: 5vw;
 
-  /* text-align: center; */
-  /* background: white; */
   position: relative;
   display: flex;
   flex-direction: column;
@@ -135,8 +85,7 @@
 
 .team_info {
   margin-left: 0;
-  padding: 1;
-  /*transform: translate(-40px, -30px);*/
+  /* padding: 1; */
 }
 
 .team_info h2 {
@@ -146,16 +95,18 @@
 
 .team_info p {
   text-align: left;
-  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: 300;
   /* width: 400px; */
   word-wrap: break-word;
   margin-top: auto;
+  padding: 0;
 }
 
 .other {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+  gap: 50px;
 }
 
 .other h2 {
@@ -164,7 +115,8 @@
 }
 
 .other p {
-  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: 300;
 }
 
 .other a {
@@ -176,59 +128,17 @@
   .vision {
     clip-path: polygon(0 2%, 100% 0, 100% 98%, 0% 100%);
     transform: translateY(-40px);
-    padding: 50px 10px;
+    padding: 5rem 2rem;
     flex-direction: column;
   }
 
-  .team_info h2 {
-    transform: none;
-  }
-
   .team_info p {
-    transform: none;
-    font-size: 15px;
-    padding-right: 65px;
-    padding-left: 10px;
+    font-size: 1.1rem;
   }
 
-  .achieve h2 {
-    transform: none;
-    font-size: 1.5rem;
-  }
-
-  .achieve p {
-    transform: none;
-    font-size: 15px;
-  }
-
-  .competitions h2 {
-    transform: none;
-    font-size: 1.5rem;
-  }
-
-  .competitions p {
-    transform: none;
-    font-size: 15px;
-  }
-
-  .rnd h2 {
-    transform: none;
-    font-size: 1.5rem;
-  }
-
-  .rnd p {
-    transform: none;
-    font-size: 15px;
-  }
-
-  .vis h2 {
-    transform: none;
-    font-size: 1.5rem;
-  }
-
-  .vis p {
-    transform: none;
-    font-size: 15px;
+  .other {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -306,11 +216,6 @@
     transform: translate(390px, -170px);
     padding-left: 10px;
   }
-}
-
-.section h1 {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
 }
 
 .slidercontainer {
