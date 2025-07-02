@@ -112,13 +112,14 @@ export default function Home() {
             </h2>
             <p>
               We have consistently excelled at the prestigious Spaceport America
-              Cup, the world's largest intercollegiate rocketry competition.
+              Cup, the world&apos;s largest intercollegiate rocketry
+              competition.
               <br />
               We ranked 34th among 150+ global teams at SA Cup 2024.
               <br />
               We secured the <strong>National First Position</strong> at SA Cup
-              2023, solidifying our place as India’s top collegiate rocketry
-              team.
+              2023, solidifying our place as India&apos;s top collegiate
+              rocketry team.
             </p>
             <br />
             <a href="/achievements">See all our achievements &rarr;</a>
