@@ -6,7 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { useState, useContext } from "react";
-import { ThemeContext } from "./Theme";
+// import { ThemeContext } from "./Theme";
 
 // import { Space_Mono, Poppins, Inter } from "next/font/google";
 // const font = Inter({ weight: "400", subsets: ["latin"] });
@@ -28,7 +28,7 @@ export default function Navbar() {
 
   const [dropdown_closed, set_dropdown_closed] = useState(true);
 
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  // const { theme, toggleTheme } = useContext(ThemeContext);
 
   // link may not exist - eg if gonna 404
   if (!current_link) {

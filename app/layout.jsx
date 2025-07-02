@@ -10,7 +10,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Stars from "./Stars";
 
-import { ThemeProvider, ThemeContext } from "./Theme";
+// import { ThemeProvider, ThemeContext } from "./Theme";
 import { useContext } from "react";
 
 // export const metadata = {
@@ -19,10 +19,10 @@ import { useContext } from "react";
 // };
 
 const App = ({ children }) => {
-  const { theme } = useContext(ThemeContext);
+  // const { theme } = useContext(ThemeContext);
 
   return (
-    <html lang="en" className={theme}>
+    <html lang="en" className={"dark-theme"}>
       <body className={font.className}>
         <Stars />
         <Navbar />
@@ -35,8 +35,8 @@ const App = ({ children }) => {
 
 export default function RootLayout({ children }) {
   return (
-    <ThemeProvider>
-      <App>{children}</App>
-    </ThemeProvider>
+    // <ThemeProvider>
+    <App>{children}</App>
+    // </ThemeProvider>
   );
 }
