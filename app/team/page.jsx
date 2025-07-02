@@ -13,13 +13,13 @@ export default function Team() {
         </h2>
         <div className={styles.description}>
           <p className={animations.fade_in + " " + animations.fade_in_delay_1}>
-            Our team is a group of 30+ members, including UGs, dual
-            degree and PhD students, united by a shared passion for advancing
-            rocketry and space sciences in India. We are dedicated to nurture a
-            robust STEM community and are guided by experienced faculty from
-            ISRO and IIT Bombay, along with a TRA Level-3 certified
-            international mentor who will be our Flyer of Record for the
-            competition.
+            We are a team of 30+ members, including undergraduates, and PhD
+            students, united by a shared passion for advancing rocketry and
+            space sciences in India.
+            <br />
+            We are guided by experienced faculty from ISRO and IIT Bombay, along
+            with a TRA Level-3 certified international mentor who will be our
+            Flyer of Record for the competition.
           </p>
 
           <Image
@@ -40,7 +40,7 @@ export default function Team() {
           Click on any of our members below to learn more about them!
         </div> */}
       </main>
-      
+
       <div className={animations.fade_in + " " + animations.fade_in_delay_3}>
         <Grid />
       </div>

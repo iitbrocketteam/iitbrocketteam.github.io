@@ -4,6 +4,7 @@
 
 .tabs {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
 }
@@ -100,8 +101,8 @@ crop and squash photos if needed
 }
 
 .profile_pic {
-  height: 15rem;
-  width: 15rem;
+  height: 10rem;
+  width: 10rem;
   object-fit: cover;
   border-radius: 0.8rem;
 }

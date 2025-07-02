@@ -55,21 +55,19 @@ export default function Grid() {
 
   return (
     <div className={styles.grid}>
-      {
-        <ul className={styles.tabs}>
-          {data.map((subsystem, index) => (
-            <li
-              key={index}
-              onClick={() => {
-                setActive(index);
-              }}
-              className={index === active ? styles.active : styles.inactive}
-            >
-              {subsystem.name}
-            </li>
-          ))}
-        </ul>
-      }
+      <ul className={styles.tabs}>
+        {data.map((subsystem, index) => (
+          <li
+            key={index}
+            onClick={() => {
+              setActive(index);
+            }}
+            className={index === active ? styles.active : styles.inactive}
+          >
+            {subsystem.name}
+          </li>
+        ))}
+      </ul>
 
       {subsystemContent(data[active])}
     </div>
