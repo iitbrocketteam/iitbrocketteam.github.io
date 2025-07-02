@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import styles from "./Stars.module.css";
 
 function Star({ x, y, scale, delay, color }) {
@@ -37,19 +38,25 @@ function Star({ x, y, scale, delay, color }) {
 }
 
 export default function Stars() {
-  const stars = Array(100)
-    .fill(0)
-    .map((_, i) => {
-      const x = Math.random() * 100;
-      const y = Math.random() * 100;
-      const scale = Math.random() * 1.3;
-      const delay = Math.random() * 3;
+  // Math.random should only be called on client
+  // "use client"; won't fix this as it still renders initial html on server ??
+  const [stars, setStars] = useState([]);
 
-      // increase multiplied to decrease brightness: make visible on white backgrounds if needed
-      const color = 255 - Math.random() * 0;
-      return (
-        <Star key={i} x={x} y={y} scale={scale} delay={delay} color={color} />
-      );
-    });
+  useEffect(() => {
+    const generatedStars = Array(100)
+      .fill(0)
+      .map((_, i) => {
+        const x = Math.random() * 100;
+        const y = Math.random() * 100;
+        const scale = Math.random() * 1.3;
+        const delay = Math.random() * 3;
+        const color = 255 - Math.random() * 0;
+        return (
+          <Star key={i} x={x} y={y} scale={scale} delay={delay} color={color} />
+        );
+      });
+    setStars(generatedStars);
+  }, []);
+
   return <div className={styles.stars}>{stars}</div>;
 }
