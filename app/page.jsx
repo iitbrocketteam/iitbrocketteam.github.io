@@ -212,7 +212,7 @@ export default function Home() {
             <div className={styles.info}>
               <h2>Rocket Akarsh</h2>
               <p>
-                Aarksh is our inaugural project for the INSPACE competition,
+                Akarsh is our inaugural project for the INSPACE competition,
                 designed to achieve an apogee of 1,000 meters. This rocket
                 features a deployable payload, demonstrating our expertise in
                 precision engineering and innovation in low-altitude rocketry
