@@ -1,22 +1,22 @@
-"use client";
+// "use client";
 
 import "./globals.css";
-import { Inter, Poppins } from "next/font/google";
+import { Inter } from "next/font/google";
 
-// not specifying weights imports all weights
 const font = Inter({ subsets: ["latin"] });
 
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Stars from "./Stars";
 
+// TODO can't have both metadata on theme coz latter needs client
 // import { ThemeProvider, ThemeContext } from "./Theme";
-import { useContext } from "react";
+// import { useContext } from "react";
 
-// export const metadata = {
-//   title: "IITB Rocket Team",
-//   description: "Admire the rockets, view past launches, and meet the team",
-// };
+export const metadata = {
+  title: "IITB Rocket Team",
+  description: "Admire the rockets, view past launches, and meet the team",
+};
 
 const App = ({ children }) => {
   // const { theme } = useContext(ThemeContext);
