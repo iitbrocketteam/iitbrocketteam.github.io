@@ -24,7 +24,7 @@ export default function Grid() {
                 <li>
                   {/* TODO add linkedin links data */}
                   {member.linkedin ? (
-                    <a href="https://www.linkedin.com/in/sayan-vishwakarma-6b2386286">
+                    <a href={member.linkedin} target="_blank" rel="noreferrer">
                       🔗 LinkedIn
                     </a>
                   ) : (
