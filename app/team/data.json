@@ -47,6 +47,13 @@
         "year": "2028"
       },
       {
+        "name": "Siddhant Patil",
+        "major": "Mechanical Engineering",
+        "role": "Junior Engineer",
+        "linkedin": "",
+        "year": "2028"
+      },
+      {
         "name": "Nishith Bhattacharya",
         "major": "",
         "role": "Senior Engineer",
@@ -61,10 +68,17 @@
         "year": "2028"
       },
       {
-        "name": "Abhinav Kaushal ",
+        "name": "Abhinav Kaushal",
         "major": "Mechanical Engineering",
         "role": "Junior Engineer",
         "linkedin": "https://www.linkedin.com/in/abhinav-kaushal-576111374",
+        "year": "2029"
+      },
+      {
+        "name": "Ruchir Padhye",
+        "major": "Mechanical Engineering",
+        "role": "Junior Engineer",
+        "linkedin": "https://www.linkedin.com/in/ruchir-padhye-1148b8375",
         "year": "2029"
       },
       {
@@ -245,6 +259,34 @@
         "linkedin": "www.linkedin.com/in/aditya-jha-919a14369/",
         "year": "2030",
         "role": "Junior Engineer"
+      },
+      {
+        "name": "Abhimanyu Kashyap",
+        "major": "",
+        "linkedin": "https://www.linkedin.com/in/abhimanyu-kashyap-47ab8238a",
+        "year": "2029",
+        "role": "Junior Engineer"
+      },
+      {
+        "name": "Ahaan Singh",
+        "major": "Electrical Engineering",
+        "linkedin": "",
+        "year": "2029",
+        "role": "Junior Engineer"
+      },
+      {
+        "name": "Nidhi Lohana",
+        "major": "Electrical Engineering",
+        "linkedin": "https://www.linkedin.com/in/nidhi-lohana-18903236a/",
+        "year": "2029",
+        "role": "Junior Engineer"
+      },
+      {
+        "name": "Paras Gore",
+        "major": "Electrical Engineering",
+        "linkedin": "",
+        "year": "2029",
+        "role": "Junior Engineer"
       }
     ]
   },
@@ -255,6 +297,13 @@
         "name": "Sameer Gupta",
         "major": "Metallurgy and Material Science",
         "linkedin": "https://www.linkedin.com/in/sameer-gupta09/",
+        "year": "2027",
+        "role": "Subsystem Head"
+      },
+      {
+        "name": "Nikhil Khandelwal",
+        "major": "Metallurgy and Material Science",
+        "linkedin": "",
         "year": "2027",
         "role": "Subsystem Head"
       },
@@ -276,8 +325,29 @@
         "name": "Vallabh Pardeshi",
         "major": "Mechanical Engineering",
         "linkedin": "https://www.linkedin.com/in/vallabh-pardeshi-033083325/",
-        "year": "2028",
+        "year": "2029",
         "role": "Junior Engineer"
+      },
+      {
+        "name": "Aarav Jayalwal",
+        "major": "",
+        "linkedin": "",
+        "year": "2029",
+        "role": "Junior Engineer"
+      },
+      {
+        "name": "Kartik Gupta",
+        "major": "",
+        "linkedin": "https://www.linkedin.com/in/kartik-gupta-040bab322",
+        "year": "2029",
+        "role": "Senior Engineer"
+      },
+      {
+        "name": "Shreyas Dey",
+        "major": "",
+        "linkedin": "https://www.linkedin.com/in/shreyas-dey",
+        "year": "2029",
+        "role": "Senior Engineer"
       }
     ]
   },
