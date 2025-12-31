@@ -1,5 +1,16 @@
 [
   {
+    "title": "M Class Motor Test",
+    "images": [
+      "M1",
+      "M2",
+      "M3",
+      "M4",
+      "M5",
+      "M6"
+    ]
+  },
+  {
     "title": "SA Cup 2024",
     "images": [
       "Sacup24-1",
@@ -27,12 +38,7 @@
   },
   {
     "title": "SA Cup 2023",
-    "images": [
-      "Sacup23-1",
-      "Sacup23-2",
-      "Sacup23-3",
-      "Sacup23-4"
-    ]
+    "images": ["Sacup23-1", "Sacup23-2", "Sacup23-3", "Sacup23-4"]
   },
   {
     "title": "LAUNCH 2.0",
