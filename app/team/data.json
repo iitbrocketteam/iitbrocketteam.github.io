@@ -55,7 +55,7 @@
       },
       {
         "name": "Nishith Bhattacharya",
-        "major": "",
+        "major": "Aerospace Engineering",
         "role": "Senior Engineer",
         "linkedin": "https://www.linkedin.com/in/nishith-bhattacharya-b30386288",
         "year": "2029"
@@ -90,14 +90,14 @@
       },
       {
         "name": "Vansh Titarmare",
-        "major": "",
+        "major": "Mechanical Engineering",
         "role": "Junior Engineer",
         "linkedin": "",
         "year": "2029"
       },
       {
         "name": "Tanay Gadgil",
-        "major": "Engineering",
+        "major": "Chemical Engineering",
         "role": "Junior Engineer",
         "linkedin": "",
         "year": "2029"
@@ -144,7 +144,7 @@
         "role": "Advisor"
       },
       {
-        "major": "",
+        "major": "Aerospace Engineering",
         "linkedin": "https://www.linkedin.com/in/aaryan-barupal-456083344",
         "year": "2028",
         "name": "Aaryan Barupal",
@@ -179,18 +179,18 @@
         "role": "Senior Engineer"
       },
       {
-        "major": "Engineering",
-        "linkedin": "",
-        "year": "2028",
-        "name": "Mihika Sawant",
-        "role": " Engineer"
-      },
-      {
         "major": "Aerospace Engineering",
         "linkedin": "https://www.linkedin.com/in/mukti-radhey-0492a1318/",
         "year": "2028",
         "name": "Mukti Radhey",
         "role": "Senior Engineer"
+      },
+      {
+        "major": "Civil Engineering",
+        "linkedin": "",
+        "year": "2028",
+        "name": "Mihika Sawant",
+        "role": "Junior Engineer"
       }
     ]
   },
@@ -287,6 +287,13 @@
         "linkedin": "",
         "year": "2029",
         "role": "Junior Engineer"
+      },
+      {
+        "name": "Vedant Wayal",
+        "major": "Metallurgy and Material Science",
+        "linkedin": "",
+        "year": "2029",
+        "role": "Junior Engineer"
       }
     ]
   },
@@ -340,14 +347,21 @@
         "major": "",
         "linkedin": "https://www.linkedin.com/in/kartik-gupta-040bab322",
         "year": "2029",
-        "role": "Senior Engineer"
+        "role": "Junior Engineer"
       },
       {
         "name": "Shreyas Dey",
         "major": "",
         "linkedin": "https://www.linkedin.com/in/shreyas-dey",
         "year": "2029",
-        "role": "Senior Engineer"
+        "role": "Junior Engineer"
+      },
+      {
+        "name": "Aryan Anarkat",
+        "major": "Electrical Engineering",
+        "linkedin": "",
+        "year": "2029",
+        "role": "Junior Engineer"
       }
     ]
   },
@@ -414,6 +428,13 @@
         "name": "Anusha Dhale",
         "major": "Aerospace Engineering",
         "linkedin": "https://www.linkedin.com/in/devashree-patil-bb45bb386",
+        "year": "2029",
+        "role": "Junior"
+      },
+      {
+        "name": "Dev Sharma",
+        "major": "Environmental Science and Engineering",
+        "linkedin": "",
         "year": "2029",
         "role": "Junior"
       }
