@@ -1,115 +1,166 @@
-.section_label {
-  padding: 56px var(--gutter) 0;
-  border-top: 1px solid var(--rule);
+/* Rockets page - see the "Rockets page" section of the design handoff */
+
+.header {
+  border-bottom: 1px solid var(--rule);
 }
 
-.section_label + .rocket {
-  padding-top: 32px;
-}
+/* ---------- shared bits: eyebrow, name, specs ---------- */
 
-/* ---------- one rocket: specs + onboard video ---------- */
-
-.rocket {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 64px;
-  align-items: start;
-  padding: 48px var(--gutter) 72px;
+.eyebrow {
+  font: 500 12px var(--mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  /* a touch lighter than --accent, it sits on the blurred photo */
+  color: oklch(0.8 0.16 55);
 }
 
 .name_row {
   display: flex;
-  align-items: baseline;
-  gap: 20px;
   flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 20px;
+  margin-top: 28px;
 }
 
 .name {
   font-family: var(--pixel);
   font-variation-settings: "ELSH" 1;
   font-weight: 400;
-  font-size: clamp(40px, 5.6vw, 72px);
+  font-size: clamp(48px, 7vw, 88px);
   line-height: 1;
   text-transform: uppercase;
 }
 
 .year {
-  font: 500 12px var(--mono);
-  letter-spacing: 0.12em;
-  color: var(--accent);
+  font: 500 14px var(--mono);
+  letter-spacing: 0.1em;
+  color: oklch(0.8 0.16 55);
 }
 
 .specs {
-  margin-top: 32px;
-  max-width: 640px;
+  margin-top: 28px;
+  border-top: 1px dashed rgba(242, 241, 238, 0.3);
 }
 
 .spec {
   display: grid;
-  grid-template-columns: 160px 1fr;
-  gap: 20px;
-  align-items: baseline;
-  padding: 14px 0;
-  border-top: 1px dashed var(--rule-dashed);
-}
-
-.spec:last-child {
-  border-bottom: 1px dashed var(--rule-dashed);
+  grid-template-columns: minmax(90px, 30%) 1fr;
+  gap: 16px;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px dashed rgba(242, 241, 238, 0.3);
 }
 
 .spec dt {
-  font: 500 11px var(--mono);
+  font: 500 12px var(--mono);
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--ink-60);
+  color: var(--ink-75);
 }
 
 .spec dd {
   font-family: var(--pixel);
   font-variation-settings: "ELSH" 1;
-  font-size: 24px;
-  line-height: 1.2;
-}
-
-.description {
-  margin-top: 28px;
-  max-width: 640px;
-  font-size: 18px;
-  line-height: 1.6;
-  color: var(--ink-75);
-  text-wrap: pretty;
-}
-
-.media {
-  position: relative;
-  width: clamp(240px, 24vw, 340px);
-  border: 1px solid var(--rule);
-  background: #000;
-}
-
-.video {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 356 / 800;
-  object-fit: cover;
+  font-size: clamp(22px, 2.4vw, 30px);
+  white-space: nowrap;
 }
 
 .tba {
   color: var(--ink-60);
 }
 
-/* launch photos: wider frame, cropped around the rocket */
+.description {
+  margin-top: 28px;
+  max-width: 560px;
+  font-size: 17px;
+  line-height: 1.65;
+  color: rgba(242, 241, 238, 0.88);
+  text-wrap: pretty;
+}
+
+/* ---------- desktop panels ---------- */
+
+.panel {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--rule);
+  background: var(--bg);
+}
+
+/* oversized so the blur has no soft edges */
+.backdrop {
+  position: absolute;
+  inset: -80px;
+  width: calc(100% + 160px);
+  height: calc(100% + 160px);
+  object-fit: cover;
+  filter: blur(40px) saturate(1.1);
+}
+
+.shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(10, 11, 13, 0.82) 0%,
+    rgba(10, 11, 13, 0.6) 40%,
+    rgba(10, 11, 13, 0.15) 60%,
+    rgba(10, 11, 13, 0) 70%
+  );
+}
+
+.panel_grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, min(50%, 640px));
+  align-items: stretch;
+}
+
+.panel_text {
+  padding: 64px var(--gutter);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.square {
+  position: relative;
+  align-self: center;
+  aspect-ratio: 1;
+  width: 100%;
+}
+
+/* edges feathered into the blurred backdrop */
 .photo {
-  width: clamp(280px, 32vw, 460px);
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -webkit-mask-image:
+    linear-gradient(90deg, transparent 0%, #000 22%),
+    linear-gradient(180deg, transparent 0%, #000 14%, #000 86%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(90deg, transparent 0%, #000 22%),
+    linear-gradient(180deg, transparent 0%, #000 14%, #000 86%, transparent 100%);
+  mask-composite: intersect;
 }
 
-.photo .video {
-  aspect-ratio: 4 / 5;
-  object-position: center 30%;
+/* older rockets: white-background render videos, no photo yet */
+.video_slot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 64px var(--gutter);
 }
 
-/* the renders have a white background, so the REC label sits in a bar above */
+.video_frame {
+  width: clamp(240px, 22vw, 320px);
+  border: 1px solid var(--rule);
+  background: #fff;
+}
+
 .rec_bar {
   display: flex;
   justify-content: space-between;
@@ -122,38 +173,216 @@
   color: var(--ink-60);
 }
 
-@media (max-width: 1024px) {
-  .rocket {
-    gap: 40px;
-  }
+.video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 356 / 800;
+  object-fit: cover;
 }
 
-@media (max-width: 760px) {
-  .rocket {
-    grid-template-columns: 1fr;
+/* ---------- narrow screens (phones, zoomed-in desktop): sliding cards ---------- */
+
+.carousel {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .list {
+    display: none;
   }
 
-  .media,
-  .photo {
-    width: min(100%, 360px);
-    justify-self: center;
+  .carousel {
+    display: block;
+  }
+
+  /* the header's rule already sits above the tabs */
+  .carousel > [role="tablist"] {
+    border-top: none;
+  }
+
+  .track {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 var(--gutter);
+    padding: 24px var(--gutter) 0;
+    scrollbar-width: none;
+  }
+
+  .track::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* next card peeks in from the right; off-focus cards shrink and dim */
+  .card {
+    flex: none;
+    width: min(82vw, 560px);
+    min-height: min(calc(100svh - var(--navbar-height) - 170px), 860px);
+    position: relative;
+    overflow: hidden;
+    /* all cards stretch to the tallest; text starts at the same height on each */
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: start;
+    border: 1px solid var(--rule);
+    background: var(--bg);
+    opacity: 0.5;
+    transform: scale(0.94);
+    transition:
+      opacity 0.5s ease,
+      transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+
+  .card_active {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* fixed-height image at the top of the card, so the crop doesn't depend on
+     how tall the text makes the card; the text overlaps its lower part */
+  .card_media {
+    position: absolute;
+    inset: 0 0 auto;
+    height: min(72svh, 760px);
+    filter: blur(6px) saturate(0.6);
+    transition: filter 0.6s ease;
+  }
+
+  .card_active .card_media {
+    filter: none;
+  }
+
+  .card_media img,
+  .card_media video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: auto;
+  }
+
+  /* render videos sit on white - contained, right-aligned at the top */
+  .card_video .card_media {
+    background: #fff;
+  }
+
+  .card_video .card_media video {
+    object-fit: contain;
+    object-position: 100% 0;
+    height: 72%;
+  }
+
+  /* text overlays the lower part of the image */
+  .card_shade {
+    position: absolute;
+    inset: 0 0 auto;
+    height: min(72svh, 760px);
+    background: linear-gradient(
+      180deg,
+      rgba(10, 11, 13, 0.25) 0%,
+      rgba(10, 11, 13, 0) 20%,
+      rgba(10, 11, 13, 0) 45%,
+      rgba(10, 11, 13, 0.8) 75%,
+      var(--bg) 100%
+    );
+    pointer-events: none;
+  }
+
+  .card_text {
+    position: relative;
+    padding: 44svh 24px 28px;
+  }
+
+  .card_text .name_row {
+    margin-top: 14px;
+  }
+
+  .card_text .name {
+    font-size: clamp(40px, 11vw, 64px);
+  }
+
+  .card_text .specs {
+    margin-top: 18px;
+  }
+
+  .card_text .spec {
+    padding: 11px 0;
+  }
+
+  .card_text .spec dd {
+    font-size: 20px;
+  }
+
+  .card_text .description {
+    margin-top: 18px;
+    font-size: 15px;
+  }
+
+  .controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 24px var(--gutter) 48px;
+  }
+
+  .arrow {
+    flex: none;
+    width: 44px;
+    height: 44px;
+    font: 500 16px var(--mono);
+    background: transparent;
+    border: 1px solid var(--ink-60);
+    cursor: pointer;
+  }
+
+  .arrow:disabled {
+    opacity: 0.3;
+    cursor: default;
+  }
+
+  .progress {
+    flex: 1;
+    display: flex;
+    gap: 6px;
+  }
+
+  /* thin bar inside a taller tap target */
+  .progress_bar {
+    position: relative;
+    flex: 1;
+    height: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .progress_bar::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 8px;
+    height: 2px;
+    background: rgba(242, 241, 238, 0.25);
+    transition: background-color 0.3s ease;
+  }
+
+  .progress_bar_active::after {
+    background: var(--accent);
   }
 }
 
 @media (max-width: 640px) {
-  .section_label {
-    padding-top: 44px;
+  .card_text {
+    padding-left: 20px;
+    padding-right: 20px;
   }
+}
 
-  .rocket {
-    padding-bottom: 56px;
-  }
-
-  .spec {
-    grid-template-columns: 110px 1fr;
-  }
-
-  .spec dd {
-    font-size: 20px;
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .card_media {
+    transition-duration: 0s;
   }
 }

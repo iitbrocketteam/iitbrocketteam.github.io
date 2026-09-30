@@ -396,9 +396,11 @@
     display: none;
   }
 
-  /* shift the crop right so the rocket stays in frame */
+  /* right-aligned crop on phones, keeps the rocket in frame */
   .hero_image {
-    transform: translate(-64%, -50%);
+    left: auto;
+    right: 0;
+    transform: translateY(-50%);
   }
 
   .tagline_row {
