@@ -1,55 +1,40 @@
-.page {
-  /* background-color: white; */
-  min-height: 100svh;
-  color: rgb(255, 255, 255);
-
-  padding: calc(3rem + var(--navbar-height)) 7% 0rem 7%;
+/* photo edge to edge, text below it */
+.photo_section {
+  padding-bottom: 72px;
 }
 
-.page h2 {
-  font-size: 2em;
-  color: rgb(49, 152, 255);
-  margin-bottom: 1rem;
-}
-
-.content {
-  margin: auto;
-  font-size: 1.3rem;
+.photo_frame {
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
 }
 
 .group_photo {
-  max-width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.description {
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  flex-wrap: nowrap;
-  gap: 2em;
-}
-
-@media (max-aspect-ratio: 1/1) {
-  .description {
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-}
-
-.description p {
-  /* max-width: 600px; */
-}
-
-.group_photo {
+  display: block;
   width: 100%;
-  max-width: 650px;
   height: auto;
-  border-radius: 8px;
-  margin-right: 20px;
 }
 
-.click_command {
-  margin-top: 3.4rem;
+.caption {
+  position: absolute;
+  left: var(--gutter);
+  top: 20px;
+}
+
+.mentors {
+  margin: 32px var(--gutter) 0;
+  max-width: 880px;
+  padding-top: 20px;
+  border-top: 1px dashed var(--rule-dashed);
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--ink-75);
+  text-wrap: pretty;
+}
+
+@media (max-width: 640px) {
+  .photo_section {
+    padding-bottom: 56px;
+  }
 }

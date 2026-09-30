@@ -1,8 +1,51 @@
 import Rocket from "./Rocket";
-import Slideshow from "./Slideshow";
+import ui from "../ui.module.css";
 import styles from "./rockets.module.css";
 
-const data = [
+// TODO specs for Ananta and Ahilya
+
+const current = {
+  name: "Ananta",
+  year: "2026",
+  data: [
+    ["Apogee", "TBA"],
+    ["Motor", "TBA"],
+    ["Fuel", "TBA"],
+    ["Height", "TBA"],
+    ["Diameter", "TBA"],
+  ],
+  image: "/ananta_launch.jpeg",
+  description: "",
+};
+
+// newest first after `current`; image = launch photo, else the old render video
+const previous = [
+  {
+    name: "Ahilya",
+    year: "2025",
+    data: [
+      ["Apogee", "TBA"],
+      ["Motor", "TBA"],
+      ["Fuel", "TBA"],
+      ["Height", "TBA"],
+      ["Diameter", "TBA"],
+    ],
+    image: "/ahilya_launch.jpg",
+    description: `Ahilya marks our third iteration in the 10k rocket series for the prestigious IREC competition. This year, we have achieved a significant milestone by developing our proprietary solid rocket fuel and integrating a deployable payload, showcasing our advancements in propulsion technology and payload deployment systems.`,
+  },
+  {
+    name: "Agastya",
+    year: "2024",
+    data: [
+      ["Apogee", "9210 ft"],
+      ["Motor", "M2500"],
+      ["Fuel", "APCP"],
+      ["Height", "2340mm"],
+      ["Diameter", "124mm"],
+    ],
+    image: "/agastya_launch.jpeg",
+    description: `Our second SA Cup entry soared to new heights, securing an impressive 34th place internationally! This rocket was a marvel of innovation, featuring airbrakes for precise apogee control, a reefing mechanism for smooth recovery, and SRAD telemetry for real-time data. An active weather station payload added a scientific edge, showcasing our team's exceptional engineering prowess and dedication to pushing the boundaries of rocketry.`,
+  },
   {
     name: "Adhyant",
     // name: "1",
@@ -49,28 +92,27 @@ const data = [
 
 export default function Rockets() {
   return (
-    <div className={styles.page}>
-      <h1 className={styles.heading}>Our Rockets</h1>
+    <div className={ui.page}>
+      <header className={ui.header}>
+        <div className={ui.label}>Rockets · Flight log</div>
+        <h1 className={ui.title}>Our Rockets</h1>
+        <p className={ui.lead}>
+          Every iteration flies higher than the last - from a 100 m hop on a
+          sorbitol motor to 9,210 ft at the Spaceport America Cup.
+        </p>
+      </header>
 
-      <Rocket
-        props={{
-          name: "Agastya",
-          year: "2024",
-          data: [
-            ["Apogee", "9210 ft"],
-            ["Motor", "M2500"],
-            ["Fuel", "APCP"],
-            ["Height", "2340mm"],
-            ["Diameter", "124mm"],
-          ],
-          videoSrc: "/agastya01.mp4",
-          description: `Our second SA Cup entry soared to new heights, securing an impressive 34th place internationally! This rocket was a marvel of innovation, featuring airbrakes for precise apogee control, a reefing mechanism for smooth recovery, and SRAD telemetry for real-time data. An active weather station payload added a scientific edge, showcasing our team's exceptional engineering prowess and dedication to pushing the boundaries of rocketry.`,
-        }}
-      />
-
-      <h1 className={styles.heading}>Previous Iterations</h1>
-
-      <Slideshow rockets_data={data} />
+      {[current, ...previous].map((rocket, i) => (
+        <section key={rocket.name}>
+          <div className={styles.section_label}>
+            <div className={ui.label}>
+              {String(i + 1).padStart(2, "0")} /{" "}
+              {i === 0 ? "Latest flight" : rocket.year}
+            </div>
+          </div>
+          <Rocket rocket={rocket} />
+        </section>
+      ))}
     </div>
   );
 }

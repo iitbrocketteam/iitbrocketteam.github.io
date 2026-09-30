@@ -1,7 +1,4 @@
 .navbar {
-  --ink: #f2f1ee;
-  --accent: oklch(0.78 0.17 50);
-
   height: var(--navbar-height);
   padding: 0 40px;
 
@@ -27,7 +24,7 @@
     border-color 0.25s;
 }
 
-/* over the homepage hero, before scrolling */
+/* at the top of every page, before scrolling */
 .transparent {
   background-color: transparent;
   border-bottom-color: transparent;

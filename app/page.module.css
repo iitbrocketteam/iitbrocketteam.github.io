@@ -1,22 +1,7 @@
 /* homepage - "onboard telemetry" design, see Claude Design handoff */
+/* tokens (--bg, --accent, --gutter...) live in globals.css */
 
 .page {
-  --bg: #0a0b0d;
-  --ink: #f2f1ee;
-  --ink-75: rgba(242, 241, 238, 0.75);
-  --ink-70: rgba(242, 241, 238, 0.7);
-  --ink-60: rgba(242, 241, 238, 0.6);
-  --rule: rgba(242, 241, 238, 0.14);
-  --rule-dashed: rgba(242, 241, 238, 0.2);
-  --accent: oklch(0.78 0.17 50);
-  --accent-fill: oklch(0.72 0.19 45);
-  --rec: oklch(0.65 0.22 28);
-  --gutter: 40px;
-
-  --pixel: var(--font-geist-pixel), monospace;
-  --mono: var(--font-geist-mono), monospace;
-  --sans: var(--font-geist), system-ui, sans-serif;
-
   background: var(--bg);
   color: var(--ink);
   font-family: var(--sans);
@@ -47,7 +32,7 @@
   overflow: hidden;
 }
 
-/* behaves like background-size: cover, but children can be placed in image coordinates */
+/* behaves like background-size: cover */
 .hero_image {
   position: absolute;
   left: 50%;
@@ -57,50 +42,6 @@
   transform: translate(-50%, -50%);
 
   background: url("/homepage_bg_2.jpeg") center / cover no-repeat;
-}
-
-/* corner marks around the rocket, in % of the 16:9 image */
-.target {
-  position: absolute;
-  left: 74.3%;
-  top: 59.7%;
-  width: 9.4%;
-  height: 19.2%;
-}
-
-.target span {
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  border: 0 solid var(--accent);
-}
-
-.target span:nth-child(1) {
-  left: 0;
-  top: 0;
-  border-left-width: 2px;
-  border-top-width: 2px;
-}
-
-.target span:nth-child(2) {
-  right: 0;
-  top: 0;
-  border-right-width: 2px;
-  border-top-width: 2px;
-}
-
-.target span:nth-child(3) {
-  left: 0;
-  bottom: 0;
-  border-left-width: 2px;
-  border-bottom-width: 2px;
-}
-
-.target span:nth-child(4) {
-  right: 0;
-  bottom: 0;
-  border-right-width: 2px;
-  border-bottom-width: 2px;
 }
 
 .hero_fade {
@@ -450,12 +391,7 @@
 }
 
 @media (max-width: 640px) {
-  .page {
-    --gutter: 20px;
-  }
-
-  /* bracket and REC label would crowd a phone screen */
-  .target,
+  /* REC label would crowd a phone screen */
   .rec {
     display: none;
   }

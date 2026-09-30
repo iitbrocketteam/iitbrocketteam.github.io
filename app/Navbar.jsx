@@ -13,10 +13,10 @@ import { useState, useEffect } from "react";
 
 const links = [
   ["/", "Home"],
+  ["/rockets", "Rockets"],
   ["/team", "Team"],
   ["/sponsors", "Sponsors"],
   ["/achievements", "Achievements"],
-  ["/rockets", "Rockets"],
   ["/contact", "Contact"],
 ];
 
@@ -29,18 +29,16 @@ export default function Navbar() {
 
   const [dropdown_closed, set_dropdown_closed] = useState(true);
 
-  // on the homepage the navbar sits transparent over the hero photo,
-  // and gets its solid background once scrolled past it
-  const is_home = pathname === "/";
+  // the navbar starts transparent over the top of every page,
+  // and gets its solid background once scrolled
   const [scrolled, set_scrolled] = useState(false);
 
   useEffect(() => {
-    if (!is_home) return;
     const on_scroll = () => set_scrolled(window.scrollY > 40);
     on_scroll();
     window.addEventListener("scroll", on_scroll, { passive: true });
     return () => window.removeEventListener("scroll", on_scroll);
-  }, [is_home]);
+  }, [pathname]);
 
   // link may not exist - eg if gonna 404
   if (!current_link) {
@@ -81,7 +79,7 @@ export default function Navbar() {
   return (
     <nav
       className={
-        styles.navbar + (is_home && !scrolled ? " " + styles.transparent : "")
+        styles.navbar + (scrolled ? "" : " " + styles.transparent)
       }
     >
       <Link className={styles.logo_link} href="/">

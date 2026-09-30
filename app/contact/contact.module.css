@@ -1,94 +1,117 @@
-.container {
-  /* font-family: Arial, sans-serif; */
-  /* background-color: white; */
-  color: white;
+.entries {
+  margin-top: 28px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.key {
+  padding-top: 3px;
+  font: 500 11px var(--mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-60);
+}
+
+.link {
+  font-size: 18px;
+  width: fit-content;
+  border-bottom: 1px solid var(--rule-dashed);
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.entries p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.social {
+  display: inline-flex;
   align-items: center;
-  height: 100vh;
-  margin: 0;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid var(--ink-60);
 
-  display: flex;
-  width: 100vw;
-  padding: 2rem 10rem;
-
-  --highlight: rgb(84, 109, 255);
+  font: 500 12px var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
 }
 
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    /*overflow: hidden;*/
-    padding-top: 70px;
-    height: max-content;
-  }
+.social:hover {
+  background: var(--ink);
+  color: var(--bg);
 }
 
-/* TODO see for eg Unreal Engine's form for nice buttons, animations */
+/* ---------- form ---------- */
 
-.contact_info {
-  flex: 1;
-  padding: 20px;
-}
-
-.contact_info h1 {
-  font-size: 2em;
-}
-
-.contact_info p {
-  margin: 10px 0;
-}
-
-.contact_info .social_icons {
-  margin-top: 20px;
-}
-
-.contact_info .social_icons a {
-  margin-right: 10px;
-  color: var(--highlight);
-  text-decoration: none;
-  font-size: 1.5em;
-}
-
-.contact_form {
-  flex: 2;
-  padding: 20px;
-}
-
-.contact_form form {
+.form {
+  margin-top: 28px;
   display: flex;
   flex-direction: column;
 }
 
-.contact_form label {
-  margin-top: 1rem;
-  font-size: 1.6rem;
+.form label {
+  margin: 20px 0 8px;
+  font: 500 11px var(--mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-60);
 }
 
-.contact_form input,
-.contact_form textarea {
-  padding: 10px;
-  /* margin-top: 5px; */
-  border: 2px solid var(--highlight);
-  /* border-color: navy; */
-  border-radius: 5px;
-  background-color: #47474742;
-  color: white;
-  font-size: 1.6rem;
+.form label:first-child {
+  margin-top: 0;
 }
 
-.contact_form button {
-  font-size: 1.6rem;
-  margin-top: 20px;
-  background-color: var(--highlight);
-  /* color: #fff; */
-  cursor: pointer;
-  padding: 8px 8px;
-  border-radius: 5px;
-  border: none;
+.form input,
+.form textarea {
+  padding: 14px 16px;
+  font-size: 17px;
+  background: rgba(242, 241, 238, 0.04);
+  border: 1px solid var(--rule-dashed);
+  border-radius: 0;
+  resize: vertical;
+  transition: border-color 0.15s ease;
 }
 
-.resources {
-  font-size: 0.8rem;
-  color: rgb(179, 179, 179);
+.form input:focus,
+.form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.submit_row {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.submit_row button:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+.status {
+  font: 500 12px var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
 }

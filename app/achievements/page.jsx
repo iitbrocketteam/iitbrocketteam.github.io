@@ -1,101 +1,73 @@
+import ui from "../ui.module.css";
 import styles from "./achievements.module.css";
-import Image from "next/image";
-import { Montserrat, Poppins, Inter } from "next/font/google";
-import data from "./event_data.json";
-import animations from "../animations.module.css";
 
-// const font = Inter({
-// weight: ["100","200","300","400","500" "400", "700"],
-//   subsets: ["latin"],
-// });
+import Image from "next/image";
+import data from "./event_data.json";
+
+const highlights = [
+  { value: "#1", label: "National · SA Cup 2023", accent: true },
+  { value: "34th", label: "Global · SA Cup 2024" },
+  { value: "1st", label: "Engineers Conclave · IIT Madras" },
+  { value: "1st", label: "Techexpo · IIT Guwahati" },
+  { value: "2nd", label: "Techzibition" },
+];
+
+// Finalists of Techkriti, 2nd Runner Up in Anveshan 2023, Finalists of
+// Debris-o-Locus - not listed for now
 
 export default function Achievements() {
-  const image_list_content = (image_list) =>
-    image_list.map((image_name) => (
-      <div className={styles.slide} key={image_name}>
-        <Image
-          width={300}
-          height={300}
-          src={`/achievements/${image_name}.jpg`}
-          alt={image_name}
-        />
-      </div>
-    ));
-
-  const events = data.map((event) => (
-    <section key={event.title} className={styles.events_section}>
-      <h2>{event.title}</h2>
-      <div className={styles.infinite_slideshow}>
-        <div className={styles.slideshow_track}>
-          {/* TODO why need so many? fix in CSS */}
-          {image_list_content(event.images)}
-          {image_list_content(event.images)}
-          {image_list_content(event.images)}
-        </div>
-      </div>
-    </section>
-  ));
-
   return (
-    <div className={styles.page /*  + " " + font.className */}>
-      <h1 className={styles.h1_achieveme}>ACHIEVEMENTS</h1>
-      <section className={styles.achievements}>
-        <ul className={styles.timeline}>
-          {/* TODO set this with js expr. also n */}
-          <li className={animations.fade_in + " " + animations.fade_in_delay_0}>
-            <p>
-              <span>First National Rank</span> at SA cup &apos;23
-            </p>
-          </li>
-          <li className={animations.fade_in + " " + animations.fade_in_delay_1}>
-            <p>
-              <span>34th Rank</span> at SA cup &apos;23
-            </p>
-          </li>
+    <div className={ui.page}>
+      <header className={ui.header}>
+        <div className={ui.label}>Achievements · Mission record</div>
+        <h1 className={ui.title}>Achievements</h1>
+        <p className={ui.lead}>
+          From our debut at the Spaceport America Cup, the world&apos;s largest
+          intercollegiate rocketry competition, to national tech expos - here
+          is where we&apos;ve flown and what we&apos;ve won.
+        </p>
+      </header>
 
-          <li className={animations.fade_in + " " + animations.fade_in_delay_2}>
-            <p>
-              <span>1st Position</span> in Engineers Conclave, IIT Madras{" "}
-              {/* 2023 */}
-            </p>
-          </li>
-
-          <li className={animations.fade_in + " " + animations.fade_in_delay_3}>
-            <p>
-              <span>1st Position</span>
-              at Techexpo, IIT Guwahati {/* 2023 */}
-            </p>
-          </li>
-
-          <li className={animations.fade_in + " " + animations.fade_in_delay_4}>
-            <p>
-              <span>2nd Position</span> in Techzibition
-            </p>
-          </li>
-
-          {/* <li>
-            <p>
-              <span>Finalists</span> of Techkriti
-            </p>
-          </li> */}
-
-          {/* <li>
-            <span>2nd Runner Up</span> in Anveshan 2023
-          </li> */}
-
-          {/* <li>
-            <span>Finalists</span> of Debris-o-Locus
-          </li> */}
-
-          {/* 19th in our category, 34th worldwide */}
-        </ul>
+      <section className={ui.stats}>
+        {highlights.map((h, i) => (
+          <div key={i} className={ui.stat}>
+            <div className={ui.stat_value + (h.accent ? " " + ui.accent : "")}>
+              {h.value}
+            </div>
+            <div className={ui.stat_label}>{h.label}</div>
+          </div>
+        ))}
       </section>
 
-      {/* events images */}
+      {data.map((event, i) => (
+        <section key={event.title} className={styles.event}>
+          <div className={styles.event_header}>
+            <div className={ui.label}>
+              Event · {String(i + 1).padStart(2, "0")}
+            </div>
+            <h2 className={styles.event_title}>{event.title}</h2>
+          </div>
 
-      <h1 className={styles.events_heading}>EVENTS</h1>
-
-      <div className={styles.events_container}>{events}</div>
+          {/* images repeated 3x and scrolled by one third, so the loop is seamless */}
+          <div className={styles.marquee}>
+            <div className={styles.track}>
+              {[0, 1, 2].map((copy) =>
+                event.images.map((image_name) => (
+                  <div className={styles.slide} key={copy + image_name}>
+                    <Image
+                      width={480}
+                      height={320}
+                      src={`/achievements/${image_name}.jpg`}
+                      alt={copy === 0 ? event.title : ""}
+                      aria-hidden={copy !== 0}
+                    />
+                  </div>
+                ))
+              )}
+            </div>
+          </div>
+        </section>
+      ))}
     </div>
   );
 }

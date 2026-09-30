@@ -1,75 +1,80 @@
 "use client";
+
 import { useState } from "react";
-import styles from "./Grid.module.css";
-import data from "./data.json";
 import Image from "next/image";
 
+import ui from "../ui.module.css";
+import styles from "./Grid.module.css";
+import data from "./data.json";
+
 export default function Grid() {
-  const subsystemContent = (subsystem) => (
-    <div className={styles.subsystem} key={subsystem.name}>
-      <h3>{subsystem.name}</h3>
-
-      <ul className={styles.member_list}>
-        {subsystem.members.map((member) => (
-          <div key={member.name} className={styles.member}>
-            <div className={styles.img_holder}>
-              <Image
-                className={styles.profile_pic}
-                src={`/team/${member.name}.jpg`}
-                width={400}
-                height={400}
-                alt=""
-              />
-              <ul className={styles.popup}>
-                <li>
-                  {/* TODO add linkedin links data */}
-                  {member.linkedin ? (
-                    <a href={member.linkedin} target="_blank" rel="noreferrer">
-                      🔗 LinkedIn
-                    </a>
-                  ) : (
-                    <a></a>
-                  )}
-                </li>
-                {member.year ? (
-                  <li>Graduation Year: {member.year}</li>
-                ) : (
-                  <li></li>
-                )}
-                {member.major ? <li>Major: {member.major}</li> : <li></li>}
-              </ul>
-            </div>
-
-            <h4>{member.name}</h4>
-            <h5>{member.role}</h5>
-          </div>
-        ))}
-      </ul>
-    </div>
-  );
-
-  // const content = data.map(subsystemContent);
-  // return <ul className={styles.list}>{content}</ul>;
-
   const [active, setActive] = useState(0);
+  const subsystem = data[active];
 
   return (
-    <div className={styles.grid}>
-      <ul className={styles.tabs}>
-        {data.map((subsystem, index) => (
-          <li
-            key={index}
-            onClick={() => {
-              setActive(index);
-            }}
-            className={index === active ? styles.active : styles.inactive}
+    <section>
+      <div className={ui.tabs} role="tablist" aria-label="Subsystems">
+        {data.map((s, index) => (
+          <button
+            key={s.name}
+            role="tab"
+            aria-selected={index === active}
+            className={ui.tab + (index === active ? " " + ui.tab_active : "")}
+            onClick={() => setActive(index)}
           >
-            {subsystem.name}
-          </li>
+            <span className={ui.tab_index}>
+              {String(index + 1).padStart(2, "0")}
+            </span>
+            {s.name}
+          </button>
         ))}
-      </ul>
+      </div>
 
-      {subsystemContent(data[active])}
-    </div>
+      <div className={styles.panel} role="tabpanel">
+        <div className={styles.panel_header}>
+          <div className={ui.label}>{subsystem.name}</div>
+          <div className={styles.count}>
+            {subsystem.members.length}{" "}
+            {subsystem.members.length === 1 ? "member" : "members"}
+          </div>
+        </div>
+
+        <ul className={styles.members}>
+          {subsystem.members.map((member) => (
+            <li key={member.name} className={styles.member}>
+              <div className={styles.photo}>
+                <Image
+                  className={styles.profile_pic}
+                  src={`/team/${member.name}.jpg`}
+                  width={400}
+                  height={400}
+                  alt={member.name}
+                />
+
+                {(member.major || member.year || member.linkedin) && (
+                  <div className={styles.details}>
+                    {member.major && <div>{member.major}</div>}
+                    {member.year && <div>Class of {member.year}</div>}
+                    {member.linkedin && (
+                      <a
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noreferrer"
+                        className={styles.linkedin}
+                      >
+                        LinkedIn ↗
+                      </a>
+                    )}
+                  </div>
+                )}
+              </div>
+
+              <div className={styles.name}>{member.name}</div>
+              {member.role && <div className={styles.role}>{member.role}</div>}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
   );
 }

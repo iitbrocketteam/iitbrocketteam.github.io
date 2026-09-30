@@ -1,87 +1,142 @@
 "use client";
 
+import ui from "../ui.module.css";
 import styles from "./contact.module.css";
 
-import { Roboto, Poppins, Inter } from "next/font/google";
+import { useState } from "react";
 import { FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
-
-// const font = Inter({
-//   weight: ["300", "500", "700"],
-//   subsets: ["latin"],
-//   display: "swap",
-// });
 
 // Send Form results to Google Sheet:
 // https://github.com/levinunnink/html-form-to-google-sheet
 // SHEET: https://docs.google.com/spreadsheets/d/1HWI5mobyBb-3KjCRrCiLHj-tHKyDQj-W9S4o7nJTwk8/edit?usp=sharing
 
-const handleSubmit = (e) => {
-  e.preventDefault();
-  console.log(e);
-  const data = new FormData(e.target);
-  const action = e.target.action;
+const socials = [
+  ["Instagram", "https://www.instagram.com/iitb.rocket.team/", FaInstagram],
+  ["LinkedIn", "https://www.linkedin.com/company/iitbrocketteam/", FaLinkedin],
+  ["Facebook", "https://www.facebook.com/iitbrocketteam", FaFacebook],
+];
 
-  console.log(data, action);
-
-  fetch(action, {
-    method: "POST",
-    body: data,
-  })
-    .then(() => {
-      console.log("Success!");
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+const status_text = {
+  sending: "Transmitting…",
+  sent: "Message received - we'll get back to you soon.",
+  error: "Couldn't send. Please email us instead.",
 };
 
 export default function Contact() {
+  // idle | sending | sent | error
+  const [status, set_status] = useState("idle");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    set_status("sending");
+
+    fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+    })
+      .then(() => {
+        set_status("sent");
+        form.reset();
+      })
+      .catch((error) => {
+        console.log(error);
+        set_status("error");
+      });
+  };
+
   return (
-    <div className={styles.container /*  + ' ' + font.className */}>
-      <div className={styles.contact_info}>
-        <h1>Contact us.</h1>
-        <p>iitbrocketteam@gmail.com</p>
-        <p>IIT BOMBAY</p>
-        <p>Powai , Mumbai -400076</p>
+    <div className={ui.page}>
+      <header className={ui.header}>
+        <div className={ui.label}>Contact · Open channel</div>
+        <h1 className={ui.title}>Contact Us</h1>
+        <p className={ui.lead}>
+          Sponsorships, collaborations, or just curious about rockets - send us
+          a message and the team will get back to you.
+        </p>
+      </header>
 
-        <div className={styles.resources}>
-          <h2>Resources</h2>
-          <a href="https://drive.google.com/drive/folders/1Nb8fV42-rMY1Dj-B-6YNH9x0v0Vwfh9y">
-            https://drive.google.com/drive/folders/1Nb8fV42-rMY1Dj-B-6YNH9x0v0Vwfh9y
-          </a>
+      <section className={ui.columns}>
+        <div className={ui.column}>
+          <div className={ui.label}>01 / Reach us</div>
+          <div className={styles.entries}>
+            <div className={ui.entry}>
+              <div className={styles.key}>Email</div>
+              <a href="mailto:iitbrocketteam@gmail.com" className={styles.link}>
+                iitbrocketteam@gmail.com
+              </a>
+            </div>
+            <div className={ui.entry}>
+              <div className={styles.key}>Address</div>
+              <p>
+                IIT Bombay
+                <br />
+                Powai, Mumbai - 400076
+              </p>
+            </div>
+            <div className={ui.entry}>
+              <div className={styles.key}>Resources</div>
+              <a
+                href="https://drive.google.com/drive/folders/1Nb8fV42-rMY1Dj-B-6YNH9x0v0Vwfh9y"
+                target="_blank"
+                rel="noreferrer"
+                className={styles.link}
+              >
+                Google Drive folder ↗
+              </a>
+            </div>
+            <div className={ui.entry}>
+              <div className={styles.key}>Social</div>
+              <div className={styles.socials}>
+                {socials.map(([name, href, Icon]) => (
+                  <a
+                    key={name}
+                    href={href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles.social}
+                  >
+                    <Icon aria-hidden="true" />
+                    {name}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div className={styles.social_icons}>
-          <a href="https://www.instagram.com/iitb.rocket.team/">
-            <FaInstagram />
-          </a>
-          <a href="https://www.facebook.com/iitbrocketteam">
-            <FaFacebook />
-          </a>
-          <a href="https://www.linkedin.com/company/iitbrocketteam/">
-            <FaLinkedin />
-          </a>
+        <div className={ui.column}>
+          <div className={ui.label}>02 / Send a message</div>
+          <form
+            className={styles.form}
+            method="POST"
+            action="https://script.google.com/macros/s/AKfycbxc837YAmC-9N9e7Zjs69MoXy2DBdugmGJafxfJKRgV8-Id4dI8jBodtGk5M4TBgBLn/exec"
+            onSubmit={handleSubmit}
+          >
+            <label htmlFor="name">Name</label>
+            <input type="text" id="name" name="name" required />
+
+            <label htmlFor="email">Email</label>
+            <input type="email" id="email" name="email" required />
+
+            <label htmlFor="message">Message</label>
+            <textarea id="message" name="message" rows="6" required />
+
+            <div className={styles.submit_row}>
+              <button
+                type="submit"
+                className={ui.button}
+                disabled={status === "sending"}
+              >
+                Send →
+              </button>
+              <p className={styles.status} role="status">
+                {status_text[status]}
+              </p>
+            </div>
+          </form>
         </div>
-      </div>
-
-      <div className={styles.contact_form}>
-        <form
-          method="POST"
-          action="https://script.google.com/macros/s/AKfycbxc837YAmC-9N9e7Zjs69MoXy2DBdugmGJafxfJKRgV8-Id4dI8jBodtGk5M4TBgBLn/exec"
-          onSubmit={handleSubmit}
-        >
-          <label htmlFor="name">First Name (required)</label>
-          <input type="text" id="name" name="name" required />
-
-          <label htmlFor="email">Email (required)</label>
-          <input type="email" id="email" name="email" required />
-
-          <label htmlFor="message">Message (required)</label>
-          <textarea id="message" name="message" rows="6" required />
-
-          <button type="submit">Send</button>
-        </form>
-      </div>
+      </section>
     </div>
   );
 }

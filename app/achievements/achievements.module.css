@@ -1,157 +1,87 @@
-.page {
-  /* background-color: white; */
-  /* min-height: 100svh; */
-  height: fit-content;
-  color: rgb(255, 255, 255);
-
-  padding-top: calc(1rem + var(--navbar-height));
+.event {
+  padding: 56px 0 72px;
 }
 
-.timeline {
-  width: 100vw;
-  display: grid;
-  margin-top: 1rem;
-
-  counter-reset: i;
-  --n: 5;
-  --h1-height: 2rem;
-  --y-shift: 5rem;
-
-  /* only 1 parameter to change shape: element height */
-  /* find everything in terms of that. eg theta = arctan(element-height / 100vw) */
-  /* use var(--i) and var(--n) in translateY and clip-path */
-
-  /* https://css-tricks.com/clipping-masking-css/ */
-  /* https://bennettfeely.com/clippy/ : parallelogram */
-
-  --element-height: 10rem;
-  --timeline-height: calc(100vh - var(--navbar-height) - var(--h1-height));
-
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-  gap: 1rem;
-  padding: 0rem 4vw 0rem 4vw;
+/* the first one sits under the stat strip's own rule */
+.event + .event {
+  border-top: 1px solid var(--rule);
 }
 
-.page h1 {
-  text-align: center;
-  vertical-align: middle;
-  height: var(--h1-height);
+.event_header {
+  padding: 0 var(--gutter);
+  margin-bottom: 28px;
 }
 
-.timeline li {
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-size: 1.3rem;
-  padding: 0.7rem;
-  /* background-color: rgba(179, 179, 179, 0.671); */
-  border-radius: 0.6rem;
-  border: 0.15rem solid rgb(56, 156, 255);
+.event_title {
+  margin-top: 16px;
+  font-family: var(--pixel);
+  font-variation-settings: "ELSH" 1;
+  font-weight: 400;
+  font-size: clamp(30px, 3.6vw, 48px);
+  line-height: 1.05;
+  text-transform: uppercase;
 }
 
-.timeline span {
-  font-weight: bold;
-  display: block;
-}
+/* ---------- endless image strip ---------- */
 
-/* Events */
-
-.events_heading {
-  font-size: 36px;
-  /* Increased font size */
-  font-weight: bold;
-  /* Made it bold */
-  text-align: center;
-  /* Centered the heading */
-  margin-top: 3rem;
-  /* Reduced space below the heading */
-}
-
-.events_container {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-}
-
-.events_section h2 {
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-/* Container for the Slideshow */
-.infinite_slideshow {
-  width: 100%;
-  /* Full width of the parent container */
+.marquee {
   overflow: hidden;
-  /* Prevent horizontal scrollbars */
-  position: relative;
-  /* height: 350px; */
-  /* Spacious container */
-  background-color: rgb(22, 22, 22);
-  /* border: 2px solid #ccc; */
-  /* Optional for styling */
-  border-radius: 10px;
-  /* Optional for rounded corners */
-  display: flex;
-  align-items: center;
-  /* Center images vertically */
-  padding: 10px;
-  /* Add padding for a cleaner look */
-  box-sizing: border-box;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 12px 0;
 }
 
-/* Slideshow Track */
-
-.slideshow_track {
+.track {
   display: flex;
-  animation: scrollLeft 25s linear infinite;
-  /* Slower and smoother scrolling */
-  width: calc(200%);
-  /* Ensure enough space for duplicate images */
-  gap: 10px;
-  /* Reduced spacing between images */
+  width: max-content;
+  animation: scroll 40s linear infinite;
 }
 
-/* Infinite Scrolling Animation */
-@keyframes scrollLeft {
-  0% {
-    transform: translateX(0);
-  }
+.marquee:hover .track {
+  animation-play-state: paused;
+}
 
-  100% {
-    transform: translateX(-100%);
+@keyframes scroll {
+  to {
+    transform: translateX(calc(-100% / 3));
   }
 }
 
-/* Individual Slide */
+/* padding instead of gap, so each third of the track is exactly one copy */
 .slide {
-  /* flex: 0 0 19%; */
-  /* Slightly increased slide width */
-  box-sizing: border-box;
-  margin: 0 4px;
-  /* Reduced margin between slides */
-  /* border: 1px solid #ddd; */
-  /* Optional: Border around each image */
-  border-radius: 8px;
-  /* Smooth corners */
-  /* background: #f9f9f9; */
-  /* Optional: Light background for contrast */
+  flex: none;
+  padding-right: 12px;
 }
 
-/* Image Styling */
 .slide img {
-  width: auto;
-  /* use this to adjust track height */
-  height: 12rem;
-  /* Fill the slide width */
-  /* Match the container height */
-  object-fit: cover;
-  /* Maintain aspect ratio and crop excess */
   display: block;
-  border-radius: 5px;
-  /* margin-top: 10rem; */
-  /* Smooth corners */
+  width: auto;
+  height: 240px;
+  object-fit: cover;
+  filter: grayscale(0.35);
+  transition: filter 0.2s ease;
+}
+
+.slide img:hover {
+  filter: none;
+}
+
+@media (max-width: 640px) {
+  .event {
+    padding: 44px 0 56px;
+  }
+
+  .slide img {
+    height: 180px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    overflow-x: auto;
+  }
+
+  .track {
+    animation: none;
+  }
 }

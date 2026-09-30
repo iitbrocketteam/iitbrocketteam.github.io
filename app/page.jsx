@@ -36,19 +36,11 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <header className={styles.hero}>
-        {/* sized like object-fit: cover so the target bracket stays on the rocket */}
         <div
           className={styles.hero_image}
           role="img"
           aria-label="Onboard camera: parachute ejection over the desert"
-        >
-          <div className={styles.target} aria-hidden="true">
-            <span />
-            <span />
-            <span />
-            <span />
-          </div>
-        </div>
+        />
         <div className={styles.hero_fade} />
         <div className={styles.scanlines} />
 
