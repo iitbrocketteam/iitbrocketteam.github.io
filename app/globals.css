@@ -12,7 +12,6 @@
   --rule-dashed: rgba(242, 241, 238, 0.2);
   --accent: oklch(0.78 0.17 50);
   --accent-fill: oklch(0.72 0.19 45);
-  --rec: oklch(0.65 0.22 28);
   --gutter: 40px;
 
   --pixel: var(--font-geist-pixel), monospace;

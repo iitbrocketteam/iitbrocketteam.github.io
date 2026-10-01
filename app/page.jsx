@@ -8,9 +8,10 @@ import { Typewriter } from "react-simple-typewriter";
 
 const stats = [
   { value: "30+", label: "Members" },
-  { value: "10,000m", label: "IREC Target Altitude" },
-  { value: "34", suffix: "/150+", label: "Global · SA Cup 2024" },
-  { value: "#1", label: "National · SA Cup 2023", accent: true },
+  { value: "30,000 ft", label: "IREC '27 Target Altitude" },
+  { value: "22", suffix: "/150+", label: "Global · IREC 2026" },
+  { value: "4", suffix: "/20", label: "Category · IREC 2026" },
+  { value: "#1", label: "National · IREC 2026", accent: true },
 ];
 
 const subsystems = [
@@ -39,18 +40,9 @@ export default function Home() {
         <div
           className={styles.hero_image}
           role="img"
-          aria-label="Onboard camera: parachute ejection over the desert"
+          aria-label="Parachute deployment over the desert"
         />
         <div className={styles.hero_fade} />
-        <div className={styles.scanlines} />
-
-        <div className={styles.rec} aria-hidden="true">
-          <div>
-            <span className={styles.rec_dot} />
-            REC · ONBOARD CAM
-          </div>
-          <div>IITB ROCKET TEAM</div>
-        </div>
 
         <div className={styles.headline}>
           <h1>

@@ -74,10 +74,6 @@ export default function Footer() {
 
       <div className={styles.bottom}>
         <span>© {new Date().getFullYear()} IIT Bombay Rocket Team</span>
-        <span className={styles.signal}>
-          <span className={styles.dot} />
-          All systems nominal
-        </span>
       </div>
     </footer>
   );

@@ -59,7 +59,6 @@ export default function Sponsors() {
           aria-label="Agastya lifting off at the Spaceport America Cup"
         />
         <div className={styles.hero_fade} />
-        <div className={ui.scanlines} />
 
         <div className={styles.headline}>
           <h1>

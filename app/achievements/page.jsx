@@ -19,7 +19,7 @@ export default function Achievements() {
   return (
     <div className={ui.page}>
       <header className={ui.header}>
-        <div className={ui.label}>Achievements · Mission record</div>
+        {/* <div className={ui.label}>Achievements · Mission record</div> */}
         <h1 className={ui.title}>Achievements</h1>
         <p className={ui.lead}>
           From our debut at the Spaceport America Cup, the world&apos;s largest

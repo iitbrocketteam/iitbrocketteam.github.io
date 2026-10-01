@@ -11,7 +11,7 @@ export default function Rockets() {
   return (
     <div className={ui.page}>
       <header className={ui.header + " " + styles.header}>
-        <div className={ui.label}>Rockets · Flight log</div>
+        {/* <div className={ui.label}>Rockets · Flight log</div> */}
         <h1 className={ui.title}>Our Rockets</h1>
         <p className={ui.lead}>
           Every iteration flies higher than the last - from a 100 m hop on a

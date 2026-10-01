@@ -8,7 +8,7 @@ export default function Team() {
   return (
     <div className={ui.page}>
       <header className={ui.header}>
-        <div className={ui.label}>Team · IIT Bombay</div>
+        {/* <div className={ui.label}>Team · IIT Bombay</div> */}
         <h1 className={ui.title}>Our Team</h1>
         <p className={ui.lead}>
           We are a team of 30+ members, including undergraduates and PhD
@@ -27,13 +27,7 @@ export default function Team() {
             alt="The IIT Bombay Rocket Team"
             priority
           />
-          <div className={ui.scanlines} />
-          <figcaption className={styles.caption}>
-            <span className={ui.rec}>
-              <span className={ui.rec_dot} />
-              Crew · &apos;25–&apos;26
-            </span>
-          </figcaption>
+          <figcaption className={styles.caption}>Team 2025–26</figcaption>
         </figure>
 
         <p className={styles.mentors}>

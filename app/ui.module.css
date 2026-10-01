@@ -280,37 +280,6 @@
   color: var(--accent);
 }
 
-/* ---------- onboard-camera overlays ---------- */
-
-.scanlines {
-  position: absolute;
-  inset: 0;
-  background: repeating-linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.12) 0 1px,
-    transparent 1px 3px
-  );
-  mix-blend-mode: multiply;
-  pointer-events: none;
-}
-
-.rec {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font: 500 11px var(--mono);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.rec_dot {
-  flex: none;
-  width: 8px;
-  height: 8px;
-  background: var(--rec);
-}
-
 /* ---------- responsive ---------- */
 
 @media (max-width: 1024px) {

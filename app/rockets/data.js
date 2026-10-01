@@ -4,18 +4,17 @@ export const current = {
   name: "Ananta",
   year: "2026",
   data: [
-    ["Apogee", "TBA"],
-    ["Motor", "TBA"],
-    ["Fuel", "TBA"],
-    ["Height", "TBA"],
-    ["Diameter", "TBA"],
+    ["Apogee", "9463 ft"],
+    ["Motor", "N3635"],
+    // ["Motor Type", "Student Research and Development"],
+    ["Fuel", "KNSB"],
+    ["Height", "2920 mm"],
+    ["Diameter", "150.2 mm"],
   ],
   image: "/ananta_launch.jpeg",
   position: "62% 40%",
-  description: "",
+  description: "Ananta marks our first entry into the 10k SRAD category at the International Rocket Engineering Competition (IREC) 2026. This rocket is a testament to our team's dedication and innovation, featuring our first-ever in-house developed N-class KNSB motor along with a roll-stabilized platform payload and first ever task-splitted multi-board avionics system.",
 };
-
-// newest first after `current`
 // image = launch photo (position = object-position keeping the rocket in
 // frame), else videoSrc = the old render video
 export const previous = [
@@ -23,9 +22,9 @@ export const previous = [
     name: "Ahilya",
     year: "2025",
     data: [
-      ["Apogee", "TBA"],
-      ["Motor", "TBA"],
-      ["Fuel", "TBA"],
+      ["Apogee", "--"],
+      ["Motor", "M2500"],
+      ["Fuel", "APCP"],
       ["Height", "TBA"],
       ["Diameter", "TBA"],
     ],

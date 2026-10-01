@@ -161,18 +161,6 @@
   background: #fff;
 }
 
-.rec_bar {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 10px 12px;
-  border-bottom: 1px solid var(--rule);
-  background: var(--bg);
-  font: 500 11px var(--mono);
-  letter-spacing: 0.1em;
-  color: var(--ink-60);
-}
-
 .video {
   display: block;
   width: 100%;

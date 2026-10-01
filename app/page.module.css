@@ -1,4 +1,4 @@
-/* homepage - "onboard telemetry" design, see Claude Design handoff */
+/* homepage, see the Claude Design handoff */
 /* tokens (--bg, --accent, --gutter...) live in globals.css */
 
 .page {
@@ -54,45 +54,6 @@
     rgba(10, 11, 13, 0) 45%,
     rgba(10, 11, 13, 0.92) 100%
   );
-}
-
-.scanlines {
-  position: absolute;
-  inset: 0;
-  background: repeating-linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.12) 0 1px,
-    transparent 1px 3px
-  );
-  mix-blend-mode: multiply;
-  pointer-events: none;
-}
-
-.rec {
-  position: absolute;
-  right: var(--gutter);
-  top: calc(var(--navbar-height) + 40px);
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 6px;
-
-  font: 500 11px var(--mono);
-  letter-spacing: 0.1em;
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.rec div {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.rec_dot {
-  width: 8px;
-  height: 8px;
-  background: var(--rec);
 }
 
 .headline {
@@ -185,25 +146,32 @@
 
 /* ---------- stats ---------- */
 
+/* one column per stat, however many there are; 1px gaps over a
+   rule-coloured background draw the dividers */
 .stats {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 1px;
+  background: var(--rule);
   border-top: 1px solid var(--rule);
   border-bottom: 1px solid var(--rule);
 }
 
 .stat {
-  padding: 28px var(--gutter);
-  border-right: 1px solid var(--rule);
+  padding: 28px clamp(20px, 2.4vw, 40px);
+  background: var(--bg);
 }
 
-.stat:last-child {
-  border-right: none;
+/* first one lines up with the headline above */
+.stat:first-child {
+  padding-left: var(--gutter);
 }
 
 .stat_value {
-  font-size: 52px;
+  font-size: clamp(30px, 3vw, 52px);
   line-height: 1.1;
+  white-space: nowrap;
 }
 
 .stat_suffix {
@@ -350,15 +318,17 @@
 
 @media (max-width: 1024px) {
   .stats {
+    grid-auto-flow: row;
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .stat:nth-child(2) {
-    border-right: none;
+  /* odd count: the last stat takes the whole row */
+  .stat:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
   }
 
-  .stat:nth-child(-n + 2) {
-    border-bottom: 1px solid var(--rule);
+  .stat_value {
+    font-size: 44px;
   }
 
   .who,
@@ -391,11 +361,6 @@
 }
 
 @media (max-width: 640px) {
-  /* REC label would crowd a phone screen */
-  .rec {
-    display: none;
-  }
-
   /* right-aligned crop on phones, keeps the rocket in frame */
   .hero_image {
     left: auto;

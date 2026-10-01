@@ -1,6 +1,5 @@
 import Image from "next/image";
 
-import ui from "../ui.module.css";
 import styles from "./rockets.module.css";
 
 // "01 / Latest flight", then "02 / 2025" ...
@@ -85,17 +84,9 @@ export default function Rocket({ rocket, index }) {
           </div>
         ) : (
           <div className={styles.video_slot}>
-            {/* the renders have a white background, so the REC label sits in a bar above */}
-            <figure className={styles.video_frame}>
-              <figcaption className={styles.rec_bar}>
-                <span className={ui.rec}>
-                  <span className={ui.rec_dot} />
-                  REC · {rocket.name}
-                </span>
-                <span>{rocket.year}</span>
-              </figcaption>
+            <div className={styles.video_frame}>
               <RocketVideo rocket={rocket} />
-            </figure>
+            </div>
           </div>
         )}
       </div>
